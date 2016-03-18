@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="libs/pushservice-4.0.0.jar" sourcepath="D:/adt-bundle-windows-x86-all/sdk"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="lib" path="lib/Msc.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/myjson-2.1.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="lib" path="libs/upomp_bypay_1_1_lib.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/libammsdk.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/baidumapapi_v2_1_2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/locSDK_4.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/MobilePaymentPlugin-4.1-AND-RC-PRD-2014041618.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

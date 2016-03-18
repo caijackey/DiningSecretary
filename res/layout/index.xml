@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 页面切换内容区 -->
+
+    <FrameLayout
+        android:id="@+id/window_container"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_above="@+id/tab_container"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+    </FrameLayout>
+
+    <!-- 底部二级切换按钮区 -->
+
+    <LinearLayout
+        android:id="@+id/sub_tab_container"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:layout_above="@+id/tab_container"
+        android:background="@drawable/home_backgroud"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 切换城市按钮 -->
+
+        <LinearLayout
+            android:id="@+id/button_switch_city"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_index_submenu"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="34dip"
+                android:layout_height="26dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/icon_switch_city1"
+                android:padding="0dp" />
+
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="切换城市"
+                android:textColor="@color/home_text_gray"
+                android:textSize="12dip" />
+        </LinearLayout>
+
+        <!-- 现金券按钮 -->
+
+       <!--  <LinearLayout
+            android:id="@+id/button_coupon"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/button_switch_city"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_index_submenu"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="34dip"
+                android:layout_height="26dip"
+                android:background="@drawable/icon_coupon1"
+                android:padding="0dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="现金券"
+                android:textColor="@color/home_text_gray"
+                android:textSize="12dip" />
+        </LinearLayout>--> 
+        <!-- 订单中心按钮 -->
+
+        <LinearLayout
+            android:id="@+id/button_order_list"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/button_coupon"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_index_submenu"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="34dip"
+                android:layout_height="26dip"
+                android:background="@drawable/icon_order_list1"
+                android:padding="0dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="订单中心"
+                android:textColor="@color/home_text_gray"
+                android:textSize="12dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_index_submenu"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_index_submenu"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 一个气泡 -->
+
+    <!--  <TextView
+        android:id="@+id/order_bubble_clone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/sub_tab_container"
+        android:layout_alignTop="@+id/sub_tab_container"
+        android:layout_marginRight="140dip"
+        android:layout_marginTop="2dip"
+        android:background="@drawable/bg_bubble"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/background_color_white"
+        android:textSize="10dp"
+        android:visibility="gone" />-->
+
+    <!-- 底部一级切换按钮区 -->
+
+    <LinearLayout
+        android:id="@+id/tab_container"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_backgroud"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/button_search_rest"
+            android:layout_width="0dip"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <View
+                android:layout_width="39dip"
+                android:layout_height="44dip"
+                android:background="@drawable/icon_book_rest_bg"
+                android:padding="0dp" />
+        </LinearLayout>
+
+        <!--
+                  <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="订餐厅"
+                android:textColor="@color/text_color_white"
+                android:textSize="10dp" />
+        -->
+
+        <LinearLayout
+            android:id="@+id/button_takeaway"
+            android:layout_width="0dip"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <View
+                android:layout_width="39dip"
+                android:layout_height="44dip"
+                android:background="@drawable/icon_takeaway_bg"
+                android:padding="0dp" />
+            <!--
+                <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="叫外卖"
+                android:textColor="@color/text_color_white"
+                android:textSize="10dp" />
+            -->
+            <!-- 推荐按钮 -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_recommend"
+            android:layout_width="0dip"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <View
+                android:layout_width="30dip"
+                android:layout_height="44dip"
+                android:background="@drawable/icon_recommend_bg"
+                android:padding="0dp" />
+        </LinearLayout>
+        <!--
+                <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="推荐"
+                android:textColor="@color/text_color_white"
+                android:textSize="10dp" />
+        -->
+
+
+        <!-- 现金券按钮 -->
+
+        <LinearLayout
+            android:id="@+id/button_coupon"
+            android:layout_width="0dip"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:gravity="center"  >
+
+            <View
+                android:layout_width="52dip"
+                android:layout_height="44dip"
+                android:background="@drawable/icon_index_coupon"
+                android:padding="0dp" />
+        </LinearLayout>
+
+        <!-- 个人中心按钮 -->
+
+        <LinearLayout
+            android:id="@+id/button_user_center"
+            android:layout_width="0dip"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <View
+                android:layout_width="52dip"
+                android:layout_height="44dip"
+                android:background="@drawable/icon_user_center_bg"
+                android:padding="0dp" />
+        </LinearLayout>
+        <!--
+                <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="个人中心"
+                android:textColor="@color/text_color_white"
+                android:textSize="10dp" />
+        -->
+
+
+        <!-- 更多 -->
+
+       <!--  <LinearLayout
+            android:id="@+id/button_more"
+            android:layout_width="0dip"
+            android:layout_height="55dip"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <View
+                android:layout_width="30dip"
+                android:layout_height="44dip"
+                android:background="@drawable/icon_more_bg"
+                android:padding="0dp" />
+        </LinearLayout>--> 
+        <!--
+                  <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:text="更多"
+                android:textColor="@color/text_color_white"
+                android:textSize="10dp" />
+        -->
+    </LinearLayout>
+
+    <!-- 两个气泡 -->
+
+
+    <!--
+         <TextView
+        android:id="@+id/order_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tab_container"
+        android:layout_alignTop="@+id/tab_container"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="2dip"
+        android:background="@drawable/bg_bubble"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/background_color_white"
+        android:textSize="10dp"
+        android:visibility="visible" />
+    -->
+
+    <TextView
+        android:id="@+id/user_center_bubble"
+        android:layout_width="8dip"
+        android:layout_height="8dip"
+        android:layout_alignRight="@+id/tab_container"
+        android:layout_alignTop="@+id/tab_container"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="2dip"
+        android:background="@drawable/bg_bubble"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/background_color_white"
+        android:textSize="10dp"
+        android:visibility="visible" />
+
+</RelativeLayout>

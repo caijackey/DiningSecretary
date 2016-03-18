@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外卖首页广告图片条目 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+     >
+      <!--  
+     		<TextView
+			android:id="@+id/advertisement_text_view"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_margin="0dp"
+			android:ellipsize="end"
+			android:gravity="center"
+			android:paddingBottom="3dip"
+			android:paddingLeft="20dip"
+			android:paddingRight="20dip"
+			android:singleLine="true"
+			android:text="春光明媚长假行，签出绿色好心情啊, 绿色好心情啊！"
+			android:textColor="@color/text_color_white"
+			android:textSize="14dip" />
+			 -->
+    
+		<com.fg114.main.app.view.MyImageView
+			android:id="@+id/advertisement_image_view"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_margin="0dp"
+			android:scaleType="fitXY"
+			android:layout_gravity="center" 
+			/>
+   
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:orientation="vertical"
+	android:background="@drawable/bg_repeat">
+
+	<!--  	
+	<com.fg114.main.app.view.LineView
+	xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"   
+	android:layout_marginTop="10dip"
+	android:layout_marginBottom="10dip"
+	android:layout_width="fill_parent" 
+	android:layout_height="100dip"
+	android:padding="5dip"
+	android:background="#FF00FF00"
+	line:color="#FF0000FF"
+	line:thickness="1dip"	
+	line:orientation="horizontal"
+	line:dashedWidth="2dip"
+	line:dashedGap="4dip"	
+	/>  
+	-->	    
+	<ListView
+		android:id="@+id/food_comment_list"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		style="@style/myListView">
+	</ListView>
+</LinearLayout>

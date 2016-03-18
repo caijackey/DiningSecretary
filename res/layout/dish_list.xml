@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color_gray" >
+
+     <include
+        android:id="@+id/zy_dish_list_dishListBaseLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+       	layout="@layout/dish_list_base"
+        android:layout_alignParentBottom="true"/>
+     
+    <!-- 菜品类别 -->
+
+    <ScrollView
+        android:id="@+id/dish_list_svDishCategoryLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/zy_dish_list_dishListBaseLayout"
+        android:background="@color/background_color_new_gray"
+        android:fadingEdgeLength="0dip"
+        android:padding="0dp"
+        android:scrollbars="none" >
+
+        <RadioGroup
+            android:id="@+id/dish_list_rgType"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            />
+    </ScrollView>
+
+    <!-- 菜品列表 -->
+    <ListView
+        android:id="@+id/dish_list_lvDish"
+        style="@style/myListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/dish_list_svDishCategoryLeft"
+        android:cacheColorHint="#EDEDED"
+        android:divider="@color/divider"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="false"
+        android:layout_marginLeft="0dp"
+        android:layout_above="@+id/zy_dish_list_dishListBaseLayout"/>
+
+    <TextView
+        android:id="@+id/dish_list_tvEmpty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal|top"
+        android:padding="10dip"
+        android:text="没有找到您需要的信息"
+        android:textColor="@color/text_color_black"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- 消息提示区 -->
+    <LinearLayout
+        android:id="@+id/dish_list_llLoadingPrompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/middle_list_item_bg1_state02"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/dish_list_item_pbDetail"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/dish_list_item_tvDetailMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="@string/text_info_loading"
+            android:textColor="@color/text_color_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

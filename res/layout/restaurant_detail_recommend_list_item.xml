@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dip" >
+
+    <LinearLayout
+        android:id="@+id/list_item_dishorderLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/shape_routart"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:paddingTop="0.6dip"
+            android:paddingLeft="0.6dip"
+            android:paddingRight="0.6dip"
+            android:paddingBottom="5dip"
+            >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/rest_picture"
+                android:layout_width="fill_parent"
+               
+                android:layout_height="200dip" />
+
+              <ImageView 
+                 android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:background="@drawable/home_top_list_view_bg"
+                />
+        </RelativeLayout>
+        
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+        <TextView
+            android:id="@+id/rest_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:background="#00000000"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="4"
+            android:textColor="@color/text_color_new_gray"
+            android:textSize="14dp" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

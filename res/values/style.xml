@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 默认列表样式 -->
+    <style name="myListView" parent="@android:Widget.ListView">
+        <item name="android:listSelector">@drawable/my_list_view_selector</item>
+        <item name="android:cacheColorHint">@color/transparence</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dip</item>
+        <item name="android:scrollingCache">false</item>
+    </style>
+
+    <!-- 闪屏 -->
+    <style name="IndexTheme" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!-- 总评样式 -->
+    <style name="starRatingBar_big" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_ratingbar_big</item>
+        <item name="android:minHeight">26dip</item>
+        <item name="android:maxHeight">26dip</item>
+        <item name="android:minWidth">26dip</item>
+        <item name="android:maxWidth">26dip</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">0</item>
+        <item name="android:stepSize">1</item>
+    </style>
+
+    <!-- 三个选项 -->
+    <style name="starRatingBar_three" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_ratingbar_big</item>
+        <item name="android:minHeight">20.5dip</item>
+        <item name="android:maxHeight">20.5dip</item>
+        <item name="android:minWidth">20.5dip</item>
+        <item name="android:maxWidth">20.5dip</item>
+        <item name="android:numStars">3</item>
+        <item name="android:rating">0</item>
+        <item name="android:stepSize">1</item>
+    </style>
+
+    <style name="starRatingBar_small" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_ratingbar_small</item>
+        <item name="android:minHeight">12.4dip</item>
+        <item name="android:maxHeight">12.4dip</item>
+        <item name="android:minWidth">12.4dip</item>
+        <item name="android:maxWidth">12.4dip</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">0</item>
+        <item name="android:stepSize">0.5</item>
+    </style>
+
+    <style name="flowerRatingBar_small">
+        <item name="android:progressDrawable">@drawable/flower_ratingbar_small</item>
+        <item name="android:minHeight">12.4dip</item>
+        <item name="android:maxHeight">12.4dip</item>
+        <item name="android:minWidth">12.4dip</item>
+        <item name="android:maxWidth">12.4dip</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">0</item>
+        <item name="android:stepSize">0.5</item>
+    </style>
+
+    <!-- 单选按钮样式 -->
+    <style name="myRadioButton_all" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/image_all_radio_button</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+        <item name="android:minWidth">52.5dip</item>
+        <item name="android:maxWidth">52.5dip</item>
+    </style>
+
+    <style name="myRadioButton_env" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/image_evn_radio_button</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+        <item name="android:minWidth">49dip</item>
+        <item name="android:maxWidth">49dip</item>
+    </style>
+
+    <style name="myRadioButton_food" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/image_food_radio_button</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+        <item name="android:minWidth">49dip</item>
+        <item name="android:maxWidth">49dip</item>
+    </style>
+
+    <style name="myRadioButton_user_upload" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/image_user_upload_radio_button</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+        <item name="android:minWidth">70dip</item>
+        <item name="android:maxWidth">70dip</item>
+    </style>
+
+    <style name="myRadioButton_room" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/my_radio_box</item>
+    </style>
+
+    <style name="myRadioButton_resDetail" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/res_detail_radio_button</item>
+        <item name="android:minHeight">46.5dip</item>
+        <item name="android:maxHeight">46.5dip</item>
+        <item name="android:minWidth">106.5dip</item>
+        <item name="android:maxWidth">106.5dip</item>
+    </style>
+
+    <style name="myRadioButton_resComment" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/res_comment_radio_button</item>
+        <item name="android:minHeight">46.5dip</item>
+        <item name="android:maxHeight">46.5dip</item>
+        <item name="android:minWidth">106.5dip</item>
+        <item name="android:maxWidth">106.5dip</item>
+    </style>
+
+    <style name="myRadioButton_resDiscount" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/res_discount_radio_button</item>
+        <item name="android:minHeight">46.5dip</item>
+        <item name="android:maxHeight">46.5dip</item>
+        <item name="android:minWidth">106.5dip</item>
+        <item name="android:maxWidth">106.5dip</item>
+    </style>
+
+    <!-- checkBox样式 -->
+    <style name="myCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/my_check_box</item>
+    </style>
+
+    <!-- 礼品卡checkBox样式 -->
+    <style name="presentCheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/my_presentcard_checkbox</item>
+    </style>
+
+    <!-- menu显示动画 -->
+    <style name="menuAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/menu_show</item>
+        <item name="android:windowExitAnimation">@anim/menu_dismiss</item>
+    </style>
+
+    <style name="Animations" />
+
+    <!-- PopDownMenu -->
+    <style name="Animations.PopDownMenu" />
+
+    <!-- PopDownMenu -->
+    <style name="Animations.PopDownMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+    </style>
+
+    <!-- PopUpMenu -->
+    <style name="Animations.PopUpMenu" />
+
+    <style name="Animations.PopUpMenu.show">
+        <item name="@android:windowEnterAnimation">@anim/index_pop_show</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.show1">
+        <item name="@android:windowEnterAnimation">@anim/scale_pop_show</item>
+        <item name="@android:windowExitAnimation">@anim/scale_pop_dismiss</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+
+    <!-- button panel显示动画 -->
+    <style name="panelAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/panel_show</item>
+        <item name="android:windowExitAnimation">@anim/panel_dismiss</item>
+    </style>
+
+    <!-- 自定义Dialog的默认样式 -->
+    <style name="Custom_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 背景是否模糊 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!-- 主框架功能菜单Dialog的样式 -->
+    <style name="Main_Menu_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 背景是否模糊 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowAnimationStyle">@style/Animations.PopUpMenu.show1</item>
+    </style>
+
+    <style name="animation_drop_down" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/frame_anim_from_up</item>
+        <item name="android:windowExitAnimation">@anim/frame_anim_to_up</item>
+    </style>
+
+    <style name="Animation_Bottom" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/frame_anim_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/frame_anim_to_bottom</item>
+    </style>
+
+    <style name="Shadow_Black_Up">
+
+        <!-- 阴影样式，黑色向上投影 -->
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDy">-1</item>
+    </style>
+
+    <style name="Shadow_Black_Down">
+
+        <!-- 阴影样式，黑色向下投影 -->
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="Shadow_White_Down">
+
+        <!-- 阴影样式，白色向下投影 -->
+        <item name="android:shadowColor">@android:color/white</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="Shadow_Black_Up_3" parent="Shadow_Black_Up">
+
+        <!-- 阴影样式，黑色向上投影，半径为3 -->
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="Shadow_Black_Up_2" parent="Shadow_Black_Up">
+
+        <!-- 阴影样式，黑色向上投影，半径为2 -->
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="Shadow_White_Down_3" parent="Shadow_White_Down">
+
+        <!-- 阴影样式，白色向下投影，半径为3 -->
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="Shadow_White_Down_2" parent="Shadow_White_Down">
+
+        <!-- 阴影样式，白色向下投影，半径为2 -->
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="Shadow_Black_Down_2" parent="Shadow_Black_Down">
+
+        <!-- 阴影样式，黑色向下投影，半径为2 -->
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/food_ratingbar_full</item>
+    </style>
+
+    <style name="foodRatingBarFavorite" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/food_ratingbar_full_favorite</item>
+    </style>
+
+    <style name="indexRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/index_rating_bar</item>
+    </style>
+
+    <style name="takeawayRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/takeaway_comment_rating_bar</item>
+    </style>
+    <!-- 银联支付 -->
+    <style name="upomp_bypay_MyDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="Activity_MyDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+
+    </style>
+
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <!-- 搜索栏 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/tittle_topbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dip" >
+
+        <!-- 重新搜索语音按钮 -->
+
+        <Button
+            android:id="@+id/search_again_voice_button"
+            android:layout_width="120dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/topbar_right_button"
+            android:drawableLeft="@drawable/icon_microphone_white"
+            android:drawablePadding="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="15dip"
+            android:text="重新搜索"
+            android:textColor="@color/text_color_white"
+            android:textSize="18dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="1dip"
+            android:background="@drawable/index2_search_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_weight="5" >
+
+            <Button
+                android:id="@+id/auto_complete_btVoice"
+                android:layout_width="33dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="1dip"
+                android:background="@drawable/button_voice_round" />
+
+            <EditText
+                android:id="@+id/auto_complete_etSearchbox"
+                android:layout_width="wrap_content"
+                android:layout_height="33dip"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/text_layout_search_recommend_res"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+        <!-- 搜索按钮 -->
+
+        <TextView
+            android:id="@+id/auto_complete_btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dip"
+            android:textSize="16dip"
+            android:gravity="center"
+            android:text="取消" 
+            android:textColor="@color/text_color_white"
+            android:layout_marginLeft="10dip"/>
+
+    </LinearLayout>
+    <!-- 搜索类型 -->
+    <!-- 语音搜索按钮 -->
+    <!--
+         <include
+		android:id="@+id/voice_search_button"
+		layout="@layout/voice_recognition_button_big" />
+    -->
+
+    <ListView
+        android:id="@+id/auto_complete_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top|center_horizontal" />
+
+</LinearLayout>

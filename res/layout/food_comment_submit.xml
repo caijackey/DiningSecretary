@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="15dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/block_bt01"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <!-- 总体评价 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/food_comment_submit_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:text="@string/text_layout_dish_comment_noname"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+
+            <LinearLayout
+                android:id="@+id/food_comment_submit_likeTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <Button
+                    android:id="@+id/food_comment_submit_verygood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/dish_list_like_button"
+                    android:focusable="false"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/food_comment_submit_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/dish_list_ok_button"
+                    android:focusable="false"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/food_comment_submit_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/dish_list_dislike_button"
+                    android:focusable="false"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 评论 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/food_comment_submit_etComment"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/block_bt01"
+                android:gravity="top"
+                android:hint="请输入评论"
+                android:inputType="textMultiLine"
+                android:maxLines="8"
+                android:minLines="3"
+                android:padding="10dip"
+                android:singleLine="false"
+                android:textColor="@color/text_color_black"
+                android:textColorHint="@color/text_color_gray"
+                android:textSize="16dip" />
+
+            <include
+                android:id="@+id/food_comment_voice_button"
+                layout="@layout/voice_recognition_button_small" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 分享微博 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/food_comment_submit_chkShareSina"
+            style="@style/myCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_layout_share_to_sina"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/food_comment_submit_btnUpLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/button_food_submit"
+        android:paddingBottom="5dip"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip"
+        android:paddingTop="5dip"
+        android:text="@string/text_button_dish_comment_submit"
+        android:textColor="@color/text_color_white"
+        android:textSize="16dip" />
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top" 
+    android:background="#f2f2f1">
+    
+     <TextView 
+         android:id="@+id/confirm_receipt_hint"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dip"
+         android:layout_marginLeft="10dip"
+         android:layout_marginRight="10dip"
+         android:textSize="16dip"/>
+     <EditText 
+         android:id="@+id/confirm_receipt_waiter_name"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dip"
+         android:layout_marginLeft="10dip"
+         android:layout_marginRight="10dip"
+          android:background="@drawable/edittext_background"
+         android:textSize="16dip"
+         android:paddingLeft="5dip"
+         android:textColor="@color/text_color_black"
+         android:singleLine="true"
+         android:textColorHint="@color/text_color_hint"
+        
+         
+         />
+     
+ 
+     
+         <EditText 
+         android:id="@+id/confirm_receipt_waiter_phonenum"
+         android:layout_width="fill_parent"
+         android:layout_marginTop="10dip"
+         android:layout_marginLeft="10dip"
+         android:layout_marginRight="10dip"
+         android:layout_height="wrap_content"
+         android:textSize="16dip"
+         android:inputType="phone"
+         android:paddingLeft="5dip"
+          android:background="@drawable/edittext_background"
+         android:textColor="@color/text_color_black"
+         android:singleLine="true"
+         android:textColorHint="@color/text_color_hint"
+         
+         />
+     <Button 
+         android:id="@+id/confirm_receipt_bt"
+         android:layout_width="120dip"
+         android:layout_height="35dip"
+         android:layout_marginTop="20dip"
+         android:background="@drawable/bg_new_red"
+         android:textColor="@color/text_color_white"/>
+</LinearLayout>

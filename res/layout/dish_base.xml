@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_repeat"
+    android:gravity="top|center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dishbase_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dishbase_main_bottomlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/res_bottom_bg" >
+
+        <ImageView
+            android:id="@+id/takewawy_shopping_cart_iv"
+            android:layout_width="49dip"
+            android:layout_height="49dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shopping_car_gray" />
+
+        <TextView
+            android:id="@+id/dishbase_bottomlefttext"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/takewawy_shopping_cart_iv"
+            android:layout_marginLeft="5dip"
+            android:textColor="@color/text_color_gray"
+            android:gravity="center"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/dishbase__bottomcentertext"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/dishbase_bottomlefttext"
+            android:gravity="center"
+            android:textColor="@color/text_color_gray"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/dishbase__bottomrighttext"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/dishbase__bottomcentertext"
+            android:gravity="center"
+            android:textColor="@color/text_color_gray"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/dishbase_bottomCashTicketText"
+            android:layout_width="200dip"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/dishbase__bottomrighttext"
+            android:paddingBottom="8dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="如果您购买300元现金券立省30元"
+            android:textColor="@color/text_color_gray"
+            android:textSize="14dip"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:padding="5dip"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/dishbase__bottomLeftbtn"
+                android:layout_width="80dp"
+                android:layout_height="35dip"
+                android:background="@drawable/bg_red_new"
+                android:gravity="center"
+                android:text="@string/text_button_dish_cashTicket"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/dishbase__bottomRightbtn"
+                android:layout_width="80dp"
+                android:layout_height="35dip"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bg_red_new"
+                android:gravity="center"
+                android:text="@string/text_button_dish_nextSay"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

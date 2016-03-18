@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- 基本信息 -->
+
+
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="10dip"
+            android:text="@string/text_layout_base_info"
+            android:textColor="@color/text_color_deep_blue"
+            android:textSize="16dip" >
+        </TextView>
+        -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/new_block_button"
+            android:orientation="vertical"
+            android:padding="0dip" >
+
+            <!-- 名称 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/text_layout_res_name"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/res_info_tvResName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line" />
+            <!-- 营业时间 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/text_layout_res_open_time"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/res_info_tvResOpenTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line" />
+
+            <!-- 菜系 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/text_layout_food_style"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/res_info_tvFoodStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line" />
+
+            <!-- 地址 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/text_layout_address"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/res_info_tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.83"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/line" />
+
+                <Button
+                    android:id="@+id/location_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/location_map" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line" />
+
+            <!-- 交通路线 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/text_layout_traffic"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/res_info_tvTraffic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line" />
+
+            <!-- 消费方式 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/text_layout_consume_way"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/res_info_tvConsumeWay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line" />
+            <!-- 餐厅介绍 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                 >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="餐厅介绍:"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/res_info_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/res_info_ivParkMapLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@drawable/new_block_button"
+            android:orientation="vertical"
+            android:padding="5dip" >
+
+            <!-- 停车地图 -->
+
+            <TextView
+                android:id="@+id/res_info_parkMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="10dip"
+                android:text="@string/text_layout_park_map"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" >
+            </TextView>
+            <!-- 分隔符 -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:background="@color/line" />
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/res_info_ivParkMap"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"	
+	android:background="#00FFFFFF"
+	android:orientation="vertical">
+	<ListView
+		android:id="@+id/food_image_list_view"
+		android:layout_width="fill_parent" 
+		android:layout_height="0dip"
+		android:layout_weight="1"
+		android:divider="#00FFFFFF"
+		android:dividerHeight="0dip"
+		android:drawSelectorOnTop="false"
+		android:listSelector="#00FFFFFF"
+		android:cacheColorHint="#00FFFFFF"
+		android:scrollingCache="false"
+		/>
+	<include layout="@layout/restaurant_image_detail_of_food_footer_view" 
+	    android:id="@+id/restaurant_image_detail_of_food_footer_view"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"/>
+</LinearLayout>
+

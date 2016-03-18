@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/order_state_icon"
+            android:layout_width="110dip"
+            android:layout_height="110dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip" />
+        <TextView 
+            android:id="@+id/order_state_hint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:textSize="16dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center"/>
+        <View 
+            android:id="@+id/order_state_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/line"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"/>
+        <TextView 
+            android:id="@+id/operate_hint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="16dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left"/>
+        <LinearLayout 
+            android:id="@+id/jump_mibi_wap"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+        <com.fg114.main.app.view.OrderStateHorizaontalScrollView
+                android:id="@+id/order_coin_imageScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+        </LinearLayout>
+        
+        <Button 
+            android:id="@+id/share_mibi_bt"
+            android:layout_width="150dip"
+            android:layout_height="35dip"
+            android:background="@drawable/bg_red_new"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"/>
+    </LinearLayout>
+
+</ScrollView>

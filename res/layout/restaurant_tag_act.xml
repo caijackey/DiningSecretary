@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/res_tag_scrollBar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/text_color_white"
+        android:baselineAligned="false"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <!-- 头部 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/res_tag_toptext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color_new_gray1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tag_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:singleLine="true"
+                    android:text="给餐厅打几个标签吧"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="18dip" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/background_color_deep_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/restaurant_tag_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/lay_ok_bt"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/res_bottom_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/okbutton"
+            android:layout_width="150dip"
+            android:layout_height="35dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/bg_new_red"
+            android:text="确定"
+            android:textColor="@color/background_color_new_white"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+</RelativeLayout>

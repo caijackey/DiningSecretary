@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line"
+        android:layout_marginBottom="10dip"/>
+    
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/user_pic_url_img"
+            android:layout_width="38dip"
+            android:layout_height="38dip"
+            local:roundType="1"
+  			local:roundRadius="20dip"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/user_nick_name_tv"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/user_pic_url_img"
+            android:text="一朵熊"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+
+        <TextView
+            android:id="@+id/create_time_tv"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:text="2012-02-12 14:20"
+            android:textColor="@color/text_color_gray"
+            android:textSize="14dip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/detail_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:textColor="@color/text_color_black"
+        android:textSize="14dip" />
+    
+    
+
+</LinearLayout>

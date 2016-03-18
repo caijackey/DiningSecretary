@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 仅限条件选择时的圆角列表框使用 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/list_item_common_layout" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+	<!-- 内容显示 -->
+	<LinearLayout
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center">
+		<!-- 名称-->
+		<TextView 
+			android:id="@+id/list_item_common_tvName" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textSize="16dip"
+			android:textColor="@color/text_color_black"
+			android:singleLine="true"
+			android:padding="10dip"
+			android:layout_weight="1">
+		</TextView>
+		
+		<!-- 预订标志 -->	
+		<ImageView 			
+			android:id="@+id/list_item_common_ivArrow"
+			android:src="@drawable/arrow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dip"
+			android:layout_marginLeft="10dip" 
+			android:layout_gravity="right|center"
+			android:visibility="invisible">
+		</ImageView>
+	</LinearLayout>
+</LinearLayout>

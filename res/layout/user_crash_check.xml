@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:scrollbars="vertical" 
+    android:fillViewport="true">
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="10dip" 
+        android:background="@drawable/bg_index"
+        android:layout_margin="0dip">
+        
+        <TextView 
+            android:id="@+id/user_crash_check_resname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/text_color_gray"
+            android:layout_marginLeft="10dip"
+            android:textSize="18dip"
+            android:text="餐厅名字"
+            />
+
+        
+        <LinearLayout
+            android:id="@+id/user_center_accountManagement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/block_top_button"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="11dip"
+            android:paddingBottom="9dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:layout_marginTop="10dip"
+            android:baselineAligned="false" >
+
+            <TextView
+                android:id="@+id/user_center_accountManagement_text"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" 
+                android:gravity="left|center_vertical"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/user_crash_check_crashticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" 
+                android:gravity="right|center_vertical"
+                android:text="500元"/>
+        </LinearLayout>
+        
+       
+        <LinearLayout
+            android:id="@+id/user_center_switch_city"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/block_middle_button"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="11dip"
+            android:paddingBottom="9dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:baselineAligned="false" >
+
+            <TextView
+                android:id="@+id/user_center_switch_city_text"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" 
+                android:gravity="left|center_vertical"
+                android:textStyle="bold"
+                android:text="序列号"/>
+            <TextView
+                android:id="@+id/user_crash_check_serialnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" 
+                android:gravity="right|center_vertical"
+                android:text="57148"/>
+        </LinearLayout>
+        
+
+        <!--现金卷密码 -->
+        <LinearLayout
+           
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:background="@drawable/block_bottom_button"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="11dip"
+            android:paddingBottom="9dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:baselineAligned="false" >
+
+            <TextView       
+                android:id="@+id/user_cash_password_text"        
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" 
+                android:gravity="left|center_vertical"
+                android:textStyle="bold"
+                
+                />
+            <TextView
+                android:id="@+id/user_crash_check_ticketpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" 
+                android:gravity="right|center_vertical"
+                android:text="05232384"/>
+        </LinearLayout>
+
+       
+        <LinearLayout
+            android:id="@+id/user_crash_check_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/block_button"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="11dip"
+            android:paddingBottom="9dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:layout_marginTop="10dip"
+            android:baselineAligned="false" >
+
+            <TextView  
+                android:id="@+id/user_cash_use_info"              
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" 
+                android:gravity="left|center_vertical"
+                android:textStyle="bold"
+                
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|right"
+                android:scaleType="centerInside"
+                android:paddingLeft="8dip"
+                android:paddingRight="2dip"
+                android:paddingBottom="1dip"
+                android:src="@drawable/arrow_right2" />            
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

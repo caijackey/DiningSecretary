@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/res_search_two_tag_bt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!-- 标签view -->
+
+    <LinearLayout
+        android:id="@+id/res_one_tag1_bt"
+        android:layout_width="0dip"
+        android:layout_height="36dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:background="@drawable/res_search_tag"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/res_one_tag1_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="14dip"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/res_one_tag2_bt"
+        android:layout_width="0dip"
+        android:layout_height="36dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:background="@drawable/res_search_tag"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/res_one_tag2_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/res_one_tag3_bt"
+        android:layout_width="0dip"
+        android:layout_height="36dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:background="@drawable/res_search_tag"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/res_one_tag3_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center"
+            android:textColor="@color/text_color_white"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30dip" >
+
+        <!-- 口味 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:paddingLeft="3dip"
+                android:paddingRight="3dip"
+                android:singleLine="true"
+                android:text="口味"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+
+            <RadioGroup
+                android:id="@+id/restaurant_upload_grade_taste"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:checkedButton="@+id/default_taste"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/default_taste"
+                    android:tag="5"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="很好"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="4"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="好"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="3"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="一般"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="差"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="很差"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 环境 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:paddingLeft="3dip"
+                android:paddingRight="3dip"
+                android:singleLine="true"
+                android:text="环境"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+
+            <RadioGroup
+                android:id="@+id/restaurant_upload_grade_environment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:checkedButton="@+id/default_environment"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/default_environment"
+                    android:tag="5"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="很好"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="4"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="好"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="3"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="一般"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="差"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="很差"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 服务 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:paddingLeft="3dip"
+                android:paddingRight="3dip"
+                android:singleLine="true"
+                android:text="服务"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+
+            <RadioGroup
+                android:id="@+id/restaurant_upload_grade_service"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:checkedButton="@+id/default_service"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/default_service"
+                    android:tag="5"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="很好"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="4"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="好"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="3"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="一般"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="差"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+
+                <RadioButton
+                    android:tag="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_radio_red"
+                    android:button="@null"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="很差"
+                    android:textColor="@drawable/take_away_menu_list_type_button_text_color"
+                    android:textSize="14dip" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <com.fg114.main.app.view.LineView
+            xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/horizontal_line"
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="#00000000"
+            android:visibility="visible"
+            line:dashedGap="0dip"
+            line:dashedWidth="2dip"
+            line:orientation="horizontal"
+            line:thickness="1px"
+            line:color="#FFCCCCCC" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <!-- 跳过 -->
+
+            <Button
+                android:id="@+id/upload_skip"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/button_gray_with_right_arrow"
+                android:gravity="center"
+                android:paddingLeft="15dip"
+                android:paddingRight="22dip"
+                android:text="跳过"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="20dip"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/upload_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_big"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:text="确定提交"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e7e7e7" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dip" >
+
+        <!-- 顶部文字 -->
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="220dip"
+            android:background="#33FFFFFF"
+            android:padding="0dip"
+            android:visibility="gone" >
+        </FrameLayout>
+        <!-- 图片 -->
+
+        <ImageView
+            android:id="@+id/upload_ivUploadPic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/nearby_food_bt01" />
+        <!-- 阴影分隔线 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dip"
+            android:background="@drawable/detail_div1" />
+
+        <!-- 上传类型选择按钮 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left" >
+
+            <View
+                android:id="@+id/line0"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_marginTop="46dp"
+                android:background="@color/background_color_deep_gray" />
+
+        	<!-- “上传到菜品图” 按钮被选中时的布局 -->
+            <LinearLayout
+                android:id="@+id/layout_tab_0"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp" 
+                android:visibility="gone">
+                
+                <!-- 上传到菜品图 -->
+                <Button
+                    android:id="@+id/upload_to_food0"
+                    android:layout_width="120dip"
+                    android:layout_height="47dip"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_upload_to_food_02"
+                    android:gravity="center"
+                    android:text="上传菜品图片"
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="16dip"
+                    android:textStyle="bold" />
+
+                <!-- 上传到环境图 -->
+
+                <Button
+                    android:id="@+id/upload_to_restaurant0"
+                    android:layout_width="120dip"
+                    android:layout_height="46dip"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/button_upload_to_food_01"
+                    android:gravity="center"
+                    android:text="上传餐厅图片"
+                    android:textColor="@color/text_color_light_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- “上传到环境图”被选中时的布局 -->
+            <LinearLayout
+                android:id="@+id/layout_tab_1"
+                android:layout_width="fill_parent"
+                android:layout_height="47dp" 
+                android:visibility="visible">
+
+                <!-- 上传到菜品图 -->
+
+                <Button
+                    android:id="@+id/upload_to_food1"
+                    android:layout_width="120dip"
+                    android:layout_height="46dip"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_upload_to_food_01"
+                    android:gravity="center"
+                    android:enabled="true"
+                    android:text="上传菜品图片"
+                    android:textColor="@color/text_color_light_gray"
+                    android:textSize="16dip"
+                    android:textStyle="bold" />
+
+                <!-- 上传到环境图 -->
+
+                <Button
+                    android:id="@+id/upload_to_restaurant1"
+                    android:layout_width="120dip"
+                    android:layout_height="47dip"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/button_upload_to_food_02"
+                    android:gravity="center"
+                    android:enabled="true"
+                    android:text="上传餐厅图片"
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/upload_edit_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <!-- 菜的名称选择 -->
+
+            <LinearLayout
+                android:id="@+id/upload_select_food_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/shape_rectangle_white_with_radius_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/upload_select_food"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:maxLength="25"
+                    android:background="#00000000"
+                    android:text="菜名"
+                    android:hint="输入菜的名称"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:hint="选择或者输入菜的名称"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="30dip"
+                    android:singleLine="true"
+                    android:textSize="16dip"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- 填写价格 -->
+
+            <LinearLayout
+                android:id="@+id/upload_layout_price_and_unit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/upload_price"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rectangle_white_with_radius_border"
+                    android:hint="填写价格"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="16dip" />
+
+                <Spinner
+                    android:id="@+id/upload_unit"
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="0dip"
+                    android:background="@drawable/bg_gray"
+                    android:entries="@array/upload_unit_array"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+            <!-- 说点什么 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/block_bt01"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@+id/upload_comments"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="@string/text_layout_input_pic_title"
+                        android:inputType="textMultiLine"
+                        android:maxLength="200"
+                        android:maxLines="6"
+                        android:minLines="3"
+                        android:padding="5dip"
+                        android:singleLine="false"
+                        android:textColor="@color/text_color_black"
+                        android:textColorHint="@color/text_color_gray"
+                        android:textSize="16dip" />
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:padding="2dip" 
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/upload_atsina_weibo"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_gravity="left|center_horizontal"
+                            android:layout_marginLeft="10dip"
+                            android:background="@drawable/at_bt"
+                            android:text="" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/upload_voice_button"
+                    layout="@layout/voice_recognition_button_small" />
+            </LinearLayout>
+
+            <!-- 选择评论模版 -->
+
+            <Button
+                android:id="@+id/upload_select_comment_templet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_gray"
+                android:drawableRight="@drawable/arrow_down_black"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:singleLine="true"
+                android:text="输入麻烦？选择我们预设的描述吧！"
+                android:textColor="#FF444444"
+                android:textSize="16dip" />
+
+            <!-- 分享到新浪微博 -->
+
+            <LinearLayout
+                android:id="@+id/upload_share_weibo_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:text="分享到："
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/upload_chkShareSina"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:button="@drawable/my_check_box_sina_icon"/>
+                
+                <CheckBox
+                    android:id="@+id/upload_chkShareTencent"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="10dp"
+                    android:button="@drawable/my_check_box_tencent_icon"/>
+            </LinearLayout>
+            <!-- 按钮 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <!-- 上传 -->
+
+                <Button
+                    android:id="@+id/upload_btnUpLoad"
+                    android:layout_width="120dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_big"
+                    android:gravity="center"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="20dip"
+                    android:text="@string/text_button_upload"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="16dip"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 进度条 -->
+
+        <ProgressBar
+            android:id="@+id/upload_pbBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:indeterminate="true"
+            android:padding="10dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

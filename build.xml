@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DiningSecretary_V3_Ant" default="Build_All" basedir=".">
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+
+	<!-- Properties -->
+
+	<property file="build.properties" />
+
+	<!-- Output directories -->
+	<property name="outdir" value="bin" />
+	<property name="outdir-classes" value="${outdir}/classes" />
+	<property name="outdir-ospath" location="${basedir}/${outdir}" />
+	<property name="outdir-classes-ospath" value="${basedir}/${outdir-classes}" />
+	<condition property="zipalign-package-ospath" value="${app.out.path}/${app.name}" else="${basedir}/${app.name}">
+		<os family="windows" />
+	</condition>
+
+	<!-- Input directories -->
+	<property name="src-dir" value="src" />
+	<property name="resource-dir" value="res" />
+	<property name="asset-dir" value="assets" />
+	<property name="external-libs" value="lib" />
+	<property name="ndk-libs" value="libs" />
+	<property name="src-dir-ospath" value="${basedir}/${src-dir}" />
+	<property name="resource-dir-ospath" value="${basedir}/${resource-dir}" />
+	<property name="asset-dir-ospath" value="${basedir}/${asset-dir}" />
+	<property name="external-libs-ospath" value="${basedir}/${external-libs}" />
+	<property name="ndk-libs-ospath" value="${basedir}/${ndk-libs}" />
+	<property name="setting_ospath" value="${basedir}/assets/ch" />
+
+	<!-- R.java in the source directory -->
+	<property name="gen-dir" value="gen" />
+
+	<!-- Intermediate files -->
+	<property name="dex-file" value="classes.dex" />
+	<property name="intermediate-dex" value="${outdir}/${dex-file}" />
+	<property name="intermediate-dex-ospath" value="${basedir}/${intermediate-dex}" />
+	<property name="setting-tmp-ospath" value="${app.out.path}/ch" />
+
+	<!-- The final package file to generate -->
+	<property name="resources-package" value="${outdir}/${ant.project.name}.ap_" />
+	<property name="out-debug-package" value="${outdir}/${ant.project.name}_debug.apk" />
+	<property name="out-unsigned-package" value="${outdir}/${ant.project.name}_unsigned.apk" />
+	<property name="out-signed-package" value="${outdir}/${ant.project.name}_signed.apk" />
+	<property name="resources-package-ospath" value="${basedir}/${resources-package}" />
+	<property name="out-debug-package-ospath" value="${basedir}/${out-debug-package}" />
+	<property name="out-unsigned-package-ospath" value="${basedir}/${out-unsigned-package}" />
+	<property name="out-signed-package-ospath" value="${basedir}/${out-signed-package}" />
+
+	<!-- Tools -->
+	<property name="android-jar" value="${android.platforms}/android.jar" />
+	<property name="android-framework" value="${android.platforms}/framework.aidl" />
+	<condition property="adb" value="${android.platform-tools}/adb.exe" else="${android.tools}/adb">
+		<os family="windows" />
+	</condition>
+	<condition property="aapt" value="${android.platform-tools}/aapt.exe" else="${android.tools}/aapt">
+		<os family="windows" />
+	</condition>
+	<condition property="aidl" value="${android.platform-tools}/aidl.exe" else="${android.tools}/aidl">
+		<os family="windows" />
+	</condition>
+	<condition property="dx" value="${android.platform-tools}/dx.bat" else="${android.tools}/dx">
+		<os family="windows" />
+	</condition>
+	<condition property="zipalign" value="${android.tools}/zipalign.exe" else="${android.tools}/zipalign">
+		<os family="windows" />
+	</condition>
+	<condition property="apk-builder" value="${android.tools}/apkbuilder.bat" else="${android.tools}/apkbuilder">
+		<os family="windows" />
+	</condition>
+	<condition property="jarsigner" value="${jdk.home}/bin/jarsigner.exe" else="${jdk.home}/bin/jarsigner">
+		<os family="windows" />
+	</condition>
+
+	<!-- End Properties -->
+
+	<!-- Start Macros -->
+
+	<macrodef name="package-res-by-assets">
+		<sequential>
+			<if>
+				<equals arg1="${app.with.assets}" arg2="true" />
+				<then>
+					<antcall target="package-res-and-assets" />
+				</then>
+				<else>
+					<antcall target="package-res-no-assets" />
+				</else>
+			</if>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="genApk">
+		<attribute name="channelID" />
+		<sequential>
+			<echo message="Channel: @{channelID}" />
+			<copy file="${setting-tmp-ospath}" tofile="${setting_ospath}" overwrite="true" failonerror="true" />
+			<replace file="${setting_ospath}" token='{渠道号}' value='@{channelID}' encoding="utf-8" />
+			<copy file="${setting_ospath}" tofile="${setting-tmp-ospath}_@{channelID}" overwrite="true" failonerror="true" />
+			<antcall target="zipalign">
+				<param name="channel" value="@{channelID}" />
+			</antcall>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="genAll">
+		<sequential>
+			<if>
+				<equals arg1="${package.mode}" arg2="0" />
+				<then>
+					<for param="i" step="1" begin="${package.min.channel}" end="${package.max.channel}">
+						<sequential>
+							<genApk channelID="@{i}" />
+						</sequential>
+					</for>
+				</then>
+				<elseif>
+					<equals arg1="${package.mode}" arg2="1" />
+					<then>
+						<for param="i" list="${package.channelIDs}">
+							<sequential>
+								<genApk channelID="@{i}" />
+							</sequential>
+						</for>
+					</then>
+				</elseif>
+			</if>
+		</sequential>
+	</macrodef>
+	<!-- End Macros -->
+
+	<!-- Rules -->
+
+	<!-- Build all apks -->
+	<target name="Build_All">
+		<echo message="Build all apks." />
+		<copy file="${setting_ospath}" tofile="${setting-tmp-ospath}" overwrite="true" failonerror="true" />
+		<genAll />
+		<copy file="${setting-tmp-ospath}" tofile="${setting_ospath}" overwrite="true" failonerror="true" />
+	</target>
+
+	<!-- Create the output directories if they don't exist yet. -->
+	<target name="dirs">
+		<echo message="Creating output directories if needed..." />
+		<mkdir dir="${app.out.path}" />
+		<mkdir dir="${outdir}" />
+		<mkdir dir="${outdir-classes}" />
+	</target>
+
+	<!-- Generate the R.java file for this project's resources. -->
+	<target name="resource-src" depends="dirs">
+		<echo>Generating R.java / Manifest.java from the resources...</echo>
+		<exec executable="${aapt}" failonerror="true">
+			<arg value="package" />
+			<arg value="-m" />
+			<arg value="-J" />
+			<arg value="${gen-dir}" />
+			<arg value="-M" />
+			<arg value="AndroidManifest.xml" />
+			<arg value="-S" />
+			<arg value="${resource-dir}" />
+			<arg value="-I" />
+			<arg value="${android-jar}" />
+		</exec>
+	</target>
+
+	<!-- Generate java classes from .aidl files. -->
+	<target name="aidl" depends="dirs">
+		<echo>Compiling aidl files into Java classes...</echo>
+		<apply executable="${aidl}" failonerror="true">
+			<arg value="-p${android-framework}" />
+			<arg value="-I${src-dir}" />
+			<fileset dir="${src-dir}">
+				<include name="**/*.aidl" />
+			</fileset>
+		</apply>
+	</target>
+
+	<!-- Compile this project's .java files into .class files. -->
+	<!-- <target name="compile" depends="dirs, resource-src, aidl"> -->
+	<target name="compile" depends="dirs, aidl">
+		<javac encoding="utf-8" target="1.6" debug="false" optimize="true" extdirs="" srcdir="." destdir="${outdir-classes}" bootclasspath="${android-jar}">
+			<classpath>
+				<fileset dir="${external-libs}" includes="*.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+	<!-- Convert this project's .class files into .dex files. -->
+	<target name="dex" depends="compile">
+		<echo>Converting compiled files and external libraries into ${outdir}/${dex-file}...</echo>
+		<apply executable="${dx}" failonerror="true" parallel="true">
+			<arg value="--dex" />
+			<arg value="--output=${intermediate-dex-ospath}" />
+			<arg path="${outdir-classes-ospath}" />
+			<fileset dir="${external-libs}" includes="*.jar" />
+		</apply>
+	</target>
+
+	<!-- Put the project's resources into the output package file. -->
+	<target name="package-res-and-assets">
+		<echo>Packaging resources and assets...</echo>
+		<exec executable="${aapt}" failonerror="true">
+			<arg value="package" />
+			<arg value="-f" />
+			<arg value="-M" />
+			<arg value="AndroidManifest.xml" />
+			<arg value="-S" />
+			<arg value="${resource-dir}" />
+			<arg value="-A" />
+			<arg value="${asset-dir}" />
+			<arg value="-I" />
+			<arg value="${android-jar}" />
+			<arg value="-F" />
+			<arg value="${resources-package}" />
+		</exec>
+	</target>
+
+	<!-- Same as package-res-and-assets, but without "-A ${asset-dir}" -->
+	<target name="package-res-no-assets">
+		<echo>Packaging resources...</echo>
+		<exec executable="${aapt}" failonerror="true">
+			<arg value="package" />
+			<arg value="-f" />
+			<arg value="-M" />
+			<arg value="AndroidManifest.xml" />
+			<arg value="-S" />
+			<arg value="${resource-dir}" />
+			<!-- No assets directory -->
+			<arg value="-I" />
+			<arg value="${android-jar}" />
+			<arg value="-F" />
+			<arg value="${resources-package}" />
+		</exec>
+	</target>
+
+	<!-- Invoke the proper target depending on whether or not an assets directory is present. -->
+	<target name="package-res">
+		<package-res-by-assets />
+	</target>
+
+	<!-- Package the application and sign it with a debug key.   
+             This is the default target when building. It is used for debug. -->
+	<target name="debug" depends="dex, package-res">
+		<echo>Packaging ${out-debug-package}, and signing it with a debug key...</echo>
+		<exec executable="${apk-builder}" failonerror="true">
+			<arg value="${out-debug-package-ospath}" />
+			<arg value="-z" />
+			<arg value="${resources-package-ospath}" />
+			<arg value="-f" />
+			<arg value="${intermediate-dex-ospath}" />
+			<arg value="-rf" />
+			<arg value="${srcdir-ospath}" />
+			<arg value="-rj" />
+			<arg value="${external-libs-ospath}" />
+			<arg value="-nf" />
+			<arg value="${ndk-libs-ospath}" />
+		</exec>
+	</target>
+
+	<!-- Package the application without signing it.   
+             This allows for the application to be signed later with an official publishing key. -->
+	<!--<target name="release" depends="dex, package-res"> -->
+	<target name="release" depends="package-res">
+		<echo>Packaging ${out-unsigned-package} for release...</echo>
+		<exec executable="${apk-builder}" failonerror="true">
+			<arg value="${out-unsigned-package-ospath}" />
+			<arg value="-u" />
+			<arg value="-z" />
+			<arg value="${resources-package-ospath}" />
+			<arg value="-f" />
+			<arg value="${intermediate-dex-ospath}" />
+			<arg value="-rf" />
+			<arg value="${src-dir-ospath}" />
+			<arg value="-rj" />
+			<arg value="${external-libs-ospath}" />
+			<arg value="-nf" />
+			<arg value="${ndk-libs-ospath}" />
+		</exec>
+		<echo>It will need to be signed with jarsigner before being published.</echo>
+	</target>
+
+	<!-- Sign the app-->
+	<target name="jarsigner" depends="release">
+		<exec executable="${jarsigner}" failonerror="true">
+			<!-- <arg value="-verbose" /> -->
+			<arg value="-sigfile" />
+			<arg value="CERT" />
+			<arg value="-storepass" />
+			<arg value="${password}" />
+			<arg value="-keypass" />
+			<arg value="${password}" />
+			<arg value="-keystore" />
+			<arg value="${keystore}" />
+			<arg value="-signedjar" />
+			<arg value="${out-signed-package-ospath}" />
+			<arg value="${out-unsigned-package-ospath}" />
+			<arg value="${storename}" />
+		</exec>
+	</target>
+
+	<!-- Zipalign the app-->
+	<target name="zipalign" depends="jarsigner">
+		<exec executable="${zipalign}" failonerror="true">
+			<!-- <arg value="-v" /> -->
+			<arg value="-f" />
+			<arg value="4" />
+			<arg value="${out-signed-package-ospath}" />
+			<arg value="${zipalign-package-ospath}_c${channel}_V${app.version}.apk" />
+		</exec>
+	</target>
+
+	<!-- Install the package on the default emulator -->
+	<target name="install" depends="debug">
+		<echo>Installing ${out-debug-package} onto default emulator...</echo>
+		<exec executable="${adb}" failonerror="true">
+			<arg value="install" />
+			<arg value="${out-debug-package}" />
+		</exec>
+	</target>
+
+	<!-- Reinstall the package on the default emulator -->
+	<target name="reinstall" depends="debug">
+		<echo>Installing ${out-debug-package} onto default emulator...</echo>
+		<exec executable="${adb}" failonerror="true">
+			<arg value="install" />
+			<arg value="-r" />
+			<arg value="${out-debug-package}" />
+		</exec>
+	</target>
+
+	<!-- Uinstall the package from the default emulator -->
+	<target name="uninstall">
+		<echo>Uninstalling ${app.package} from the default emulator...</echo>
+		<exec executable="${adb}" failonerror="true">
+			<arg value="uninstall" />
+			<arg value="${app.package}" />
+		</exec>
+	</target>
+
+	<!-- End Rules -->
+</project>

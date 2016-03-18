@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/tittle_topbar" >
+
+        <include
+            android:id="@+id/search_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp"
+            layout="@layout/index_new_search_bar" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- 快捷预定 -->
+
+            <!--  <TextView
+                android:id="@+id/fast_book_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:text="快捷预订"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14sp" />-->
+
+           <!-- <RelativeLayout
+                android:id="@+id/index2_relative_main"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >-->
+
+                <!-- 伪搜索框 -->
+
+               <!-- <LinearLayout
+                    android:id="@+id/fast_booking_top_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/hot_district_search_bg_top"
+                    android:orientation="horizontal"
+                    android:padding="8dp" >
+
+                    <LinearLayout
+                        android:id="@+id/fast_booking_search_text_layout"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginRight="-5dip"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="10dip" >-->
+
+                        <!-- 餐厅名 -->
+
+                       <!-- <TextView
+                            android:id="@+id/fast_booking_search_text_view"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入餐厅首字母"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:baselineAligned="false"
+                            android:gravity="center" > -->
+
+                            <!-- 秘币图标 -->
+
+                            <!-- <ImageView
+                                android:id="@+id/promotion_icon_mibi"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/icon_mibi_1"
+                                android:visibility="visible" /> -->
+
+                            <!-- 秘币文字 -->
+
+                            <!--<TextView
+                                android:id="@+id/promotion_mibi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-10dip"
+                                android:layout_marginTop="-7dip"
+                                android:padding="0dip"
+                                android:text="15%"
+                                android:textColor="@color/text_color_red"
+                                android:textSize="10dip"
+                                android:visibility="visible" />
+                        </LinearLayout>-->
+
+                        <!-- 优惠和文字 -->
+
+                       <!-- <TextView
+                            android:id="@+id/promotion_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dip"
+                            android:background="@drawable/promotion_discount_icon_bg"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="1dip"
+                            android:text="75折惠"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="12dip"
+                            android:visibility="visible" />-->
+                        <!-- 券和文字 -->
+
+                        <!--<TextView
+                            android:id="@+id/promotion_coupon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dip"
+                            android:background="@drawable/promotion_coupon_icon_bg"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="1dip"
+                            android:text="75折券"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="12dip"
+                            android:visibility="visible" />
+                    </LinearLayout>-->
+                    <!-- 右按钮 -->
+
+                   <!-- <Button
+                        android:id="@+id/fast_booking_search_right_button"
+                        android:layout_width="33dip"
+                        android:layout_height="30dip"
+                        android:background="@drawable/hot_district_pull_down"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="16dp" />
+                </LinearLayout>-->
+
+                <!-- 下部 -->
+
+               <!-- <LinearLayout
+                    android:id="@+id/fast_booking_bottom_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fast_booking_top_layout"
+                    android:layout_marginTop="0dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >-->
+
+                    <!-- 中间滚轮，提交按钮 -->
+
+                 <!--   <com.fg114.main.app.view.OrderSelectionWheelView
+                        xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+                        android:id="@+id/order_info_selection_wheel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="140dip"
+                        android:background="@drawable/index_search_bg_top"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/button_order_submit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dip"
+                        android:layout_marginLeft="-2px"
+                        android:layout_marginRight="1px"
+                        android:background="@drawable/bt_submit_order"
+                        android:gravity="center"
+                        android:text="确定提交"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="17dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/button_order_phone_call"
+                        android:layout_width="100dip"
+                        android:layout_height="100dip"
+                        android:layout_marginTop="20dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/index_phone_order_01"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/fast_booking_search_order_hint_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="一键预订:021-58305757"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="16dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/button_order_bottom_line_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:layout_marginTop="0dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_index_search_bottom"
+                        android:visibility="gone" />
+                </LinearLayout>-->
+                <!-- 禁止操作的蒙皮 -->
+
+              <!--  <LinearLayout
+                    android:id="@+id/order_selection_mask"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/advertisement_layout"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dip"
+                    android:background="#22000000"
+                    android:visibility="gone" />
+            </RelativeLayout>-->
+
+            <!-- 热门商区 -->
+
+            <LinearLayout
+                android:id="@+id/hot_district_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- android:drawableLeft="@drawable/icon_location_buiness_district" -->
+
+                <TextView
+                    android:id="@+id/test_entry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="热门商区"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/hot_district_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rectangle_white_with_radius_border"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- 热门菜系 -->
+            <!-- android:drawableLeft="@drawable/icon_location_buiness_district" -->
+
+            <LinearLayout
+                android:id="@+id/hot_main_menu_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/change_locbaidu_or_gps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="热门菜系"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/hot_main_menu_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rectangle_white_with_radius_border"
+                    android:orientation="vertical" />
+            </LinearLayout>
+            <!-- 热门榜单 -->
+
+            <LinearLayout
+                android:id="@+id/top_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="热门榜单"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/top_list_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rectangle_white_with_radius_border"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- 热门线路 -->
+
+            <LinearLayout
+                android:id="@+id/hot_subway_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="地铁沿线"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/hot_subway_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rectangle_white_with_radius_border"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- 最近选择过的商区 -->
+            <!-- android:drawableLeft="@drawable/icon_category" -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvLatelyBrowse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="最近选择过的商圈"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/lately_browse_district_layoutId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_rectangle_white_with_radius_border"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- 内部修正版本号 -->
+
+            <TextView
+                android:id="@+id/build_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|bottom"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="5dip"
+                android:paddingTop="20dip"
+                android:text="build-0"
+                android:textColor="#22000000"
+                android:textSize="8dip" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

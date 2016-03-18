@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/bnt_submit"
+            android:layout_width="160dip"
+            android:layout_height="35dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_red_new"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="确定提交"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linearlayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/my_order_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:paddingBottom="10dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/my_order_message_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="09月10号 星期二 18:15"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="14dip" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="50dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/my_order_message_peoplenum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="10dip"
+                            android:text="44人"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="14dip" />
+
+                        <TextView
+                            android:id="@+id/my_order_message_roomtype"
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="30dip"
+                            android:layout_marginTop="10dip"
+                            android:singleLine="false"
+                            android:text="优先定大厅"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="14dip" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/my_order_edit"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="15dip"
+                    android:background="@drawable/button_edit" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/background_color_deep_gray"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/booker_default_message_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical" >
+                
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="预定人信息"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+                
+                <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@color/line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="3dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/booker_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dip"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_marginRight="0dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_backgroud"
+                        android:gravity="center_vertical|left"
+                        android:hint="请输入预订人姓名"
+                        android:inputType="text"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_black"
+                        android:textColorHint="@color/text_color_hint"
+                        android:textSize="16dip" />
+
+                    <Button
+                        android:id="@+id/booker_sex"
+                        android:layout_width="250dip"
+                        android:layout_height="34dip"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_sex_selector"
+                        android:gravity="center_vertical|left"
+                        android:paddingLeft="18dip"
+                        android:paddingRight="22dip"
+                        android:singleLine="true"
+                        android:tag="1"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+<View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="3dip"
+                        android:background="@color/line" />
+                <EditText
+                    android:id="@+id/booker_tel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_backgroud"
+                    android:gravity="center_vertical|left"
+                    android:hint="请输入预订人手机号"
+                    android:inputType="number"
+                    android:paddingLeft="5dip"
+                    android:singleLine="true"
+                    android:maxLength="11"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textSize="16dip" />
+                
+                <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="3dip"
+                        android:background="@color/line" />
+
+                <EditText
+                    android:id="@+id/memo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="3dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_backgroud"
+                    android:gravity="center_vertical|left"
+                    android:hint="备注：请输入70字以内"
+                    android:inputType="text"
+                    android:maxLength="70"
+                    android:paddingLeft="5dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textSize="16dip" />
+                
+                <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="3dip"
+                        android:background="@color/line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip" 
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="为他人预定"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" 
+                        android:layout_weight="1"/>
+
+                    <ToggleButton
+                        android:id="@+id/bnt_toggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/button_toggle"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eater_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+                    
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="3dip">
+
+                        <EditText
+                            android:id="@+id/eater_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="35dip"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_marginRight="0dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_backgroud"
+                            android:gravity="center_vertical|left"
+                            android:hint="请输就餐人姓名"
+                            android:maxLength="100"
+                            android:paddingLeft="5dip"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_black"
+                            android:textColorHint="@color/text_color_hint"
+                            android:textSize="16dip" />
+
+                        <Button
+                            android:id="@+id/eater_sex_tag"
+                            android:layout_width="250dip"
+                            android:layout_height="34dip"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginLeft="5dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_sex_selector"
+                            android:gravity="center_vertical|left"
+                            android:paddingLeft="18dip"
+                            android:paddingRight="22dip"
+                            android:singleLine="true"
+                            android:tag="1"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+                    
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="3dip"
+                        android:background="@color/line" />
+
+                    <EditText
+                        android:id="@+id/eater_tel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dip"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="3dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_backgroud"
+                        android:gravity="center_vertical|left"
+                        android:hint="请输就餐人手机号"
+                        android:inputType="number"
+                        android:paddingLeft="5dip"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_black"
+                        android:textColorHint="@color/text_color_hint"
+                        android:textSize="16dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_bt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/order_activity_image" />
+
+                <TextView
+                    android:id="@+id/order_activity_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

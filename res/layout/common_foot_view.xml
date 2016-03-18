@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 此布局没有实际业务作用，只是为了辅助ListView而用！ 因为当ListView过少时，便无法滑动。
+	  此种情况，可能造成一些左右联动效果无法实现 
+		 **********************注意这个布局中padding的设置  
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="400dip"  
+    android:paddingBottom="7dip"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@drawable/bg_index_new">
+
+    <LinearLayout 
+        android:id="@+id/footer_layout" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+    <TextView 
+        android:id="@+id/footer_1" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textSize="14sp" 
+        android:textStyle="bold" 
+        android:layout_marginRight="5dip" />
+    </LinearLayout>
+</LinearLayout> 

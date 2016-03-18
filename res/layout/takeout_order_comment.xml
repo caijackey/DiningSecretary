@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/takeout_order_scrollBar"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:fillViewport="true"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="top|center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/takeaway_comment_score_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dip"
+                android:gravity="left|center"
+                android:orientation="vertical" >
+
+                <!-- 标题（给美食点评） -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="给美食评星"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="18dip" />
+            </LinearLayout>
+            <!-- 外卖菜品评分 -->
+
+            <LinearLayout
+                android:id="@+id/takeout_order_commentListLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="0dip" >
+
+                <com.fg114.main.app.view.MyListView
+                    android:id="@+id/takeaway_order_comment_list"
+                    style="@style/myListView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dip"
+                    android:divider="@null"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" >
+                </com.fg114.main.app.view.MyListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/restaurant_comment_comment_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top|center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <!-- 评论 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/block_bt01"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="5dip" >
+
+                        <EditText
+                            android:id="@+id/takeaway_comment"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/text_layout_takeout_recommend"
+                            android:inputType="textMultiLine"
+                            android:maxLines="8"
+                            android:minLines="4"
+                            android:scrollbars="vertical"
+                            android:singleLine="false"
+                            android:textColor="@color/text_color_black"
+                            android:textColorHint="@color/text_color_gray"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 分享微博 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dip" >
+
+                    <ToggleButton
+                        android:id="@+id/takeaway_comment_submit_chkShareSina"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="13dip"
+                        android:background="@drawable/sina_check_weibo"
+                        android:textOff=""
+                        android:textOn="" >
+                    </ToggleButton>
+
+                    <ToggleButton
+                        android:id="@+id/takeaway_comment_submit_chkShareTX"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="25dip"
+                        android:layout_toRightOf="@+id/comment_sina"
+                        android:background="@drawable/tx_check_weibo"
+                        android:textOff=""
+                        android:textOn="" >
+                    </ToggleButton>
+
+                    <!-- 提交 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:gravity="right"
+                        android:paddingRight="10dip" >
+
+                        <Button
+                            android:id="@+id/takeaway_comment_submit_btnUpLoad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_green"
+                            android:padding="10dip"
+                            android:text="@string/text_button_upload"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 消息遮罩 -->
+
+        <LinearLayout
+            android:id="@+id/takeaway_comment_submit_message_mask"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:background="#66000000"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="15dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingTop="15dip"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="#EE333333"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dip"
+                android:visibility="visible" >
+
+                <!-- 进度条 -->
+
+                <ProgressBar
+                    android:id="@+id/upload_pbBar"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="visible" />
+
+                <!-- 文字信息 -->
+
+                <TextView
+                    android:id="@+id/upload_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:text="@string/text_info_uploading"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="14dip" />
+                <!-- 附加文字信息 -->
+
+                <TextView
+                    android:id="@+id/takeaway_upload_message_extra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="正在上传"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

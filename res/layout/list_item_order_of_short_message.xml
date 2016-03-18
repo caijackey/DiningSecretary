@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:id="@+id/order_list_item_orderLayout"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:paddingLeft="10dip"
+		android:paddingTop="10dip"
+		android:paddingBottom="10dip"
+		android:orientation="horizontal"
+		android:background="@drawable/order_list_bt"
+		android:descendantFocusability="blocksDescendants">
+		<!-- 订单内容区 -->
+		<LinearLayout
+	 		android:orientation="vertical"
+	 		android:layout_width="0dip" 
+	 		android:layout_height="wrap_content"
+	 		android:layout_weight="1"
+	 		android:id="@+id/order_list_item_orderLayout_left">
+
+			<RelativeLayout
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"	
+				android:orientation="horizontal">
+				<!-- 餐馆名称 -->		
+				<TextView 
+					android:id="@+id/order_list_item_tvResName"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="16dip"
+					android:textColor="@color/text_color_black"
+					android:maxEms="10"
+					android:ellipsize="end"
+					android:singleLine="true"/>
+				<!-- 订单状态 -->		
+				<TextView 
+				    android:layout_alignParentRight="true"
+				    android:text="已发送请柬"
+					android:id="@+id/order_list_item_tvState"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="10dip"
+					android:textSize="14dip"
+					android:textColor="@color/text_color_red"
+					android:maxEms="5"
+					android:ellipsize="end"
+					android:singleLine="true"/>
+		 	</RelativeLayout>	
+		 		
+			<RelativeLayout
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dip"
+				>
+       			<!-- 就餐时间 -->
+       			<TextView 
+       			    android:id="@+id/order_list_item_tvTite"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/text_layout_lunch_time"
+					android:textSize="14dip"
+					android:textColor="@color/text_color_black"
+					android:singleLine="true"/>
+				<TextView 
+				    android:layout_toRightOf="@id/order_list_item_tvTite"
+					android:id="@+id/order_list_item_tvLunchTime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:textColor="@color/text_color_black"
+					android:singleLine="true"/>
+				
+			</RelativeLayout>
+			
+			<LinearLayout
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dip"
+				android:gravity="left|top"	
+				android:orientation="horizontal">
+       			<!-- 预订手机 -->
+       			<TextView 
+       				android:id="@+id/order_list_item_tvPhoneLable"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/text_layout_booker_phone"
+					android:textSize="14dip"
+					android:textColor="@color/text_color_gray"
+					android:singleLine="true"/>
+				<TextView 
+					android:id="@+id/order_list_item_tvPhone"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="10dip"
+					android:textSize="14dip"
+					android:textColor="@color/text_color_deep_red"
+					android:singleLine="true"/>
+			</LinearLayout>
+		</LinearLayout>
+		<!-- 箭头符号区 -->
+	    <LinearLayout
+	 		android:orientation="horizontal"
+	 		android:layout_width="wrap_content" 
+	 		android:layout_height="wrap_content">
+	    	<ImageView
+				android:src="@drawable/arrow"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical|right"/>
+		</LinearLayout>
+	</LinearLayout>
+	<!-- 消息提示区 -->
+	<LinearLayout
+		android:id="@+id/order_list_item_msgLayout"
+ 		android:orientation="horizontal"
+ 		android:layout_width="fill_parent" 
+ 		android:layout_height="fill_parent"
+		android:gravity="center"
+		android:background="@drawable/middle_list_item_bg1_state02"
+ 		android:visibility="gone">
+		<ProgressBar
+			android:id="@+id/order_list_item_pBar"
+			style="?android:attr/progressBarStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+ 			android:visibility="gone" />
+ 		<TextView
+ 			android:id="@+id/order_list_item_tvMsg"
+ 			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dip"
+			android:textSize="14dip"
+			android:textColor="@color/text_color_black"/>
+ 	</LinearLayout>
+</LinearLayout>

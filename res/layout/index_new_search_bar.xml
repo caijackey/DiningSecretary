@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/index_new_search_bar"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:padding="3dp">
+	<RelativeLayout
+		android:id="@+id/index_new_search_bar_rlSearch"
+		android:layout_width="fill_parent"
+		android:layout_height="40dip"
+		android:background="@drawable/index2_search_bg">
+		<Button
+			android:id="@+id/index_new_search_bar_btVoice"
+			android:layout_width="33dip"
+			android:layout_height="fill_parent"
+			android:layout_marginLeft="1dip"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:background="@drawable/button_voice_round" />
+		<TextView
+		    android:id="@+id/index_new_search_bar_tvKey"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="40dp"
+			android:layout_toRightOf="@id/index_new_search_bar_btVoice"
+			android:layout_centerVertical="true"
+			android:singleLine="true"
+			android:textSize="14dp"
+			android:textColor="@color/text_color_gray"
+			android:hint="任意搜，如东方路" />
+	</RelativeLayout>
+</FrameLayout>

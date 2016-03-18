@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip" >
+
+    <!-- 评论信息部分 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/new_block_bt01"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <!-- 发帖人及时间 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="top"
+            android:orientation="horizontal" >
+
+            <!-- 头像 -->
+
+            <RelativeLayout
+                android:layout_width="38dip"
+                android:layout_height="38dip" >
+
+                <com.fg114.main.app.view.MyImageView
+                    android:id="@+id/list_item_comment_userphoto"
+                    android:layout_width="38dip"
+                    android:layout_height="38dip"
+                   
+                    android:src="@drawable/bg_custom_dialog" />
+
+                <ImageView
+                    android:layout_width="38dip"
+                    android:layout_height="38dip"
+                    
+                    android:src="@drawable/res_recom_user_skin" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/list_item_comment_tvUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="wode"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/list_item_comment_tvTime"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="right|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/text_color_gray"
+                android:textSize="12dip" >
+            </TextView>
+        </LinearLayout>
+
+        <!-- 餐馆星级 -->
+
+        <LinearLayout
+            android:id="@+id/list_item_comment_rbStarlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 评分 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_layout_taste"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/list_item_comment_tvTaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="5dip"
+                android:textColor="@color/text_color_red_3"
+                android:textSize="16dip" >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="@string/text_layout_env"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/list_item_comment_tvEnvironment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="5dip"
+                android:textColor="@color/text_color_red_3"
+                android:textSize="16dip" >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="@string/text_layout_service"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/list_item_comment_tvSerivce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:textColor="@color/text_color_red_3"
+                android:textSize="16dip" >
+            </TextView>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="20dip"
+                android:layout_weight="1" />
+            <!-- 他喜欢 -->
+
+            <TextView
+                android:id="@+id/list_item_comment_he_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:drawableLeft="@drawable/attention_recommen_restaurant_2"
+                android:drawablePadding="1dip"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="0dip"
+                android:singleLine="true"
+                android:text="他喜欢"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <!-- 来自随手拍 -->
+
+        <LinearLayout
+            android:id="@+id/list_item_comment_photolayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/list_item_comment_tvNoRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="12dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_item_comment_tvComment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="16dip" >
+        </TextView>
+
+        <com.fg114.main.app.view.CommentImageHorizontalScrollView
+            android:id="@+id/list_item_comment_imageScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+        <!-- 分隔线 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@color/background_color_deep_gray" />
+        <!-- 我要回复等图标、信息 -->
+
+        <LinearLayout
+            android:id="@+id/list_item_comment_replyLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:baselineAligned="false"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_comment_reply" />
+
+            <TextView
+                android:id="@+id/list_item_comment_replyNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:padding="0dip"
+                android:text="回复(0)"
+                android:textColor="@color/text_color_gray"
+                android:textSize="12dip" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="10dip"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/list_item_comment_replyClientIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_comment_come_from" />
+
+            <TextView
+                android:id="@+id/list_item_comment_replyClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:text="来自Android客户端"
+                android:textColor="@color/text_color_gray"
+                android:textSize="12dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

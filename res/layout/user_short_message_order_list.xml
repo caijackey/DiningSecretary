@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<!-- 我的订单列表 -->	
+	<ListView 			
+		android:id="@+id/user_order_List_listview"
+		android:layout_width="fill_parent"
+		android:layout_height="0dip"
+		android:layout_gravity="center_horizontal|top"
+		style="@style/myListView"
+		android:drawSelectorOnTop="false"
+		android:layout_weight="1"
+		android:visibility="visible"/>
+	
+	<!-- 登录按钮层 -->
+	<LinearLayout
+		android:id="@+id/user_order_List_LoginLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:padding="10dip"
+		android:background="@color/background_color_white">
+	    <TextView
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"
+	        android:text="订单发送请柬需先登录"
+	        android:textColor="@color/text_color_gray"
+	        android:textSize="12dip"
+	        android:singleLine="true"
+	        android:padding="5dip" />  
+		<Button
+			android:id="@+id/user_order_List_btnLogin"
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="20dip"
+	        android:paddingRight="20dip"
+	        android:text="登录,查看预订成功还未就餐的订单"
+	        android:textColor="@color/text_color_white"
+	        android:textSize="16dip"
+	        android:background="@drawable/button_big"/>  
+	</LinearLayout>
+	<!-- 选择餐厅层 -->
+	<LinearLayout
+		android:id="@+id/user_order_List_SelectRestaurantButtonLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:padding="10dip"
+		android:background="@color/background_color_white">
+	    <TextView
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"
+	        android:text="您没有预订成功还未就餐的订单，暂时不需要发送短信请柬"
+	        android:textColor="@color/text_color_gray"
+	        android:textSize="12dip"
+	        android:singleLine="false"
+	        android:padding="5dip"/>  
+		<Button
+			android:id="@+id/user_order_List_btnSelectRestaurant"
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="20dip"
+	        android:paddingRight="20dip"
+	        android:text="选择餐厅"
+	        android:textColor="@color/text_color_white"
+	        android:textSize="16dip"
+	        android:background="@drawable/button_big"
+	        android:visibility="gone"/>  
+	</LinearLayout>
+</LinearLayout>

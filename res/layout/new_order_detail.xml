@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:layout_marginTop="-200dip"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/img_top_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dip"
+                android:src="@drawable/default_ptr_rotate" />
+
+            <TextView
+                android:id="@+id/tv_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginTop="150dip"
+                android:text="下拉加载上一订单"
+                android:textSize="20dip" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="#FF00FF00"
+            android:fadingEdge="none"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:id="@+id/layout_center"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#FF0000FF"
+                android:orientation="vertical" >
+
+                <!-- 订餐的状态 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg_index_new"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/order_list_bt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="100dip"
+                            android:background="@color/background_color_white"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="80dip"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dip"
+                                android:background="@color/background_color_new_gray2"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <com.fg114.main.app.view.MyImageView
+                                    android:id="@+id/icon_url"
+                                    android:layout_width="40dip"
+                                    android:layout_height="40dip"
+                                    android:layout_marginTop="10dip" />
+
+                                <TextView
+                                    android:id="@+id/order_detail_status_name"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dip"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="2"
+                                    android:textColor="@color/text_color_deep_gray"
+                                    android:textSize="16dip" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="10dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="10dip"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/order_detail_rest_name"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_color_black"
+                                    android:textSize="20dip" />
+
+                                <TextView
+                                    android:id="@+id/order_detail_reserve_info"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dip"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:textColor="@color/text_color_gray"
+                                    android:textSize="16dip" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/san_jiao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:background="@color/divider" />
+                    </LinearLayout>
+
+                    <!-- 预订信息 -->
+
+                    <LinearLayout
+                        android:id="@+id/more_reserve_info_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <!-- 功能提示 -->
+
+                    <LinearLayout
+                        android:id="@+id/func_hint_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/func_hint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+
+                    <!-- 分享之类 -->
+
+                    <LinearLayout
+                        android:id="@+id/invite_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dip"
+                        android:background="@drawable/new_block_bt01"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+                    </LinearLayout>
+
+                    <!-- 金额面板 -->
+
+                    <LinearLayout
+                        android:id="@+id/show_price_panel_tag_true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/new_block_bt01"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <!-- 上传小票的面板 -->
+
+                        <LinearLayout
+                            android:id="@+id/can_upload_receipt_tag_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/receipt_hint"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dip"
+                                android:gravity="center_horizontal"
+                                android:text="上传小票成功后可立即获取相应积分"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="14dip" />
+
+                            <Button
+                                android:id="@+id/can_upload_receipt_tag"
+                                android:layout_width="fill_parent"
+                                android:layout_height="35dip"
+                                android:layout_marginLeft="50dip"
+                                android:layout_marginRight="50dip"
+                                android:layout_marginTop="20dip"
+                                android:background="@drawable/new_green_bg"
+                                android:drawableLeft="@drawable/new_camera_bt02"
+                                android:paddingLeft="40dip"
+                                android:paddingRight="60dip"
+                                android:text="上传结账小票"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="16dip" />
+                        </LinearLayout>
+
+                        <!-- 小票上传之后 展示 -->
+
+                        <LinearLayout
+                            android:id="@+id/can_upload_receipt_tag_false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dip"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <com.fg114.main.app.view.MyImageView
+                                android:id="@+id/detail_res_ivResPic"
+                                android:layout_width="120dip"
+                                android:layout_height="120dip"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/loading" />
+                        </LinearLayout>
+
+                        <!-- 是否可以输入金额 true -->
+
+                        <LinearLayout
+                            android:id="@+id/can_input_price_tag_true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1px"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="20dip"
+                                android:background="@color/background_color_deep_gray" />
+
+                            <TextView
+                                android:id="@+id/input_price_pint"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="20dip"
+                                android:gravity="center"
+                                android:text="输入就餐金额，我们会根据金额赠送相应秘币。"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="14dip" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="42dip"
+                                android:layout_marginBottom="20dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="20dip"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="就餐金额"
+                                    android:textColor="@color/text_color_black"
+                                    android:textSize="16dip" />
+
+                                <EditText
+                                    android:id="@+id/price"
+                                    android:layout_width="0dip"
+                                    android:layout_height="40dip"
+                                    android:layout_marginLeft="10dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/block_bt01"
+                                    android:gravity="center_vertical|left"
+                                    android:inputType="number"
+                                    android:paddingLeft="5dip"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_color_black"
+                                    android:textColorHint="@color/text_color_hint"
+                                    android:textSize="14dip" />
+
+                                <Button
+                                    android:id="@+id/price_confirm"
+                                    android:layout_width="80dip"
+                                    android:layout_height="40dip"
+                                    android:layout_marginLeft="10dip"
+                                    android:background="@drawable/bg_new_red"
+                                    android:text="确定"
+                                    android:textColor="@color/text_color_white"
+                                    android:textSize="16dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/can_input_price_tag_false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:background="@color/background_color_deep_gray" />
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="10dip" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dip"
+                                    android:layout_marginRight="10dip"
+                                    android:layout_marginTop="10dip"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:id="@+id/repast_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="14dip" />
+                                </LinearLayout>
+
+                                <Button
+                                    android:id="@+id/can_report_price_error_tag"
+                                    android:layout_width="60dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:background="@drawable/error_bnt"
+                                    android:drawableLeft="@drawable/error"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dip"
+                                    android:text="报错" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 操作提示 -->
+
+                    <TextView
+                        android:id="@+id/operate_hint"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center_horizontal|left"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="16dip" />
+                    <!-- 按钮 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dip"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/can_cancel_tag"
+                            android:layout_width="140dip"
+                            android:layout_height="35dip"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/bg_new_red"
+                            android:paddingBottom="5dip"
+                            android:paddingTop="5dip"
+                            android:text="撤销订单"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="16dip"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/can_edit_tag"
+                            android:layout_width="140dip"
+                            android:layout_height="35dip"
+                            android:layout_marginLeft="10dip"
+                            android:background="@drawable/bg_new_red"
+                            android:paddingBottom="5dip"
+                            android:paddingTop="5dip"
+                            android:text="修改订单"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="16dip"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- 上拉刷新 -->
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#000000" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/buttom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:layout_marginBottom="-200dip"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/img_buttom_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="40dip"
+                android:src="@drawable/default_ptr_rotate" />
+
+            <TextView
+                android:id="@+id/tv_buttom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dip"
+                android:layout_marginTop="40dip"
+                android:text="上拉加载下一订单"
+                android:textSize="20dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

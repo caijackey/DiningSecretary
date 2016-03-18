@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip" >
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"       
+        android:orientation="vertical"
+        >
+    <LinearLayout
+        android:id="@+id/takeaway_fooddetail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_routart"
+        android:orientation="vertical" >
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/takeaway_newfooddetail_ivPic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            local:roundRadius="8dip"
+            local:roundType="2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal|top"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="10dip"
+            >
+
+            <TextView
+                android:id="@+id/takeaway_newfooddetail_foodName"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="false"
+                android:textSize="18dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/takeaway_newfooddetail_foodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="18dip" />
+
+            <RatingBar
+                android:id="@+id/takeaway_newfooddetail_foodScroe"
+                style="@style/starRatingBar_small"
+                android:layout_width="wrap_content"
+                android:layout_height="16dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dip"
+                android:clickable="false"
+                android:focusable="false"
+                android:isIndicator="true"
+                android:saveEnabled="true"
+                android:stepSize="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/takeaway_newfooddetail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="20dip"
+        android:background="@drawable/shape_routart"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="10dip"
+            android:singleLine="true"
+            android:text="美味简介"
+            android:textSize="18dip" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/takeaway_newfooddetail"
+            style="@color/text_color_deep_gray"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:maxLength="500"
+            android:singleLine="false"
+            android:layout_marginBottom="5dip"
+            android:textColor="@color/background_color_deep_gray"
+            android:textSize="16dip" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

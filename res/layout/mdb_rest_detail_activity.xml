@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/detail_res_scrollBar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/rest_tag_background"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <!-- 广告 -->
+
+                <RelativeLayout
+                    android:id="@+id/mdb_res_detail_adv_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dip"
+                    android:visibility="visible" >
+
+                    <com.fg114.main.app.view.ViewFlow
+                        xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+                        android:id="@+id/viewflow_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="0dp"
+                        android:focusableInTouchMode="true"
+                        app:sidebuffer="3" />
+
+                    <com.fg114.main.app.view.CircleFlowIndicator
+                        xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+                        android:id="@+id/circle_indicator_img"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="5dp"
+                        app:activeColor="@color/text_color_red"
+                        app:fadeOut="0"
+                        app:inactiveColor="@color/text_color_white"
+                        app:inactiveType="fill"
+                        app:radius="3dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/mdb_predetermine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_margin="10dip"
+                    android:background="@drawable/bg_red_new"
+                    android:text="预定"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18dip" />
+            </LinearLayout>
+
+            <!-- 提示 -->
+
+            <RelativeLayout
+                android:id="@+id/mdb_detail_hint_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:clickable="true"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/mdb_arrow_right_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:scaleType="center"
+                    android:src="@drawable/arrow_right2"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/mdb_detail_res_hint_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dip"
+                    android:layout_toLeftOf="@id/arrow_right_2"
+                    android:paddingLeft="10dip"
+                    android:singleLine="false"
+                    android:textSize="14dip"
+                    android:textColor="@color/text_color_black" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/mdb_restaurant_discount_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/mdb_detail_restaurant_hint_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:text="消费提示"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="18dip" />
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_margin="0dip"
+                    android:background="@color/background_color_gray" />
+
+                <LinearLayout
+                    android:id="@+id/mdb_restaurant_discount_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    android:gravity="left|center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/mdb_detail_restaurant_hint_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="无"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mdb_detail_res_tscLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:clickable="true" 
+               >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/mdb_detail_res_llSpecialFoodTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dip"
+                        android:gravity="left|center_vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_layout_special_food"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="18dip" />
+
+                        <TextView
+                            android:id="@+id/mdb_detail_res_special_food_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(0)"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="14dip" />
+                    </LinearLayout>
+
+                    <!-- 分隔线 -->
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_margin="0dip"
+                        android:background="@color/background_color_gray" />
+
+                    <TextView
+                        android:id="@+id/mdb_detail_res_tvDishOnline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="@string/text_layout_dish_online"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/mdb_detail_res_tvFoodList_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dip"
+                        android:background="@drawable/button_light_color_effect"
+                        android:orientation="horizontal"
+                        android:padding="10dip" >
+
+                        <com.fg114.main.app.view.EllipsizeText
+                            android:id="@+id/mdb_detail_res_tvFoodList"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:textColor="@color/text_color_black"
+                            android:maxLines="3"
+                            android:textSize="16dip" />
+
+                        <!-- 右箭头 -->
+
+                        <ImageView
+                            android:id="@+id/mdb_arrow_right2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="2dip"
+                            android:scaleType="center"
+                            android:src="@drawable/arrow_right2"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_margin="0dip"
+                        android:background="@color/background_color_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/mdb_detail_res_dish_order"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/button_light_color_effect"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="1dip"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="预点菜算算价格"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16dip" />
+                            <!-- 右箭头 -->
+
+                            <ImageView
+                                android:id="@+id/mdb_arrow_right2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_marginRight="12dip"
+                                android:gravity="center_vertical"
+                                android:scaleType="center"
+                                android:src="@drawable/arrow_right2"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="46dp"
+                    android:layout_height="41dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/flag_menu" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <!-- 分隔符 -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:text="餐厅基本信息"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="18dip" />
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_margin="0dip"
+                    android:background="@color/background_color_gray"
+                    android:visibility="gone" />
+
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_margin="0dip"
+                    android:background="@color/background_color_gray" />
+
+                <com.fg114.main.app.view.MyImageView
+                    android:id="@+id/mdb_rest_location_map"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:layout_marginLeft="1dip"
+                    android:layout_marginRight="1dip"
+                    android:background="#00FFFF00"
+                    android:scaleType="fitXY"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/mdb_detail_res_tvAddress_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_marginRight="1dip"
+                    android:background="@drawable/button_light_color_effect"
+                    android:gravity="left|top"
+                    android:orientation="horizontal"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:text="地址："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+
+                    <TextView
+                        android:id="@+id/mdb_detail_res_tvAddress"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:id="@+id/mdb_arrow_right2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="0dp"
+                        android:scaleType="center"
+                        android:src="@drawable/arrow_right2"
+                        android:visibility="visible" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_margin="0dip"
+                    android:background="@color/background_color_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:text="电话："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+                    <!-- 餐厅电话 -->
+
+                    <TextView
+                        android:id="@+id/mdb_detail_res_tvTel"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mdb_restaurant_introduction"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:text="餐厅介绍"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="18dip" />
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_margin="0dip"
+                    android:background="@color/background_color_gray" />
+
+                <LinearLayout
+                    android:id="@+id/mdb_restaurant_introduction_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    android:gravity="left|center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/mdb_detail_restaurant_no_introduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="无"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="16dip"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

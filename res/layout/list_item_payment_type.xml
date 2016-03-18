@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|center"
+    android:layout_marginLeft="1dip"
+    android:layout_marginRight="1dip"
+    android:layout_marginTop="1dip"
+    android:background="@drawable/button_light_color_effect"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="0dip"
+    android:paddingRight="0dip"
+    android:paddingTop="10dip" 
+    android:paddingBottom="0dip">
+
+    <TextView
+        android:id="@+id/payment_type_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:text="银联支付"
+        android:textColor="@color/text_color_deep_gray"
+        android:textSize="16dip" />
+
+    <TextView
+        android:id="@+id/payment_type_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment_type_title"
+        android:layout_gravity="center_vertical|left"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:text="请选择正确的支付方式"
+        android:singleLine="false"
+        android:textColor="@color/text_color_gray"
+        android:textSize="13dip" />
+
+    <!-- 右箭头 -->
+
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:scaleType="center"
+        android:src="@drawable/arrow_right2"
+        android:visibility="visible" />
+
+    <!-- 分隔线 -->
+
+    <View
+        android:id="@+id/h_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/payment_type_description"
+        android:layout_marginBottom="0dip"
+        android:background="@color/background_color_deep_gray" />
+
+</RelativeLayout>

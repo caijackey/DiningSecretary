@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/mdb_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="#FF00FF00"
+        android:fadingEdge="none"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/mdb_layout_center"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FF0000FF"
+            android:orientation="vertical" >
+
+            <!-- 订餐的状态 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_index_new"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/mdb_order_list_bt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dip"
+                        android:background="@color/background_color_white"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="80dip"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dip"
+                            android:background="@color/background_color_new_gray2"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <com.fg114.main.app.view.MyImageView
+                                android:id="@+id/mdb_icon_url"
+                                android:layout_width="40dip"
+                                android:layout_height="40dip"
+                                android:layout_marginTop="10dip" />
+
+                            <TextView
+                                android:id="@+id/mdb_order_detail_status_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dip"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:textColor="@color/text_color_deep_gray"
+                                android:textSize="16dip" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginTop="10dip"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/mdb_order_detail_rest_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="20dip" />
+
+                            <TextView
+                                android:id="@+id/mdb_order_detail_reserve_info"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dip"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="16dip" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/mdb_san_jiao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dip" />
+                    </LinearLayout>
+
+                    <!-- 预订信息 -->
+
+                    <LinearLayout
+                        android:id="@+id/mdb_more_reserve_info_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <!-- 功能提示 -->
+
+                    <LinearLayout
+                        android:id="@+id/mdb_func_hint_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/mdb_func_hint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+
+                    <!-- 验证码 -->
+
+                    <LinearLayout
+                        android:id="@+id/mdb_valid_code_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/new_block_bt01"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:singleLine="true"
+                            android:text="验证码"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="18dip" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:background="@color/background_color_gray" />
+
+                        <TextView
+                            android:id="@+id/mdb_valid_code_hint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:textColor="@color/text_color_new_gray"
+                            android:textSize="16dip" />
+
+                        <com.fg114.main.app.view.MyImageView
+                            android:id="@+id/mdb_vaild_code_image"
+                            android:layout_width="100dip"
+                            android:layout_height="100dip"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:id="@+id/mdb_valid_code"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:gravity="center"
+                            android:textColor="@color/text_color_new_gray"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mdb_flower_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/new_block_bt01"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dip"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/mdb_flower_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:singleLine="true"
+                            android:text="献花"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="18dip" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:background="@color/background_color_gray" />
+
+                        <TextView
+                            android:id="@+id/mdb_flower_detail"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginTop="10dip"
+                            android:text=""
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="14dip" />
+
+                        <LinearLayout
+                            android:id="@+id/can_flower_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginTop="10dip"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <CheckBox
+                                android:id="@+id/flower_1"
+                                android:layout_width="73dip"
+                                android:layout_height="41dip"
+                                android:layout_marginRight="10dip"
+                                android:background="@drawable/flower_1_gray"
+                                android:button="@null"
+                                android:checked="false" />
+
+                            <CheckBox
+                                android:id="@+id/flower_3"
+                                android:layout_width="73dip"
+                                android:layout_height="41dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:background="@drawable/flower_3_gray"
+                                android:button="@null"
+                                android:checked="false" />
+
+                            <CheckBox
+                                android:id="@+id/flower_5"
+                                android:layout_width="73dip"
+                                android:layout_height="41dip"
+                                android:layout_marginLeft="10dip"
+                                android:background="@drawable/flower_5_gray"
+                                android:button="@null"
+                                android:checked="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mdb_draw_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/new_block_bt01"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dip" 
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/mdb_draw_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:singleLine="true"
+                            android:text="抽奖"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="18dip" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:background="@color/background_color_gray" />
+
+                        <TextView
+                            android:id="@+id/mdb_draw_hint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:text=""
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="16dip" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center" >
+
+
+                            <TextView
+                                android:id="@+id/mdb_draw_num"
+                                android:layout_width="0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_marginRight="10dip"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:singleLine="true"
+                                android:textColor="@color/text_color_new_gray"
+                                android:textSize="18dip"
+                                android:textStyle="normal" 
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/mdb_draw_bt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dip"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:background="@drawable/bg_new_red"
+                                android:paddingBottom="5dip"
+                                android:paddingLeft="20dip"
+                                android:paddingRight="20dip"
+                                android:paddingTop="5dip"
+                                android:text=""
+                                android:singleLine="true"
+                                android:textColor="@color/text_color_white"
+                                android:textSize="16dip"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mdb_upload_share_pic_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/new_block_bt01"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:singleLine="true"
+                            android:text="上传获奖分享截图"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="18dip" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:background="@color/background_color_gray" />
+
+                        <TextView
+                            android:id="@+id/mdb_upload_share_pic_hint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:textColor="@color/text_color_new_gray"
+                            android:textSize="16dip" />
+
+                        <com.fg114.main.app.view.MyImageView
+                            android:id="@+id/mdb_upload_share_pic_image"
+                            android:layout_width="120dip"
+                            android:layout_height="120dip"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/loading" />
+
+                        <Button
+                            android:id="@+id/mdb_upload_share_pic_bt"
+                            android:layout_width="130dip"
+                            android:layout_height="35dip"
+                            android:layout_margin="10dip"
+                            android:layout_marginTop="10dip"
+                            android:background="@drawable/bg_new_red"
+                            android:layout_gravity="center"
+                            android:text="上传截图"
+                            android:textColor="@color/text_color_white"
+                            android:textSize="16dip" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 按钮 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    
+
+                    <Button
+                        android:id="@+id/mdb_cancel_tag"
+                        android:layout_width="140dip"
+                        android:layout_height="35dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/bg_gary_new"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="取消订单"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="16dip"
+                        android:visibility="gone" />
+                    
+                    <Button
+                        android:id="@+id/mdb_edit_tag"
+                        android:layout_width="140dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/bg_new_red"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip"
+                        android:text="去支付"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="16dip"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- 上拉刷新 -->
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#000000" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

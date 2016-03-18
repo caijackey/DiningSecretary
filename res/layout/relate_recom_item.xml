@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="106dip"
+     >
+
+    <RelativeLayout
+        android:id="@+id/rest_recom_bt"
+        android:layout_width="match_parent"
+        android:layout_height="106dip"
+        android:background="@drawable/button_light_color_effect" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/line" />
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/rest_recom_pic"
+            android:layout_width="86dip"
+            android:layout_height="86dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip" />
+
+        <ImageView
+            android:id="@+id/same_store_view"
+            android:layout_width="44dip"
+            android:layout_height="44dip"
+            android:layout_alignLeft="@+id/rest_recom_pic"
+            android:layout_alignTop="@+id/rest_recom_pic"
+            android:background="@drawable/same_store_res" />
+
+        <TextView
+            android:id="@+id/rest_recom_title"
+            android:layout_width="fill_parent"
+            android:layout_height="18dip"
+            android:layout_alignTop="@+id/rest_recom_pic"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="30dip"
+            android:layout_toRightOf="@+id/rest_recom_pic"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/rest_recom_name_and_data"
+            android:layout_width="fill_parent"
+            android:layout_height="18dip"
+            android:layout_below="@id/rest_recom_title"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="8dip"
+            android:layout_toRightOf="@+id/rest_recom_pic"
+            android:singleLine="true"
+            android:textColor="@color/text_color_gray"
+            android:textSize="14dip" />
+
+        <TextView
+            android:id="@+id/rest_recom_info"
+            android:layout_width="fill_parent"
+            android:layout_height="37dip"
+            android:layout_below="@id/rest_recom_name_and_data"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="30dip"
+            android:layout_toRightOf="@+id/rest_recom_pic"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/text_color_gray"
+            android:textSize="14dip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="fitEnd"
+            android:src="@drawable/arrow" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/group_buy_icon_url"
+            android:layout_width="40dip"
+            android:layout_height="40dip" />
+
+        <TextView
+            android:id="@+id/group_buy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="提交成功"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/group_buy_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:gravity="center"
+        android:textColor="@color/text_color_gray"
+        android:textSize="16dip" />
+
+    <Button
+        android:id="@+id/group_buy_order_bt"
+        android:layout_width="120dip"
+        android:layout_height="35dip"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_red_new"
+        android:singleLine="true"
+        android:textColor="@color/text_color_white"
+        android:textSize="16dip" />
+
+</LinearLayout>

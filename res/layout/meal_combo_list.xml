@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- spinner工具栏 -->
+
+    <LinearLayout
+        android:id="@+id/meal_combo_list_llFilter"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_marginBottom="0dip"
+        android:background="@drawable/bg_search_bar"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/firstButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_toggle_button"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="18dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line" />
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_toggle_button"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="18dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line" />
+
+        <Button
+            android:id="@+id/thirdButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/list_toggle_button"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="18dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dp" />
+    </LinearLayout>
+    
+    <!-- 广告 -->
+    <RelativeLayout
+        android:id="@+id/new_meal_combo_adv_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip" 
+        android:visibility="gone">
+
+        <com.fg114.main.app.view.ViewFlow
+            xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/viewflow_img"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="0dp"
+            android:focusableInTouchMode="true"
+            app:sidebuffer="3" />
+
+        <com.fg114.main.app.view.CircleFlowIndicator
+            xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/circle_indicator_img"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            app:activeColor="@color/text_color_red"
+            app:fadeOut="0"
+            app:inactiveColor="@color/text_color_white"
+            app:inactiveType="fill"
+            app:radius="3dp" />
+    </RelativeLayout>
+
+    <!-- 套餐列表 -->
+
+    <com.fg114.main.app.view.DragLoadingView
+        android:id="@+id/dragview_rest_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/listview"
+            style="@style/myListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_weight="1"
+            android:divider="@color/divider"
+            android:dividerHeight="1px"
+            android:drawSelectorOnTop="false" />
+    </com.fg114.main.app.view.DragLoadingView>
+
+</LinearLayout>

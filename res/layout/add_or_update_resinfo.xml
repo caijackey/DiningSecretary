@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" 
+    android:fillViewport="true"
+    android:padding="0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle_transparent_with_border"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <EditText
+                    android:id="@+id/add_or_update_resInfo_etResName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/new_block_bt01"
+                    android:hint="@string/text_layout_addorupdate_resname"
+                    android:inputType="text"
+                    android:paddingLeft="5dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <Spinner
+                    android:id="@+id/add_or_update_resInfo_regionSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_srrow_background_"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="12dip" />
+
+                <Spinner
+                    android:id="@+id/add_or_update_resInfo_districtSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_srrow_background_"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="12dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <EditText
+                    android:id="@+id/add_or_update_resInfo_detailaddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/new_block_bt01"
+                    android:hint="@string/text_layout_addorupdate_resaddress"
+                    android:inputType="text"
+                    android:paddingLeft="5dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_or_update_resInfo_foodtype_layout"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <Spinner
+                    android:id="@+id/add_or_update_resInfo_foodtypeSpinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_srrow_background_"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <EditText
+                    android:id="@+id/add_or_update_resInfo_ettelephone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/new_block_bt01"
+                    android:hint="@string/text_layout_addorupdate_telephone"
+                    android:inputType="phone"
+                    android:paddingLeft="5dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="16dip" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/add_or_update_resInfo_tvTip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_layout_addorupdate_tip"
+                android:textColor="@color/text_color_red_3"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <EditText
+                android:id="@+id/add_or_update_resInfo_etEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_weight="1"
+                android:background="@drawable/new_block_bt01"
+                android:hint="@string/text_layout_addorupdate_email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textColorHint="@color/text_color_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/add_or_update_resInfo_btnSubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginLeft="80dip"
+                android:layout_marginRight="80dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_new_red"
+                android:gravity="center"
+                android:text="提交信息"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

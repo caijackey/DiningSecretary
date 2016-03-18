@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color_black" >
+
+    <LinearLayout
+        android:id="@+id/image_gallery_titlelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/tittle_topbar"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 返回按钮 -->
+
+        <Button
+            android:id="@+id/image_gallery_btnGoBack"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/icon_go_back"
+            android:gravity="center"
+            android:paddingLeft="20dip"
+            android:paddingRight="10dip"
+            android:textColor="@color/text_color_white"
+            android:textSize="14dip" />
+        <!-- 页面标题 -->
+
+        <TextView
+            android:id="@+id/image_gallery_tvTitle"
+            style="@style/Shadow_Black_Up_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/text_color_white"
+            android:textSize="20dip" />
+        <!-- 功能按钮 -->
+
+        <Button
+            android:id="@+id/image_gallery_btnTitle"
+            style="@style/Shadow_Black_Up_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_title"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/arrow_title_down"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/image_gallery_btnOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/topbar_right_button"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="　　　"
+            android:textColor="@color/text_color_white"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+    <com.fg114.main.app.view.MyRecommendRestGalleryView
+        android:id="@+id/image_gallery_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:spacing="20dip" />
+
+    <TextView
+        android:id="@+id/recom_rest_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#66000000"
+        android:padding="10dip"
+        android:textColor="@color/text_color_white"
+        android:textSize="14dip" />
+
+</FrameLayout>

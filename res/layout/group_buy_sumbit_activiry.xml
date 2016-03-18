@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/group_buy_info_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/new_block_bt01"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/group_buy_submit_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:textColor="@color/text_color_deep_gray"
+        android:textSize="16dip" />
+
+    <LinearLayout
+        android:id="@+id/group_buy_submit_share"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="43dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:text="分享到"
+            android:textColor="@color/text_color_gray"          
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/group_buy_submit_chkShareSina"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="13dip"
+            android:background="@drawable/weibo_icon_1_gray"
+            android:textOff=""
+            android:textOn="" >
+        </Button>
+
+        <Button
+            android:id="@+id/group_buy_submit_chkShareTX"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@+id/comment_sina"
+            android:background="@drawable/weibo_icon_2_gray"
+            android:textOff=""
+            android:textOn="" >
+        </Button>
+    </LinearLayout>
+    
+    <Button
+            android:id="@+id/group_buy_submit_bt"
+            android:layout_width="120dip"
+            android:layout_height="30dip"
+            android:background="@drawable/bg_new_red"
+            android:singleLine="true"
+            android:text="确定"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip"
+            android:layout_marginTop="10dip" />
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="#99000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/shape_rectangle_dialog_background"
+        android:orientation="vertical"
+        android:layout_margin="20dip"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dip"
+            android:text="请打分"
+            android:textColor="@color/background_color_white"
+            android:textSize="20dip" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dip"
+            android:text="这道菜口味如何？"
+            android:textColor="@color/background_color_white"
+            android:textSize="16dip" />
+
+        <!-- 按钮 -->
+
+        <Button
+            android:id="@+id/food_like"
+            android:layout_width="220dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/crystal_button_light_color"
+            android:text="好吃"
+            android:textColor="@color/text_color_white"
+            android:textSize="18dip"
+            android:layout_marginBottom="10dip"/>
+
+        <Button
+            android:id="@+id/food_normal"
+            android:layout_width="220dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/crystal_button_light_color"
+            android:text="一般"
+            android:textColor="@color/text_color_white"
+            android:textSize="18dip" 
+            android:layout_marginBottom="10dip"/>
+
+        <Button
+            android:id="@+id/food_dislike"
+            android:layout_width="220dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/crystal_button_light_color"
+            android:text="不好吃"
+            android:textColor="@color/text_color_white"
+            android:textSize="18dip"
+            android:layout_marginBottom="5dip" />
+    </LinearLayout>
+
+</LinearLayout>

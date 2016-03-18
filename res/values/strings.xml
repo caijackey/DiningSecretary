@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">订餐小秘书</string>
+    <string name="google_api_key">0ehIMRdIb39tXAfI6VkLwj4UR98St6uTDIZk_3Q</string>
+    <string name="mapbar_api_key">HnEaDpJkCfDpMbAbIhLePoIoDlNeEgAmHjCeNhNiEcHdNkLmApPlKaFhCeDkEcFa</string>
+
+    <!-- 电话号码 -->
+    <string name="text_phone_95171">95171</string>
+    <string name="text_phone_57575777">57575777</string>
+
+    <!-- 标题 -->
+    <string name="text_title_show_error">提示</string>
+    <string name="text_title_super57">超级小秘书</string>
+    <string name="text_title_nearby">附近餐厅</string>
+    <string name="text_title_search">搜索</string>
+    <string name="text_title_nearby_food">附近的菜</string>
+    <string name="text_title_list">榜单</string>
+    <string name="text_hotsale">求婚成功率最高的餐厅</string>
+    <string name="text_title_discount">今日七折</string>
+    <string name="text_title_login">登录</string>
+    <string name="text_title_my_order">我的订单</string>
+    <string name="text_title_order_detail">订单详情</string>
+    <string name="text_title_history">最近浏览</string>
+    <string name="text_title_city_select">选择城市</string>
+    <string name="text_title_restaurant_detail">餐厅详情</string>
+    <string name="text_title_all_comment">全部评论</string>
+    <string name="text_title_restaurant_info">餐厅信息</string>
+    <string name="text_title_region_list">地域列表</string>
+    <string name="text_title_search_result">查询结果</string>
+    <string name="text_title_restaurant_image">餐厅图片</string>
+    <string name="text_title_restaurant_menu">餐厅菜单</string>
+    <string name="text_title_super57_history">历史记录</string>
+    <string name="text_title_regist">注册</string>
+    <string name="text_title_access_set">账户设置</string>
+    <string name="text_title_book">一键预订</string>
+    <string name="text_title_map">地图</string>
+    <string name="text_title_all_discount">全部优惠</string>
+    <string name="text_title_my_location_settings">设置定位方式</string>
+    <string name="text_title_upload_pic">上传照片</string>
+    <string name="text_title_my_comment">我要评论</string>
+    <string name="text_title_error_report">其他错误修改</string>
+    <string name="text_title_add_res">添加餐厅基本信息</string>
+    <string name="text_title_update_resinfo">修改餐厅基本信息</string>
+    <string name="text_title_contact">通讯录</string>
+    <string name="text_title_sms_invite">发送短信请柬</string>
+    <string name="text_title_change_user_pwd">修改密码</string>
+    <string name="text_title_report_loc">位置报错</string>
+    <string name="text_title_user_center">用户中心</string>
+    <string name="text_title_enjoy_app">您可能喜欢的应用</string>
+    <string name="text_title_user_crash">现金券</string>
+    <string name="text_title_user_crash_buy">购买记录</string>
+    <string name="text_title_user_account_in_out">账户余额</string>
+    <string name="text_title_user_crashdiscount">优惠精选</string>
+    <string name="text_title_user_station_message">站内信</string>
+    <string name="text_title_user_wedding_order">婚团宴订单</string>
+    <string name="text_title_select_sms_resad">餐厅地址：</string>
+    <string name="text_title_select_sms_resinfoad">地标信息：</string>
+    <string name="text_title_select_sms_moban">模板:</string>
+    <string name="text_title_select_sms_otherinfo">点击可选择附近其他地标信息</string>
+    <string name="text_title_nearby_title">附近地标</string>
+    <string name="text_title_discount_package">套餐面额</string>
+    <string name="text_title_discount_pwd">使用密码</string>
+    <string name="text_title_cash_pwd">现金券密码</string>
+    <string name="text_title_cash_use_info">现金券使用说明</string>
+    <string name="text_title_discount_use_info">优惠套餐使用说明</string>
+    <string name="text_title_cash_gift_info">没有相关礼品卡信息</string>
+    <string name="text_title_discount_title">优惠套餐</string>
+    <string name="text_title_share_weibo_title">分享</string>
+    <string name="text_title_share_weibo_rest">分享餐厅到微博</string>
+    <string name="text_title_share_weibo_software">分享软件到微博</string>
+
+    <!-- 按钮文字 -->
+    <string name="text_button_goto_index">首页</string>
+    <string name="text_button_login">登录</string>
+    <string name="text_button_regist">注册</string>
+    <string name="text_button_find_in_result">搜索</string>
+    <string name="text_button_faction">功能菜单</string>
+    <string name="text_button_index_title">订餐小秘书-上海站</string>
+    <string name="text_button_editing">编辑</string>
+    <string name="text_button_booking_res">订餐厅</string>
+    <string name="text_button_finish">完成</string>
+    <string name="text_button_back">返回</string>
+    <string name="text_button_clear">清空记录</string>
+    <string name="text_button_logout">退出登录</string>
+    <string name="text_button_book">立即预订</string>
+    <string name="text_button_write_more">填写更多信息</string>
+    <string name="text_button_post_order">提交订单</string>
+    <string name="text_button_bind">立即绑定</string>
+    <string name="text_button_release_binded">解绑</string>
+    <string name="text_button_change_bind">修改</string>
+    <string name="text_button_upload">确认提交</string>
+    <string name="text_button_submit">提交</string>
+    <string name="text_button_cancel">取消</string>
+    <string name="text_button_comment">我要评论</string>
+    <string name="text_button_share_to_sina">分享优惠到新浪微博</string>
+    <string name="text_button_login_for_show_all">登录,查看全部订单</string>
+    <string name="text_button_goto_comment">去点评</string>
+    <string name="text_button_report_price_error">报错</string>
+    <string name="text_button_delete">删除</string>
+    <string name="text_button_delete_order">撤销订单</string>
+    <string name="text_button_modify_order">修改订单</string>
+    <string name="text_button_my_order_detail">再次预订</string>
+    <string name="text_button_fast">最快速</string>
+    <string name="text_button_shortest">最短距离</string>
+    <string name="text_button_avoid_highway">避开高速</string>
+    <string name="text_button_nonstop">直达优先</string>
+    <string name="text_button_subway">地铁优先</string>
+    <string name="text_button_upload_from_camera">拍照上传</string>
+    <string name="text_button_upload_from_local">手机相册上传</string>
+    <string name="text_button_book_by_net">点击预订%1$s</string>
+    <string name="text_button_book_by_phone">电话预订%1$s</string>
+    <string name="text_button_view_res_info">查看该餐厅详情</string>
+    <string name="text_button_search_res">搜餐厅</string>
+    <string name="text_button_search_food">搜菜</string>
+    <string name="text_button_local_contact">手机通讯录</string>
+    <string name="text_button_net_contact">网站通讯录</string>
+    <string name="text_button_add_contact">添加</string>
+    <string name="text_button_save">保存</string>
+    <string name="text_button_add_res">添加餐厅(可获30-50秘币)</string>
+    <string name="text_button_send_sms">短信请柬</string>
+    <string name="text_button_change_pwd">修改密码</string>
+    <string name="text_button_compile">修改</string>
+    <string name="text_button_orderfinish">已下单</string>
+    <string name="text_button_confirmorder">确定保存</string>
+    <string name="text_button_dish_list_dish_order">点菜</string>
+    <string name="text_button_dish_list_sub_comment">发表评论</string>
+    <string name="text_button_dish_myorder">我的菜单</string>
+    <string name="text_button_dish_list_dish_already_order">已点</string>
+    <string name="text_button_dish_comment_publish">发表</string>
+    <string name="text_button_dish_comment_submit">提交评论</string>
+    <string name="text_button_dish_goondish">继续点菜</string>
+    <string name="text_button_regist_phone">手机注册</string>
+    <string name="text_button_regist_emali">邮箱注册</string>
+    <string name="text_button_clear_error_info">清空</string>
+    <string name="text_button_favourable_cash">现金券</string>
+    <string name="text_button_favourable_greatnum">高额返现</string>
+    <string name="text_button_confirm">确定</string>
+    <string name="text_button_reciverhome">收件箱</string>
+    <string name="text_button_sendhome">发件箱</string>
+    <string name="text_button_select_smsbtn">下一步</string>
+    <string name="text_button_order_by_voice">语音订餐</string>
+
+    <!-- 页面表示文字 -->
+    <string name="text_layout_takeout_recommend">说说用餐感受吧</string>
+    <string name="text_layout_nearby_recommend">周边特色餐厅推荐</string>
+    <string name="text_layout_search_recommend">语音搜索 预订餐厅</string>
+    <string name="text_layout_search_city">搜索城市</string>
+    <string name="text_layout_search_food_recommend">搜索菜名</string>
+    <string name="text_layout_gps_city">GPS定位显示您在：</string>
+    <string name="text_layout_more_city">热门城市：</string>
+    <string name="text_layout_popularity">人气</string>
+    <string name="text_layout_supply">供应</string>
+    <string name="text_layout_otherwise1">另有</string>
+    <string name="text_layout_otherwise2">个特色菜品</string>
+    <string name="text_layout_book_num1">近期订单</string>
+    <string name="text_layout_book_num2">笔</string>
+    <string name="text_layout_avg_Price1">实际人均消费</string>
+    <string name="text_layout_avg_Price2">元</string>
+    <string name="text_layout_friend_Impress">网友印象</string>
+    <string name="text_layout_special_food">特色菜推荐</string>
+    <string name="text_layout_promotion_message">优惠信息</string>
+    <string name="text_layout_comment">评论</string>
+    <string name="text_layout_res_info">餐厅信息</string>
+    <string name="text_layout_food_more">查看全部菜单({0}例)</string>
+    <string name="text_layout_comment_more">查看全部({0}条)</string>
+    <string name="text_layout_res_info_more">查看餐厅特色、交通等其他信息</string>
+    <string name="text_layout_input_user_name">输入邮箱/手机号</string>
+    <string name="text_layout_input_password">输入密码</string>
+    <string name="text_layout_not_regist">还没有账号或者忘记密码？</string>
+    <string name="text_layout_email">新邮箱/新手机号</string>
+    <string name="text_layout_nickname">昵称</string>
+    <string name="text_layout_password">密码</string>
+    <string name="text_layout_res_map">地图导航</string>
+    <string name="text_layout_address">地　　址:</string>
+    <string name="text_layout_price">人均:</string>
+    <string name="text_layout_discount1">折扣:</string>
+    <string name="text_layout_taste">口味</string>
+    <string name="text_layout_all_score">总体评价</string>
+    <string name="text_layout_env">环境</string>
+    <string name="text_layout_service">服务</string>
+    <string name="text_layout_book_num3">服务</string>
+    <string name="text_layout_monday">一</string>
+    <string name="text_layout_tuesday">二</string>
+    <string name="text_layout_wednesday">三</string>
+    <string name="text_layout_thursday">四</string>
+    <string name="text_layout_friday">五</string>
+    <string name="text_layout_saturday">六</string>
+    <string name="text_layout_sunday">日</string>
+    <string name="text_layout_noon">午市</string>
+    <string name="text_layout_evening">晚市</string>
+    <string name="text_layout_base_info">基本信息</string>
+    <string name="text_layout_food_style">菜　　系:</string>
+    <string name="text_layout_traffic">交通路线:</string>
+    <string name="text_layout_consume_way">消费方式:</string>
+    <string name="text_layout_park_map">停车地图</string>
+    <string name="text_layout_call_time">拨打时间:</string>
+    <string name="text_layout_receive_num1">共接受</string>
+    <string name="text_layout_receive_num2">张图片</string>
+    <string name="text_layout_customer_service">客服</string>
+    <string name="text_layout_hot_area">热门商圈</string>
+    <string name="text_layout_aim">查询目的</string>
+    <string name="text_layout_book_phone">预订手机号</string>
+    <string name="text_layout_people_num">用餐人数</string>
+    <string name="text_layout_order_name">订餐人姓名</string>
+    <string name="text_layout_other_info">其他信息</string>
+    <string name="text_layout_other_info_request">填写更多信息有助于我们为您提供更好的订餐服务</string>
+    <string name="text_layout_room_request_hall">只订大厅</string>
+    <string name="text_layout_room_request_room">只订包房</string>
+    <string name="text_layout_room_request_hall_then_room">优先订大厅,包房也可以</string>
+    <string name="text_layout_room_request_room_then_hall">优先订包房,大厅也可以</string>
+    <string name="text_layout_suggest">推荐</string>
+    <string name="text_layout_ydzk">预订折扣</string>
+    <string name="text_layout_xjq">现金券</string>
+    <string name="text_layout_cx">促销</string>
+    <string name="text_layout_have_not_binded">您尚未绑定手机,无法接受推图。</string>
+    <string name="text_layout_binded_phone">已绑定手机:</string>
+    <string name="text_layout_binded_phone_no">当前绑定号码</string>
+    <string name="text_layout_input_new_phone_no">请输入新号码</string>
+    <string name="text_layout_input_your_phone_no">请输入您的手机号码</string>
+    <string name="text_layout_unbind_phone_title">解除绑定</string>
+    <string name="text_layout_unbind_phone_no">您确定要解除绑定?之后将无法在订餐推荐时接受推图。</string>
+    <string name="text_layout_input_pic_title">说点神马吧</string>
+    <string name="text_layout_share_to_sina">分享到新浪微博</string>
+    <string name="text_layout_input_comment">说点什么吧</string>
+    <string name="text_layout_input_comment_reply">点击输入回复内容</string>
+    <string name="text_layout_input_score">点击评分</string>
+    <string name="text_layout_search_key">您搜索的是:</string>
+    <string name="text_layout_synce_set">同步设置</string>
+    <string name="text_layout_sina_webo">新浪微博</string>
+    <string name="text_layout_app_user">手机App预订</string>
+    <string name="text_layout_current_user">当前账户:</string>
+    <string name="text_layout_lunch_time">就餐时间:</string>
+    <string name="text_layout_all_order">全部订单包括账号下的电话订单和网站订单</string>
+    <string name="text_layout_booker_phone">预订手机:</string>
+    <string name="text_layout_book_time">订单产生时间：</string>
+    <string name="text_layout_your_point1">您的积分:</string>
+    <string name="text_layout_your_point2">获得积分</string>
+    <string name="text_layout_your_point3">分</string>
+    <string name="text_layout_your_point4">积分计算中</string>
+    <string name="text_layout_order_info">订单信息</string>
+    <string name="text_layout_order_state">订单状态</string>
+    <string name="text_layout_order_service_people">网站服务专员</string>
+    <string name="text_layout_reserver_info">预订者信息</string>
+    <string name="text_layout_repaster_info">就餐人信息</string>
+    <string name="text_layout_order_other_info">订餐具体信息</string>
+    <string name="text_layout_order_myrequest">我的需求</string>
+    <string name="text_layout_order_remark_info">备注信息</string>
+    <string name="text_layout_order_result">订单结果：</string>
+    <string name="text_layout_order_price">就餐金额：</string>
+    <string name="text_layout_name">姓名：</string>
+    <string name="text_layout_phone">手机：</string>
+    <string name="text_layout_repast_time">就餐时间：</string>
+    <string name="text_layout_company_name">公司名称：</string>
+    <string name="text_layout_repast_num">就餐人数：</string>
+    <string name="text_layout_room_type">包房需求：</string>
+    <string name="text_layout_room_info">餐位情况：</string>
+    <string name="text_layout_room_categoryorder">团宴类型：</string>
+    <string name="text_layout_other_request">其他需求：</string>
+    <string name="text_layout_input_error">请输入出错信息，支持语音输入哦！</string>
+    <string name="text_layout_input_reporter">您的EMAIL(选填)</string>
+    <string name="text_layout_input_name">用户名</string>
+    <string name="text_layout_tel">电　　话:</string>
+    <string name="text_layout_more_comment">更多点评</string>
+    <string name="text_layout_other_res_info">交通，营业时间及其他信息</string>
+    <string name="text_layout_route">路线导航查询</string>
+    <string name="text_layout_error_report">有奖报错，补漏</string>
+    <string name="text_layout_forget_pwd">忘记密码</string>
+    <string name="text_layout_input_phone">输入手机号</string>
+    <string name="text_layout_find_pwd">找回密码</string>
+    <string name="text_layout_res_name">餐　　厅:</string>
+    <string name="text_layout_res_open_time">营业时间:</string>
+    <string name="text_layout_search_recommend_res">搜索餐厅 地址等</string>
+    <string name="text_layout_search_recommend_food">搜索菜名</string>
+    <string name="text_layout_search_hot_area">按热门商圈</string>
+    <string name="text_layout_dish_list_order_num">人点过</string>
+    <string name="text_layout_dish_list_detail">详情</string>
+    <string name="text_layout_dish_list_comment">评论</string>
+    <string name="text_layout_dish_comment_noname">游客</string>
+    <string name="text_layout_addorupdate_tip">谢谢您告知商户信息，审核后会赠送您 30~50 秘币，并将回复发送至您输入的邮箱</string>
+    <string name="text_layout_addorupdate_tip1">谢谢您告知商户信息，审核后会赠送您 30~50 秘币，并将回复发送至您输入的邮箱</string>
+    <string name="text_layout_addorupdate_resname">商户名</string>
+    <string name="text_layout_addorupdate_resaddress">请填写具体地址</string>
+    <string name="text_layout_addorupdate_telephone">电话</string>
+    <string name="text_layout_addorupdate_email">您的EMAIL(选填)</string>
+    <string name="text_layout_addorupdate_region">行政区</string>
+    <string name="text_layout_addorupdate_district">热门商区</string>
+    <string name="text_layout_addorupdate_foodtypr">请选择菜系</string>
+    <string name="text_layout_samefoodrecommend">同类美食推荐</string>
+    <string name="text_layout_hint_name">姓名</string>
+    <string name="text_layout_hint_phone">手机号码</string>
+    <string name="text_layout_res_not_found">没有找到您要的餐厅吗?您可以</string>
+    <string name="text_layout_old_pwd">旧密码</string>
+    <string name="text_layout_new_pwd">新密码</string>
+    <string name="text_layout_confirm_pwd">确认密码</string>
+    <string name="text_layout_pwd_set">密码设置</string>
+    <string name="text_layout_x">总数</string>
+     <string name="text_foodie">吃货荐店</string>
+     <string name="text_foodie_txt">暂无时间</string>
+    <string name="text_layout_scan_tip">请将条码置于取景框内扫描。  </string>
+    <string name="text_layout_dish_recommend">推荐</string>
+    <string name="text_layout_dish_online">自助点菜</string>
+    <string name="text_layout_dish_no_comment">暂无评论</string>
+    <string name="text_layout_dish_unselecttable">未选桌号</string>
+    <string name="text_layout_dish_no_comment_detail">此菜好吃吗？欢迎评论。</string>
+    <string name="text_layout_food_list_item_tvUpImage"><u>+有奖传图</u></string>
+    <string name="text_layout_regist_phone">手机号</string>
+    <string name="text_layout_regist_email">邮箱</string>
+    <string name="text_layout_regist_phonepromt">请输入手机号码</string>
+    <string name="text_layout_regist_emailpromt">请输入邮箱</string>
+    <string name="text_layout_regist_prompt">最可靠的美食体验，仅余一步之遥</string>
+    <string name="text_layout_sinablog_prompt">绑定新浪微博，立即获得50秘币</string>
+    <string name="text_layout_about_us">\u0020\u0020\u0020\u0020订餐小秘书是由上海邦助信息技术有限公司创立于2004年，总部设在中国上海，是中国领先的餐饮预订服务平台。目前有员工超过600人，并在北京、广州、深圳、杭州、南京、成都、厦门、武汉、西安、沈阳和青岛等地设有分公司。</string>
+    <string name="text_layout_use_instruction">1.现金券可作为现金抵用（香烟除外）\n2.须通过订餐小秘书预订，并在结账前向餐厅出示短信\n3.现金券不兑现不找零，超额部分以现金或刷卡方式补足\n4.现金券不得用于外卖，不能打包\n5.本活动最终解释权归订餐小秘书所有</string>
+    <string name="text_layout_res_detail_buy_coupon">查看详情并购买</string>
+    <string name="text_layout_update_res">更正或补全餐厅信息可获20秘币</string>
+    <string name="text_layout_regist_agreement"><u>《客户端用户使用协议》</u></string>
+    <string name="text_layout_upload_bonus">上传图片可获秘币</string>
+    <string name="text_layout_upload_bonus_for_grade_food">打分可获<font color="#FF0000">3</font>秘币</string>
+    <string name="info_loading">信息加载中，请稍侯</string>
+    <string name="text_time_switcher_rest_info">1折餐厅疯抢</string>
+    <!-- null表示 -->
+    <string name="text_null_hanzi">-</string>
+
+    <!-- 对话框提示 -->
+    <string name="text_dialog_gps_localed">GPS定位到您当前在{0},需要切换吗?</string>
+    <string name="text_dialog_gps_localed_before_nearby">该功能只能在您切换到您的所在城市才能使用,GPS定位到您当前在{0},需要切换吗?</string>
+    <string name="text_dialog_must_update">当前本软件最新版本为{0},{1}您必须升级才能使用</string>
+    <string name="text_dialog_need_update">当前本软件最新版本为{0}{1}</string>
+    <string name="text_dialog_shutdown">确定要退出订餐小秘书吗?</string>
+    <string name="text_dialog_net_unavailable">目前网络连接不可用</string>
+    <string name="text_dialog_gps_unavailable">目前定位不可用,请手动选择所在城市</string>
+    <string name="text_dialog_gps_unlocaled">无法定位您的位置,请手动选择所在城市</string>
+    <string name="text_dialog_goto_open_gps">目前定位不可用,需要去设置页打开相应的功能吗?</string>
+    <string name="text_dialog_clear_all_history">是否要清空记录</string>
+    <string name="text_dialog_super57_net_unavailable">网络不可用，请确认网络连接并稍后使用</string>
+    <string name="text_dialog_super57_time_unavailable">小秘书的工作时间为 早9:00~晚8:30</string>
+    <string name="text_dialog_super57_client_unavailable">客服繁忙请稍候再试</string>
+    <string name="text_dialog_super57_not_support_cdma">很抱歉,超级小秘书功能只支持\r\n联通WCDMA或者开启wifi功能的手机</string>
+    <string name="text_dialog_goto_bind_sina">您的账号还未与新浪微博绑定，是否现在进行绑定</string>
+    <string name="text_dialog_post_order_line1">由于您未登录</string>
+    <string name="text_dialog_post_order_line2">由于您未登录，本订单积分将记入:</string>
+    <string name="text_dialog_post_order_line3">如您想将积分记入别的账户，请登录</string>
+    <string name="text_dialog_clear_confirm">确认清空信息吗?</string>
+    <string name="text_dialog_error_submit_success">提交成功，谢谢！</string>
+    <string name="text_dialog_cancel_order_success">订单撤销成功</string>
+    <string name="text_dialog_add_res_success">添加餐厅信息成功</string>
+    <string name="text_dialog_login_go_home">欢迎回来</string>
+    <string name="text_dialog_regist_go_home">注册成功！</string>
+    <string name="text_dialog_comment_finish">评论尚未提交，确定放弃所输入的内容吗？</string>
+    <string name="text_dialog_comment_reply">回复尚未提交，确定放弃所输入的内容吗？</string>
+    <string name="text_dialog_cancle_myorder">确定撤销该订单吗？</string>
+    <string name="text_dialog_order_finish">订单尚未提交，确定放弃所输入的内容吗？</string>
+    <string name="text_dialog_user_station_message_delete_confirmation">确定要删除消息吗？</string>
+    <string name="text_dialog_comment_cancle">确定清除输入框内所有内容吗？</string>
+    <!-- 提示信息 -->
+    <string name="text_info_not_found">没有找到您需要的信息</string>
+    <string name="text_info_not_found_user_point_list">暂无积分记录</string>
+    <string name="text_info_food_not_found">请在上方的框内输入您所拍的菜名</string>
+    <string name="text_info_no_history">您没有浏览记录</string>
+    <string name="text_info_synchronization">数据同步中,请稍等...</string>
+    <string name="text_info_loading">数据加载中,请稍等...</string>
+    <string name="text_info_uploading">数据提交中,请稍等...</string>
+    <string name="text_info_super57_start">超级小秘书功能启动中...</string>
+    <string name="text_info_shutdown">确定要退出订餐小秘书吗?</string>
+    <string name="text_info_net_unavailable">目前网络连接不可用,请启用您手机的网络访问功能</string>
+    <string name="text_info_gps_unavailable">目前GPS不可用,请启用您手机的GPS功能</string>
+    <string name="text_info_null_location">很抱歉,暂时无法获得您的位置</string>
+    <string name="text_info_link_super57">启动超级小秘书功能中...</string>
+    <string name="text_info_off_super57">关闭超级小秘书功能中...</string>
+    <string name="text_info_no_super57_history">您没有超级小秘书的使用记录</string>
+    <string name="text_info_no_super57_wait">已成功连接!\r\n\r\n稍后小秘书将为您发送推荐餐厅图片,\r\n\r\n请稍等...</string>
+    <string name="text_info_no_super57_history_pic">此次通话没有推送记录</string>
+    <string name="text_info_super57_error_six_time">超级小秘书功能发生异常，将停止推图功能</string>
+    <string name="text_info_super57_wait_client">等待客服...</string>
+    <string name="text_info_please_input_key">请输入关键字</string>
+    <string name="text_info_no_search_history">没有搜索记录</string>
+    <string name="text_info_no_search_result">没有搜索结果</string>
+    <string name="text_info_no_found_by_key">没有相关记录</string>
+    <string name="text_info_can_not_booking">很抱歉,该餐厅暂不提供预订服务</string>
+    <string name="text_info_loading_for_new_apk">新的版本下载中,请稍等...</string>
+    <string name="text_info_no_sdcard">您的手机里没有内存卡,无法上传照片</string>
+    <string name="text_info_sdcard_cant_write">您的内存卡现在读写保护中,无法上传照片</string>
+    <string name="text_info_upload_cant_show">无法显示选择的文件</string>
+    <string name="text_info_has_not_upload">画面中的内容还未提交,确定放弃上传吗?</string>
+    <string name="text_info_file_not_found">该文件已被删除,无法上传</string>
+    <string name="text_info_upload_failed">上传失败!</string>
+    <string name="text_info_upload_success">信息已发布成功！</string>
+    <string name="text_info_post_comment_success">评论提交成功！</string>
+    <string name="text_info_send_to_sina_success">分享成功!</string>
+    <string name="text_info_call_xiaomishu">确定要立即呼叫订餐小秘书吗?</string>
+    <string name="text_info_create_shortcut">是否需要创建桌面快捷方式</string>
+    <string name="text_info_invalid_email_phone">请输入正确的Email地址或手机号</string>
+    <string name="text_info_empty_error">请输入您的反馈信息</string>
+    <string name="text_info_empty_phone">请输入电话号码</string>
+    <string name="text_info_empty_order_price_error">请输入就餐金额</string>
+    <string name="text_info_order_price_error">输入的就餐金额不正确</string>
+    <string name="text_info_use_myloc_to_search">是否使用您当前的位置作为起点搜索?</string>
+    <string name="result_text">Found plain text</string>
+    <string name="text_info_camera_error">抱歉，您的手机暂时不支持扫描二维码。</string>
+    <string name="text_info_camera_error_code">此商户不存在，请扫描正确的二维码哦！</string>
+    <string name="text_info_dish_scan_tip">该功能处于测试阶段，稍后将推出正式版本！\此功能只针对部分被邀请用户!</string>
+    <string name="text_info_dish_order_clear">确定清空已点的菜吗？</string>
+    <string name="text_info_dish_order_submitorder">确定提交订单吗？</string>
+    <string name="text_info_regist_title">此手机号码已注册</string>
+    <string name="text_info_regist_mess">如果您忘记密码可以\"找回密码\"</string>
+    <string name="text_info_send_sms_label_info">您现在可以撰写请柬邀请朋友，请柬将在预订成功后由订餐小秘书免费自动发送。</string>
+    <string name="text_info_share_weibo_detail">“订餐小秘书”随时随地查找附近餐厅、周边美食，拥有全国300余城市数万家优质餐厅，餐位实时查询、一键呼叫客服、便捷订餐位等，是商务宴请、情侣约会、家庭聚会的必备利器，下载地址http://57.cn/z0Ta1</string>
+    <!-- 报错信息 -->
+    <string name="text_error_save">信息保存出错</string>
+    <string name="text_error_net">网络异常</string>
+    <string name="text_timeout_error">连接超时,请重试!</string>
+    <string name="text_data_parse_error">数据解析出错!</string>
+    <string name="text_unknown_error">未知错误!</string>
+    <string name="text_send_to_sina_failed">分享失败!</string>
+    <string name="text_have_shared">您已分享过该信息</string>
+
+    <!-- 报错模块文字（文字是动态的，这里只是默认文字） -->
+    <string name="error_report_top_message">感谢你报告商户的错误信息，我们将把回复邮件发送至您的邮箱中。</string>
+    <string name="error_report_bottom_message">经编辑核实确认后，根据信息丰富程度，将获赠30-50个秘币奖励。</string>
+
+    <!-- 文本框hint -->
+    <string name="book_restaurant_remark_hint">备注：如果您有特殊需求请告知</string>
+    <!-- 热门榜单页，当滑动到底部无数据时的友好提示 -->
+	<string name="book_hotsale_remark_hint">亲，已经没有数据啦！</string>
+    <!-- 程序出错 -->
+    <string name="info_crash">抱歉，软件出现错误</string>
+    <string name="text_button_dish_cashTicket">立即购买</string>
+    <string name="text_button_dish_nextSay">稍后再说</string>
+    <string name="my_dish_save_time_title">菜单保存时间:</string>
+    <!-- 现金券购买页面 -->
+    <string name="text_input_cash_hint">您购买了%1$s元现金券，实际支付%2$s元</string>
+    <string name="text_input_group_buy_hint">总计%1$s+运费%1$s-抵扣%1$s</string>
+    <string name="text_input_group_buy_total">实际需支付：%2$s元</string>
+   <!--   <string name="text_input_cash_buy_success">购买成功后，现金券序列号将发送至\n%1$s.您到店出示此序列号即可抵扣消费</string>-->
+   <string name="text_input_cash_buy_success">购买成功后，现金券序列号将发送至手机，到店出示即可抵扣消费。</string>
+    <string name="text_input_remaining_cash_hint">余额%1$s元，抵扣</string>
+    <string name="text_input_remaining_bwb_hint">秘币%1$s个，抵扣</string>
+    <string name="phone_number">手机号</string>
+
+    <!-- 静态Spinner内容 -->
+    <string-array name="sex_list">
+        <item>女士</item>
+        <item>先生</item>
+    </string-array>
+    <string-array name="distance_list">
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+    </string-array>
+    <string-array name="star_list">
+        <item>差(1)</item>
+        <item>较差(2)</item>
+        <item>普通(3)</item>
+        <item>较好(4)</item>
+        <item>好(5)</item>
+    </string-array>
+    <string-array name="commont_list">
+        <item>喜欢</item>
+        <item>一般</item>
+        <item>不喜欢</item>
+    </string-array>
+    <string-array name="score_list">
+        <item>差(1)</item>
+        <item>较差(2)</item>
+        <item>普通(3)</item>
+        <item>较好(4)</item>
+        <item>好(5)</item>
+    </string-array>
+    <string-array name="channel_list">
+        <item>餐厅</item>
+        <item>美食</item>
+    </string-array>
+    <string-array name="order_state_list">
+        <item>全部</item>
+        <item>已就餐</item>
+        <item>未就餐</item>
+    </string-array>
+    <string-array name="upload_unit_array">
+        <item>每份</item>
+        <item>元/例</item>
+        <item>元/位</item>
+        <item>元/只</item>
+        <item>元/斤</item>
+        <item>元/条</item>
+        <item>元/个</item>
+    </string-array>
+    <string-array name="user_station_reciver_array">
+        <item>全选</item>
+        <item>全选(已读)</item>
+        <item>全选(未读)</item>
+        <item>全不选</item>
+    </string-array>
+    <string-array name="user_station_sender_array">
+        <item>全选</item>
+        <item>全不选</item>
+    </string-array>
+    <string-array name="share_res">
+        <item>短信分享</item>
+        <item>邮件分享</item>
+        <item>分享到新浪微博</item>
+        <item>分享到微信</item>
+        <item>其他分享</item>
+    </string-array>
+    <string-array name="share_res_new">
+        <item>短信分享</item>
+        <item>邮件分享</item>
+        <item>分享到微博</item>
+        <item>分享到微信</item>
+        <item>分享到微信朋友圈</item>
+    </string-array>
+    <string-array name="other_options">
+        <item>有奖报错</item>
+        <item>发给好友</item>
+    </string-array>
+    <!-- 银联支付 -->
+    <string name="upomp_bypay_sessionhint">由于您过长时间未操作，此次交易已失效，请退出支付，并重新进行交易。是否立即退出支付？</string>
+    <!-- <string name="app_name">手机POS1.1</string> -->
+
+    <string name="upomp_bypay_splash_hint1">随时随地</string>
+    <string name="upomp_bypay_splash_hint2">随心支付</string>
+    <string name="upomp_bypay_esc_pay">退出支付</string>
+    <string name="upomp_bypay_pay_btn_hint1">使用银联帐号支付</string>
+    <string name="upomp_bypay_pay_btn_hint2">直接输入卡号支付</string>
+    <string name="upomp_bypay_pan">信用卡\u002F借记卡\u002F储值卡</string>
+    <string name="upomp_bypay_tel">银行预留手机号</string>
+    <string name="upomp_bypay_user_name">用户名\u002F手机号</string>
+    <string name="upomp_bypay_user_psw">6-12位密码</string>
+    <string name="upomp_bypay_image_validate">图形验证码</string>
+    <string name="upomp_bypay_note_validate">短信验证码</string>
+    <string name="upomp_bypay_splash_loading">加载中，请稍候...</string>
+    <string name="upomp_bypay_safety_info">安全信息:</string>
+    <string name="upomp_bypay_secondshortmessagesecuritycode">短信验证码</string>
+    <string name="upomp_bypay_secondcardpsw">银行卡密码</string>
+    <string name="upomp_bypay_get">获取</string>
+    <string name="upomp_bypay_retry">重发</string>
+    <string name="upomp_bypay_return">返回</string>
+    <string name="upomp_bypay_pay">确认支付</string>
+    <string name="upomp_bypa_cvn2">CVN2</string>
+    <string name="upomp_bypay_pay_result_paysucceed">支付成功</string>
+    <string name="upomp_bypay_payfail">支付失败</string>
+    <string name="upomp_bypay_pay_result_returnmerchant">返回商户</string>
+    <string name="upomp_bypay_pay_result_newpay">重新支付</string>
+    <string name="upomp_bypay_failcause">失败原因:</string>
+    <string name="upomp_bypay_next">下一步</string>
+    <string name="upomp_bypay_welcome">欢\u0020\u0020迎\u0020\u0020语:</string>
+    <string name="upomp_bypay_securityissue">安全问题:</string>
+    <string name="upomp_bypay_securityquestionanswer">问题答案:</string>
+    <string name="upomp_bypay_register_hint">成为银联在线支付用户可使用用户名和密码享受快捷支付。</string>
+    <string name="upomp_bypay_register_password">密\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020码:</string>
+    <string name="upomp_bypay_register_makesurepassword">确认密码:</string>
+    <string name="upomp_bypay_username">用\u0020\u0020户\u0020\u0020名:</string>
+    <string name="upomp_bypay_register_win">恭喜您，注册成功！</string>
+    <string name="upomp_bypay_register_win_hint">成为银联在线支付用户可使用用户名和密码享受快捷支付。</string>
+    <string name="upomp_bypay_debitcard">借记卡</string>
+    <string name="upomp_bypay_creditcard">信用卡</string>
+    <string name="upomp_bypay_valuecard">储值卡</string>
+    <string name="upomp_bypay_supportcard">支持的银行</string>
+    <string name="upomp_bypay_getpass">忘记密码</string>
+    <string name="upomp_bypay_getpass_name_hint">请输入用户名</string>
+    <string name="upomp_bypay_getpass_tel_hint">请输入绑定的手机号</string>
+    <string name="upomp_bypay_getpass_questionkey_hint">请输入安全问题答案</string>
+    <string name="upomp_bypay_getpass_psw1_hint">请输入新密码</string>
+    <string name="upomp_bypay_getpass_psw2_hint">请再输入一次</string>
+    <string name="upomp_bypay_getpass_name">用户名：</string>
+    <string name="upomp_bypay_pay_it_inputtel">请重新点击“获取”按钮，获取最新短信验证码。</string>
+    <string name="upomp_bypay_register_bind_card">快速绑卡,享受快捷支付</string>
+    <string name="upomp_bypay_bind_card">确认绑卡</string>
+    <string name="upomp_bypay_pswname">用户密码:</string>
+
+<!-- 		ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg -->
+    <string name="upomp_bypay_error">错误</string>
+    <string name="upomp_bypay_linkerror">网络连接错误，请重新尝试！</string>
+    <string name="upomp_bypay_fileerror">系统检测到您的手机POS已被恶意修改，为确保您的支付安全，请重新安装使用！</string>
+    <string name="upomp_bypay_please">请过\u0020</string>
+    <string name="upomp_bypay_sendMac">\u0020秒后再发送验证码!</string>
+    <string name="upomp_bypay_sixtotwenty">6~20位字符组合</string>
+    <string name="upomp_bypay_sixtotwelve">6~12位字符组合</string>
+    <string name="upomp_bypay_twotosixteen">2~16位字符组合</string>
+    <string name="upomp_bypay_secondmobilenum">手机号码</string>
+    <string name="upomp_bypay_loading">登录</string>
+    <string name="upomp_bypay_register">注册</string>
+    <string name="upomp_bypay_selectcard">选\u0020择\u0020卡\u0020种\u0020:</string>
+    <string name="upomp_bypay_firstcardid">银行卡卡号:</string>
+    <string name="upomp_bypay_secondcardid">银行卡卡号</string>
+    <string name="upomp_bypay_hint">若与您预设的资料不符，极有可能是钓鱼软件，请终止操作。</string>
+    <string name="upomp_bypay_editpass">修改密码</string>
+    <string name="upomp_bypay_editinfo">更改手机号码</string>
+    <string name="upomp_bypay_selectdate">请选择有效期。</string>
+    <string name="upomp_bypay_date">有\u0020\u0020\u0020效\u0020\u0020\u0020期\u0020\u0020:</string>
+    <string name="upomp_bypay_checkcode">校\u0020\u0020\u0020验\u0020\u0020\u0020码\u0020\u0020:</string>
+    <string name="upomp_bypay_payamount">支\u0020付\u0020金\u0020额\u0020:</string>
+    <string name="upomp_bypay_backnum">信用卡背面末三位数字</string>
+    <string name="upomp_bypay_cardmanage">银行卡管理</string>
+    <string name="upomp_bypay_gantan">！</string>
+    <string name="upomp_bypay_cancel">取消</string>
+    <string name="upomp_bypay_returnlist">返回列表</string>
+    <string name="upomp_bypay_cardunknown">未知卡</string>
+    <string name="upomp_bypay_removecard">解除关联</string>
+    <string name="upomp_bypay_affirmremovecard">确认要解除关联本银行卡？[</string>
+    <string name="upomp_bypay_changedefultcard">默认卡变更</string>
+    <string name="upomp_bypay_affirmchangedefultcard">是否设置本卡为默认卡？[</string>
+    <string name="upomp_bypay_selectsucceed">设置成功！</string>
+    <string name="upomp_bypay_selectfail">设置失败，请重新尝试！</string>
+    <string name="upomp_bypay_updatelist">更新列表</string>
+    <string name="upomp_bypay_balance">余额查询</string>
+    <string name="upomp_bypay_changepswsucceed">修改密码成功!</string>
+    <string name="upomp_bypay_newpsw">新\u0020\u0020\u0020密\u0020\u0020\u0020码\u0020\u0020:</string>
+    <string name="upomp_bypay_enternewpsw">确认新密码:</string>
+    <string name="upomp_bypay_logined">已登录</string>
+    <string name="upomp_bypay_accountmainactivity_header">我的信息</string>
+    <string name="upomp_bypay_accountmain_myinfo">个人信息</string>
+    <string name="upomp_bypay_accountmain_username">\u0020用\u0020户\u0020名\u0020:</string>
+    <string name="upomp_bypay_accountmain_email">邮箱地址:</string>
+    <string name="upomp_bypay_addcard_binduser">绑\u0020定\u0020用\u0020户\u0020:</string>
+    <string name="upomp_bypay_addcard_cvn2">C\u0020V\u0020N\u00202\u0020:</string>
+    <string name="upomp_bypay_addcard_selectdefultcard">设置成默认银行卡</string>
+    <string name="upomp_bypay_balanceresult_balance">余额查询结果</string>
+    <string name="upomp_bypay_balanceresult_balancesucceed">余额查询成功！</string>
+    <string name="upomp_bypay_balanceresult_balancefail">余额查询失败！</string>
+    <string name="upomp_bypay_balanceresult_balancenumber">您的银行卡余额是</string>
+    <string name="upomp_bypay_balanceresult_yuan">元。</string>
+    <string name="upomp_bypay_bankrestlt_succeed">添加银行卡成功！</string>
+    <string name="upomp_bypay_bankrestlt_fail">添加银行卡失败！</string>
+    <string name="upomp_bypay_bankrestlt_cardid">\u0020\u0020卡\u0020\u0020\u0020\u0020号\u0020\u0020:</string>
+    <string name="upomp_bypay_bankrestlt_continuebank">继续绑卡</string>
+    <string name="upomp_bypay_cardinfo_hint1">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020您可以对该银行卡进行以下操作：默认卡设置、解除关联、余额查询。</string>
+    <string name="upomp_bypay_cardinfo_hint2">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020您可以对该银行卡进行以下操作：默认卡设置、解除关联。</string>
+    <string name="upomp_bypay_cardinfo_removecardsucceed">银行卡解除关联成功!</string>
+    <string name="upomp_bypay_cardinfo">银行卡信息</string>
+    <string name="upomp_bypay_cardmainactivity_firstlogin">您尚未登录，请先登录再进行银行卡管理操作。</string>
+    <string name="upomp_bypay_cardmainactivity_defultcard">(默认卡)</string>
+    <string name="upomp_bypay_cardmainactivity_cancelbanksucced">取消绑定成功!</string>
+    <string name="upomp_bypay_cardmainactivity_issuedcard">发卡行:\u0020</string>
+    <string name="upomp_bypay_cardmainactivity_cardtype">卡类型:\u0020</string>
+    <string name="upomp_bypay_cardmainactivity_cardid">卡\u0020\u0020\u0020\u0020号:\u0020</string>
+    <string name="upomp_bypay_cardmainactivity_close">关闭</string>
+    <string name="upomp_bypay_cardmain_relevancecard">你已关联的银行卡:</string>
+    <string name="upomp_bypay_cardmain_norelevancecard">你还没有关联的银行卡！</string>
+    <string name="upomp_bypay_cardmain_hint1">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020请点击添加银行卡按钮添加银行卡！</string>
+    <string name="upomp_bypay_cardmain_hint2">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020选择您绑定的银行卡后，您可以进行以下操作：查看银行卡信息；默认卡设置；银行卡删除；余额查询！</string>
+    <string name="upomp_bypay_editinfoactivity_nochange">新手机号码与原手机号码一样，无需进行修改。</string>
+    <string name="upomp_bypay_editinfoactivity_inputtelnum">请输入原手机号码。</string>
+    <string name="upomp_bypay_editinfoactivity_inputtelnum1">原手机号码格式有误，应为11位数字。</string>
+    <string name="upomp_bypay_editinfoactivity_changetelfail">更改手机号码失败！</string>
+    <string name="upomp_bypay_editinfoactivity_changetelsucceed">更改手机号码成功！</string>
+    <string name="upomp_bypay_editinfo_registertel">已注册手机:</string>
+    <string name="upomp_bypay_editinfo_oldtelhint">原手机号码</string>
+    <string name="upomp_bypay_editinfo_newtelhint">新手机号码</string>
+    <string name="upomp_bypay_editinfo_hint">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020如果您的用户名是手机号，您将不能修改手机号。</string>
+    <string name="upomp_bypay_editpassactivity_inputoldpsw">请输入原密码。</string>
+    <string name="upomp_bypay_editpass_oldpsw">原\u0020\u0020\u0020密\u0020\u0020\u0020码\u0020\u0020:</string>
+    <string name="upomp_bypay_editpass_oldpswhint">原密码</string>
+    <string name="upomp_bypay_getpassactivity_updatepsw">密码重置</string>
+    <string name="upomp_bypay_loginactivity_userlogin">用户登录</string>
+    <string name="upomp_bypay_loginactivity_loginsucceed">登录成功!</string>
+    <string name="upomp_bypay_loginactivity_loginfail">登录失败!</string>
+    <string name="upomp_bypay_login_username">用\u0020\u0020\u0020户\u0020\u0020\u0020名\u0020\u0020:</string>
+    <string name="upomp_bypay_login_psw">\u0020\u0020\u0020密\u0020\u0020\u0020\u0020\u0020\u0020码\u0020\u0020\u0020:</string>
+    <string name="upomp_bypay_login_webvalidcode">校\u0020\u0020\u0020验\u0020\u0020\u0020码\u0020\u0020:</string>
+    <string name="upomp_bypay_login_hint">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020请使用中国银联的注册帐号及密码登录，为保证账户安全，如果您连续五次输错密码，您的账号将被锁定三个小时，给您带来的不便敬请原谅！</string>
+    <string name="upomp_bypay_pay_it_previewdifferent">若与您预设的资料不符，极有可能是钓鱼软件，请终止支付。</string>
+    <string name="upomp_bypay_pay_it_valuecardpay">储值卡支付</string>
+    <string name="upomp_bypay_pay_it_preventfish">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020为防止钓鱼应用，请核对您收到的95516发送的短信中，安全提示信息是否为：</string>
+    <string name="upomp_bypay_pay_it_bankmobilenum">发卡行预留的手机号</string>
+    <string name="upomp_bypay_pay_it_securitycode">\u0020\u0020\u0020密\u0020\u0020\u0020\u0020\u0020\u0020码\u0020\u0020\u0020\u0020:</string>
+    <string name="upomp_bypay_pay_it_pleaseaddcard">您还未关联过银行卡，请先添加银行卡。</string>
+    <string name="upomp_bypay_pay_it_paycardnum">支\u0020付\u0020卡\u0020号\u0020:</string>
+    <string name="upomp_bypay_pay_it_other">其他</string>
+    <string name="upomp_bypay_pay_it_valueacrdtype">储值卡类型:</string>
+    <string name="upomp_bypay_pay_it_choosevalueacrdtype">请选择储值卡类型</string>
+    <string name="upomp_bypay_pay_it_valueacrdnum">储值卡卡号:</string>
+    <string name="upomp_bypay_pay_it_valueacrdcode">储值卡密码:</string>
+    <string name="upomp_bypay_pay_it_cvn2">C\u0020\u0020V\u0020\u0020N\u0020\u0020\u00202\u0020\u0020:</string>
+    <string name="upomp_bypay_pay_it_cardid">银行卡卡号</string>
+    <string name="upomp_bypay_pay_it_cardpsw">银行卡密码</string>
+    <string name="upomp_bypay_pay_it_getmac">请先点击“获取”按钮，获取最新短信校验码。</string>
+    <string name="upomp_bypay_pay_it_macfail">短信验证码不正确，请重新填写!</string>
+    <string name="upomp_bypay_pay_it_getlistfail">读取储值卡列表错误！</string>
+    <string name="upomp_bypay_pay_it_selectcard">银行卡选择</string>
+    <string name="upomp_bypay_pay_it_defultcard">（默认）</string>
+    <string name="upomp_bypay_pay_it_changecard">银行卡变更</string>
+    <string name="upomp_bypay_pay_it_yesornopay">是否选择此卡进行支付？[</string>
+    <string name="upomp_bypay_pay_it_selectmm">请选择有效期月份</string>
+    <string name="upomp_bypay_pay_it_selectyy">请选择有效期年份</string>
+    <string name="upomp_bypay_pay_it_hint_normal">只需验证发卡行预留手机号及银行卡信息（信用卡验证有效期和CVN2，借记卡验证卡密码），即可完成支付。</string>
+    <string name="upomp_bypay_pay_it_hint_auth">银联在线支付注册用户可通过验证用户密码，选择绑定的银行卡并验证手机短信验证码，即可完成支付。</string>
+    <string name="upomp_bypay_pay_it_hint_valuecard">使用银联支持的储值卡（也叫预付费卡，不记名不挂失），只需验证卡号和密码，即可完成支付。</string>
+    <string name="upomp_bypay_pay_main_tradeverify">交易确认</string>
+    <string name="upomp_bypay_pay_main_secondindentnum">订单编号:</string>
+    <string name="upomp_bypay_pay_main_secondexchangetime">交易时间:</string>
+    <string name="upomp_bypay_pay_main_moneytype">交易币种:</string>
+    <string name="upomp_bypay_pay_main_tradetype">交易种类:</string>
+    <string name="upomp_bypay_pay_main_immediatelypay">立即支付</string>
+    <string name="upomp_bypay_pay_main_checkinfocarefully">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020请仔细核对交易信息，以防止虚假交易或钓鱼软件。如与您之前交易信息不符，请不要进行交易。</string>
+    <string name="upomp_bypay_pay_result_indentnum">订\u0020单\u0020编\u0020号\u0020:</string>
+    <string name="upomp_bypay_pay_result_exchangetime">交\u0020易\u0020时\u0020间\u0020:</string>
+    <string name="upomp_bypay_pay_result_traderesult_maohao">交\u0020易\u0020结\u0020果\u0020:</string>
+    <string name="upomp_bypay_pay_result_tradeturnover">交\u0020易\u0020流\u0020水\u0020:</string>
+    <string name="upomp_bypay_pay_result_failinfo">失\u0020败\u0020原\u0020因\u0020:</string>
+    <string name="upomp_bypay_register_email">邮\u0020箱\u0020地\u0020址\u0020:</string>
+    <string name="upomp_bypay_register_emailhint">邮箱地址</string>
+    <string name="upomp_bypay_register_setsecuritypromptquestion">设置安全提示问题</string>
+    <string name="upomp_bypay_register_customquestion">自定义问题:</string>
+    <string name="upomp_bypay_register_iagreewithuserdeal">我同意用户协议</string>
+    <string name="upomp_bypay_registeractivity_yes">请阅读注册协议，只有同意协议才能继续注册。</string>
+    <string name="upomp_bypay_registeractivity_usernamerepeat">用户名已存在，请返回商户。</string>
+    <string name="upomp_bypay_splash_version">版本1.1.0</string>
+    <string name="upomp_bypay_splash_info">中国银联股份有限公司版权所有 ©2002-2012</string>
+    <string name="upomp_bypay_carddialog_select">选择操作</string>
+    <string name="upomp_bypay_carddialog_seecardinfo">银行卡信息查看</string>
+    <string name="upomp_bypay_keyboard_clear">清除</string>
+    <string name="upomp_bypay_keyboard_number">数字</string>
+    <string name="upomp_bypay_keyboard_letter">字母</string>
+    <string name="upomp_bypay_keyboard_symbol">符号</string>
+    <string name="upomp_bypay_loading1dialog_loading">加载中,请稍后...</string>
+    <string name="upomp_bypay_splashactivity_initfail">初始化数据失败！</string>
+    <string name="upomp_bypay_splashactivity_quit">中途退出</string>
+    <string name="upomp_bypay_splashactivity_rmb">人民币</string>
+    <string name="upomp_bypay_splashactivity_pay">直接消费</string>
+    <string name="upomp_bypay_splashactivity_custom">自定义</string>
+    <string name="upomp_bypay_utils_inputusername">请输入用户名。</string>
+    <string name="upomp_bypay_utils_inputusernamefail">用户名格式有误，应由6-20位字母和数字混合组成。</string>
+    <string name="upomp_bypay_utils_inputpsw">请输入密码。</string>
+    <string name="upomp_bypay_utils_inputpswinfo">密码格式有误，应由6-12位字母、数字或特殊符号混合组成（至少两种混合）。</string>
+    <string name="upomp_bypay_utils_enterquit">确定要退出吗?</string>
+    <string name="upomp_bypay_utils_inputloginusername">请输入用户名。</string>
+    <string name="upomp_bypay_utils_inputloginusernamefail">用户名格式有误，长度应为6-20位。</string>
+    <string name="upomp_bypay_utils_inputusernameinfo">用户名应由6-20位字符组合组成!</string>
+    <string name="upomp_bypay_utils_inputloginpsw">请输入密码。</string>
+    <string name="upomp_bypay_utils_inputloginpswinfo">密码应由6-12位字符组合组成!</string>
+    <string name="upomp_bypay_utils_inputpswfail">密码格式有误，长度应为6-12位。</string>
+    <string name="upomp_bypay_utils_inputenterpsw">请再次输入密码。</string>
+    <string name="upomp_bypay_utils_twopswfail">两次输入的密码不一致。</string>
+    <string name="upomp_bypay_utils_twonewpswfail">两次输入的新密码不一致。</string>
+    <string name="upomp_bypay_utils_inputnewpsw">请输入新密码。</string>
+    <string name="upomp_bypay_utils_inputnewpswfail">新密码格式有误，应由6-12位字母、数字或特殊符号混合组成（至少两种混合）。</string>
+    <string name="upomp_bypay_utils_inputenternewpsw">请再次输入新密码。</string>
+    <string name="upomp_bypay_utils_inputtel">请输入手机号码。</string>
+    <string name="upomp_bypay_utils_inputtelfail">手机号码格式有误，应为11位数字。</string>
+    <string name="upomp_bypay_utils_inputnewtel">请输入新手机号码。</string>
+    <string name="upomp_bypay_utils_inputnewtelfail">新手机号码格式有误，应为11位数字。</string>
+    <string name="upomp_bypay_utils_inputmac">请输入短信验证码。</string>
+    <string name="upomp_bypay_utils_inputwebvalidcode">请输入校验码。</string>
+    <string name="upomp_bypay_utils_inputwebvalidcodefail">校验码格式错误，应为4位数字。</string>
+    <string name="upomp_bypay_utils_inputemail">请输入邮箱地址。</string>
+    <string name="upomp_bypay_utils_inputemailfail">邮箱地址格式有误。</string>
+    <string name="upomp_bypay_utils_welcome">请输入页面欢迎语。</string>
+    <string name="upomp_bypay_utils_welcomefail">页面欢迎语格式有误，长度应为2-16位，内容可为中文、英文、数字或特殊字符。</string>
+    <string name="upomp_bypay_utils_question">请选择安全问题。</string>
+    <string name="upomp_bypay_utils_questionfail">安全问题由2-16位字符组合组成!</string>
+    <string name="upomp_bypay_utils_myquestion">请输入自定义安全问题。</string>
+    <string name="upomp_bypay_utils_myquestionfail">自定义安全问题格式有误，长度应为2-16位，内容可为中文、英文、数字或特殊字符。</string>
+    <string name="upomp_bypay_utils_questionresult">请输入安全问题答案。</string>
+    <string name="upomp_bypay_utils_questionresultfail">安全问题答案格式有误，长度应为2-16位，内容可为中文、英文、数字或特殊字符。</string>
+    <string name="upomp_bypay_utils_cardpsw">请输入银行卡密码。</string>
+    <string name="upomp_bypay_utils_cardpswfail">银行卡密码长度有误，应为6位数字。</string>
+    <string name="upomp_bypay_utils_valuecardid">请输入储值卡卡号。</string>
+    <string name="upomp_bypay_utils_valuecardidfail">储值卡卡号格式有误，应为16-19位数字。</string>
+    <string name="upomp_bypay_utils_valuecardpsw">请输入银行卡密码。</string>
+    <string name="upomp_bypay_utils_valuecardpswfail">银行卡密码长度有误，应为6位数字。</string>
+    <string name="upomp_bypay_utils_cvn2">请输入CVN2。</string>
+    <string name="upomp_bypay_utils_cvn2fail">CVN2长度有误，应为3位数字，一般为信用卡背面数字的末三位。</string>
+    <string name="upomp_bypay_utils_cardpsw_hint">\u0020\u0020请输入密码</string>
+    <string name="upomp_bypay_editpassactivity_inputoldpsw_hint">请输入原密码</string>
+    <string name="upomp_bypay_utils_inputnewpsw_hint">\u0020\u0020请输入新密码</string>
+    <string name="upomp_bypay_utils_inputenternewpsw_hint">\u0020\u0020请再次输入密码</string>
+    <string name="upomp_bypay_utils_valuecardpsw_hint">\u0020\u0020请输入储值卡密码</string>
+    <string name="upomp_bypay_utils_inputenterpsw_hint">\u0020\u0020请输入确认密码</string>
+    <string name="upomp_bypay_message_validation">确认短信中安全提示信息为:</string>
+    <string name="upomp_bypay_pay_normal_2_1">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020您输入的是借记卡，请输入该卡在发卡行预留的手机号码并点击获取按钮，然后在手机收到短信验证码后输入到短信验证码输入框中。</string>
+    <string name="upomp_bypay_pay_normal_2_2">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020您输入的是信用卡，请输入该卡在发卡行预留的手机号码并点击获取按钮，然后在手机收到短信验证码后输入到短信验证码输入框中。</string>
+    <string name="upomp_bypay_pay_normal_2">如果短信中安全提示信息一样， 请勾选“确认短信中安全提示信息”，只有确认短信中安全提示信息才能支付。</string>
+
+    <!-- qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq -->
+
+    <string name="upomp_bypay_prompt">提示</string>
+    <string name="upomp_bypay_pay_main_merchantname">商户名称:</string>
+    <string name="upomp_bypay_pay_main_secondpayamount">订单金额:</string>
+    <string name="upomp_bypay_yuan">\u0020元</string>
+    <string name="upomp_bypay_pay_main_user">普通用户</string>
+    <string name="upomp_bypay_pay_main_user_info">使用卡号，手机号，卡密完成认证支付：</string>
+    <string name="upomp_bypay_pay_main_user_btn">普通用户认证支付</string>
+    <string name="upomp_bypay_pay_main_user_pan">卡\u0020\u0020\u0020\u0020号:</string>
+    <string name="upomp_bypay_affirm">确认</string>
+    <string name="upomp_bypay_pay_main_onuser">银联在线支付用户</string>
+    <string name="upomp_bypay_pay_main_onuser_info">使用用户名，密码及绑定卡完成快捷支付:</string>
+    <string name="upomp_bypay_pay_main_onuser_btn">银联在线支付用户快捷支付</string>
+    <string name="upomp_bypay_pay_main_cancelpay">取消支付</string>
+    <string name="upomp_bypay_pay_main_user_name">用户名:</string>
+    <string name="upomp_bypay_pay_main_user_password">密码:</string>
+    <string name="upomp_bypay_pay_main_ordernum">订单编号:</string>
+    <string name="upomp_bypay_pay_main_orderdata">订单时间:</string>
+    <string name="upomp_bypay_pay_main_orderinfo">订单详情:</string>
+    <string name="upomp_bypay_cardinfo_issuercard">发卡行:</string>
+    <string name="upomp_bypay_cardtype">卡类型:</string>
+    <string name="upomp_bypay_cardinfo_hint">如果您在银行预留的手机号码已变更，请直接填写新手机号码。</string>
+    <string name="upomp_bypay_firstmobilenum">手机号码:</string>
+    <string name="upomp_bypay_pin">银行卡密码:</string>
+    <string name="upomp_bypay_pay_result">交易结果:</string>
+    <string name="upomp_bypay_register_box_hint">注册成为银联在线支付用户</string>
+    <string name="upomp_bypay_defaultcard">默认卡:</string>
+    <string name="upomp_bypay_register_title_hint">请填写以下信息进行注册:</string>
+    <string name="upomp_bypay_finish">完成</string>
+    <string name="upomp_bypay_register_succeed">注册成功!</string>
+    <string name="upomp_bypay_utils_cvn2_hint">请输入CVN2</string>
+    <string name="upomp_bypay_utils_inputpsw_hint">请输入密码</string>
+    <string name="upomp_bypay_fae">百付天下\u0020\u0020\u0020\u0020技术支持</string>
+    <string name="upomp_bypay_pay_it_secondcheckcode">校验码:</string>
+    <string name="upomp_bypay_utils_cardid">请输入银行卡卡号。</string>
+    <string name="upomp_bypay_utils_cardidfail">银行卡卡号格式有误，应为16-19位数字。</string>
+    <string name="upomp_bypay_head_change">支付方式</string>
+    <string name="upomp_bypay_head_user">认证支付</string>
+    <string name="upomp_bypay_head_onuser">快捷支付</string>
+    <string name="upomp_bypay_head_addcard">添加银行卡</string>
+    <string name="upomp_bypay_head_addresult">添加结果</string>
+    <string name="upomp_bypay_head_usermanage">用户管理</string>
+    <string name="upomp_bypay_head_cardmanage">管理银行卡</string>
+    <string name="upomp_bypay_head_changetel">修改手机号码</string>
+    <string name="upomp_bypay_head_changepsw">修改密码</string>
+    <string name="upomp_bypay_head_payresult">支付结果</string>
+    <string name="upomp_bypay_head_registerresult">注册结果</string>
+    <string name="upomp_bypay_inputtel">请重新点击“获取”按钮，获取最新短信验证码。</string>
+    <string name="upomp_bypay_getmac">请先点击“获取”按钮，获取最新短信校验码。</string>
+    <string name="upomp_bypay_utils_inputmacfail">短信验证码内容有误，请重新核对短信中的6位数字验证码。</string>
+    <string name="upomp_bypay_no_bindcard_hint">请添加要支付的银行卡。</string>
+    <string name="upomp_bypay_mobilenum">手机号码:</string>
+    <string name="upomp_bypay_bindcard">已绑定卡:</string>
+    <string name="upomp_bypay_bindcardlength">张(上限10张)</string>
+    <string name="upomp_bypay_editinfo_oldtel">原手机号码:</string>
+    <string name="upomp_bypay_editinfo_newtel">新手机号码:</string>
+    <string name="upomp_bypay_firstshortmessagesecuritycode">短信验证码:</string>
+    <string name="upomp_bypay_bindcard_help">如有疑问请致电95516或访问网站http://online.unionpay.com</string>
+    <string name="upomp_bypay_bindcard_hint">所添加的银行卡信息如下:</string>
+    <string name="upomp_bypay_card_btn1">选择此卡支付</string>
+    <string name="upomp_bypay_card_btn2">设为默认卡</string>
+    <string name="upomp_bypay_card_btn3">解除绑定</string>
+    <string name="upomp_bypay_addcard">添加银行卡</string>
+    <string name="upomp_bypay_bindcard_win">银行卡信息添加成功!</string>
+    <string name="upomp_bypay_bindcard_lose">添加失败!</string>
+    <string name="upomp_bypay_registeractivity_register">用户注册</string>
+    <string name="upomp_bypay_utils_change_tel_mac">短信验证码对应手机号码已更改，请重新获取对应短信验证码。</string>
+    <string name="upomp_bypay_ispreauth_lose">预授权失败</string>
+    <string name="upomp_bypay_ispreauth_win">预授权成功</string>
+</resources>

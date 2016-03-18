@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="55dip" 
+    android:textSize="20dip"
+    android:textColor="@color/text_color_black"
+    android:padding="10dip"
+    android:ellipsize="end"
+	android:gravity="center_vertical"
+	android:checkMark="@drawable/my_spinner_check_mark"
+	android:background="@color/background_color_white"
+    />

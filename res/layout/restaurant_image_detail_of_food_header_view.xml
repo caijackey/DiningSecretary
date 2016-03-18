@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#03000000"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- 菜品名称 -->
+
+    <TextView
+        android:id="@+id/food_image_food_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dip"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="10dip"
+        android:background="#00FFFFFF"
+        android:gravity="left"
+        android:text="精品红烧肉"
+        android:textColor="@color/text_color_black"
+        android:textSize="16dip" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:layout_marginTop="5dip" >
+
+        <Gallery
+            android:id="@+id/food_image_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdge="none" />
+
+        <!-- 右箭头 -->
+
+        <ImageView
+            android:id="@+id/food_image_gallery_right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dip"
+            android:padding="5dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/right_arrow_button" />
+
+        <!-- 左箭头 -->
+
+        <ImageView
+            android:id="@+id/food_image_gallery_left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dip"
+            android:padding="5dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/left_arrow_button" />
+
+        <!-- 无图片时的上传按钮 -->
+
+        <FrameLayout
+            android:id="@+id/food_image_upload_button_when_no_pic_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:background="@drawable/shape_bg_white_border_gray" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_margin="4dip"
+                android:background="#FFDDDDDD" >
+
+                <Button
+                    android:id="@+id/food_image_upload_button_when_no_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:padding="5dip"
+                    android:background="@drawable/upload_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="0dip"
+                    android:layout_marginTop="35dip"
+                    android:background="#00FFFFFF"
+                    android:text="该菜式 暂无图片"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="15dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="0dip"
+                    android:layout_marginTop="58dip"
+                    android:background="#00FFFFFF"
+                    android:text="点这里上传，获秘币"
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="16dip" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- 价格背景 -->
+
+        <ImageView
+            android:id="@+id/food_image_gallery_food_price_image"
+            android:layout_width="45dip"
+            android:layout_height="75dip"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="25dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/food_price_plate"
+            android:padding="3dip"
+            android:scaleType="fitXY" />
+
+        <!-- 价格文字 -->
+
+        <TextView
+            android:id="@+id/food_image_gallery_food_price"
+            android:layout_width="38dip"
+            android:layout_height="20dip"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="28dip"
+            android:layout_marginTop="45dip"
+            android:background="#00FFFFFF"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:padding="0dip"
+            android:shadowColor="@color/background_color_black"
+            android:shadowDx="-2.0"
+            android:shadowDy="-2.0"
+            android:singleLine="true"
+            android:text="2259"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14dip" />
+        <!-- 价格文字单位 -->
+
+        <TextView
+            android:id="@+id/food_image_gallery_food_price_unit"
+            android:layout_width="38dip"
+            android:layout_height="20dip"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="60dip"
+            android:background="#00FFFFFF"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:padding="0dip"
+            android:singleLine="true"
+            android:text="元/例"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12dip" />
+    </FrameLayout>
+
+    <!-- 有图片时的上传按钮 -->
+
+    <Button
+        android:id="@+id/food_image_upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/dish_already_order_button"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:text="上传图片"
+        android:textColor="#FF555555"
+        android:textSize="14dip" />
+    <!-- 阴影 -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/detail_div1" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dip"
+        android:layout_marginTop="12dip"
+        android:background="#00FFFFFF"
+        android:gravity="center"
+        android:text="觉得该菜品怎么样? 来点评一下吧!"
+        android:textColor="@color/text_color_deep_gray"
+        android:textSize="16dip" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip" >
+
+            <Button
+                android:id="@+id/food_image_grade_like_button"
+                android:layout_width="90dip"
+                android:layout_height="30dip"
+                android:layout_marginLeft="0dip"
+                android:background="@drawable/button_grade_like"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="15dip"
+                android:paddingRight="5dip"
+                android:singleLine="true"
+                android:text="好(11)"
+                android:textColor="@color/text_color_black" />
+
+            <Button
+                android:id="@+id/food_image_grade_general_button"
+                android:layout_width="90dip"
+                android:layout_height="30dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/button_grade_general"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="17dip"
+                android:paddingRight="5dip"
+                android:singleLine="true"
+                android:text="一般(25)"
+                android:textColor="@color/text_color_black" />
+
+            <Button
+                android:id="@+id/food_image_grade_dislike_button"
+                android:layout_width="90dip"
+                android:layout_height="30dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/button_grade_dislike"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="15dip"
+                android:paddingRight="5dip"
+                android:singleLine="true"
+                android:text="差(245)"
+                android:textColor="@color/text_color_black" />
+        </LinearLayout>
+        <!-- 评分动画效果 -->
+
+        <TextView
+            android:id="@+id/food_image_grade_animation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dip"
+            android:layout_marginLeft="80dip"
+            android:clickable="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:longClickable="false"
+            android:text="+1"
+            android:textSize="20dip" />
+    </RelativeLayout>
+
+    <!-- 分隔线 -->
+
+    <com.fg114.main.app.view.LineView
+        xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+        android:id="@+id/horizontal_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        android:background="#00000000"
+        android:visibility="visible"
+        line:dashedGap="0dip"
+        line:dashedWidth="2dip"
+        line:orientation="horizontal"
+        line:thickness="1dip"
+        line:color="#FFCCCCCC" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="10dip"
+        android:background="#00FFFFFF"
+        android:text="评论"
+        android:textColor="@color/text_color_black"
+        android:textSize="18dip" />
+
+</LinearLayout>

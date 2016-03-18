@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:gravity="center"
+    android:background="@drawable/tip_pointer_button_normal"
+    >
+    <TextView 
+        android:id="@+id/show_takeaway_res_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_deep_gray"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:textSize="16dp"
+        />
+    <ImageView 
+        android:layout_width="8dip"
+        android:layout_height="14dip"
+        android:layout_marginLeft="0dip"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/arrow_right2"/>
+
+</LinearLayout>

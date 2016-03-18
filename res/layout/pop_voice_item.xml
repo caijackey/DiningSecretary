@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:background="@drawable/voice_pop_rouad"
+        android:id="@+id/voice_content_view_1"
+         >
+
+        <ImageView
+            android:id="@+id/voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            />
+
+      
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/voice_content_view_2"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/voice_pop_rouad"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/voice_image_low_high_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/voice_cancle"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/voice_rcd_cancel_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="移到这里取消"
+                android:id="@+id/voice_cancel_tv"
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/voice_cancel_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rcd_cancel_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/takeaway_order_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/border_color_light_gray"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/takeaway_order_menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="- -"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/takeaway_order_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" >
+
+        <RatingBar
+            android:id="@+id/takeaway_order_menu_overallNum"
+            style="@style/takeawayRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:max="5"
+            android:numStars="5"
+            android:stepSize="1" 
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

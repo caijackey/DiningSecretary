@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+    android:id="@+id/index2_relative_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="@drawable/bg_index_new" >
+
+    <!-- 伪搜索框 -->
+
+    <LinearLayout
+        android:id="@+id/fast_booking_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/index_search_bg_top"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <LinearLayout
+            android:id="@+id/fast_booking_search_text_layout"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_marginRight="-5dip"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingRight="10dip" >
+
+            <!-- 餐厅名 -->
+
+            <TextView
+                android:id="@+id/fast_booking_search_text_view"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:hint="请输入餐厅首字母"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_color_gray"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:baselineAligned="false"
+                android:gravity="center" >
+
+                <!-- 秘币图标 -->
+
+                <ImageView
+                    android:id="@+id/promotion_icon_mibi"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_mibi_1"
+                    android:visibility="visible" />
+
+                <!-- 秘币文字 -->
+
+                <TextView
+                    android:id="@+id/promotion_mibi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-10dip"
+                    android:layout_marginTop="-7dip"
+                    android:padding="0dip"
+                    android:text="15%"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="10dip"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!-- 优惠和文字 -->
+
+            <TextView
+                android:id="@+id/promotion_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="22dip"
+                android:background="@drawable/promotion_discount_icon_bg"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="1dip"
+                android:text="75折惠"
+                android:textColor="@color/text_color_white"
+                android:textSize="12dip"
+                android:visibility="visible" />
+            <!-- 券和文字 -->
+
+            <TextView
+                android:id="@+id/promotion_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="22dip"
+                android:background="@drawable/promotion_coupon_icon_bg"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="1dip"
+                android:text="75折券"
+                android:textColor="@color/text_color_white"
+                android:textSize="12dip"
+                android:visibility="visible" />
+        </LinearLayout>
+        <!-- 右按钮 -->
+
+        <Button
+            android:id="@+id/fast_booking_search_right_button"
+            android:layout_width="33dip"
+            android:layout_height="30dip"
+            android:background="@drawable/search_bg_right"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <!-- 下部 -->
+
+    <LinearLayout
+        android:id="@+id/fast_booking_bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fast_booking_top_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="0dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 中间滚轮，提交按钮 -->
+
+        <com.fg114.main.app.view.OrderSelectionWheelView
+            xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/order_info_selection_wheel"
+            android:layout_width="fill_parent"
+            android:layout_height="140dip"
+            android:background="@drawable/index_search_bg_top"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/button_order_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="-2px"
+            android:layout_marginRight="1px"
+            android:background="@drawable/bt_submit_order"
+            android:gravity="center"
+            android:text="确定提交"
+            android:textColor="@color/text_color_white"
+            android:textSize="17dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/button_order_phone_call"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_marginTop="20dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/index_phone_order_01"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fast_booking_search_order_hint_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="一键预订:021-58305757"
+            android:textColor="@color/text_color_green"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/button_order_bottom_line_image"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:layout_marginTop="0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_index_search_bottom"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!-- 禁止操作的蒙皮 -->
+
+    <LinearLayout
+        android:id="@+id/order_selection_mask"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/advertisement_layout"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dip"
+        android:background="#22000000"
+        android:visibility="gone" />
+
+</RelativeLayout>

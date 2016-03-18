@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 包含菜的图片，名字，和价钱集合 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	>
+  	 <FrameLayout
+		android:id="@+id/pitcure_layout"
+		android:layout_width="75dip"
+		android:layout_height="75dip"
+		android:layout_marginRight="10dip"
+		android:orientation="horizontal"
+		android:background="@drawable/shape_bg_white_border_gray"
+		android:padding="5dip" >
+
+		<com.fg114.main.app.view.MyImageView
+			android:id="@+id/foodpicture"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"  />
+	</FrameLayout>
+	<TextView
+		android:id="@+id/foodname"
+		android:layout_width="75dip"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:textSize="12dip"
+		android:visibility="gone"
+		android:textColor="@color/text_color_gray" />
+	<TextView
+		android:id="@+id/foodprice"
+		android:layout_width="75dip"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		android:visibility="gone"
+		android:textSize="12dip"
+		android:textColor="@color/text_color_red" />
+</LinearLayout>

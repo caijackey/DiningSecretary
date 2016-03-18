@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="#99000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:id="@+id/person_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dip"
+        android:background="@drawable/shape_rectangle_dialog_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/person_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dip"
+            android:text="请输入昵称"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip" />
+
+        <EditText
+            android:id="@+id/person_content"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:paddingLeft="5dip"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColor="@color/background_color_black"
+            android:background="@drawable/shape_bg_white_border_deep_gray_round_corner"
+            android:textSize="16dip" />
+
+        <!-- 按钮 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/person_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/crystal_button_light_color"
+                android:text="保存"
+                android:textColor="@color/text_color_white"
+                android:layout_marginRight="5dip"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/person_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/crystal_button_light_color"
+                android:text="取消"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

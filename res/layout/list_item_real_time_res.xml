@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<RelativeLayout
+		android:id="@+id/list_item_real_time_res_rlRes"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="10dp"
+		android:paddingTop="15dp"
+		android:paddingBottom="15dp"
+		android:background="@drawable/middle_list_item_bg">
+		<!-- 箭头符号区 -->
+		<ImageView
+			android:id="@+id/list_item_real_time_res_ivArrow"
+			android:src="@drawable/arrow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true" />
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="5dp"
+			android:layout_toLeftOf="@+id/list_item_real_time_res_ivArrow"
+			android:layout_alignWithParentIfMissing="true">
+			<com.fg114.main.app.view.MyImageView
+				android:id="@+id/list_item_real_time_res_ivResLogo"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_margin="5dp"
+				android:layout_alignParentTop="true" />
+			<!-- 折扣 -->
+			<LinearLayout
+				android:id="@+id/list_item_real_time_res_vgDiscount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_alignTop="@+id/list_item_real_time_res_ivResLogo"
+				android:orientation="horizontal"
+				android:gravity="center_horizontal">
+				<TextView
+					android:id="@+id/list_item_real_time_res_tvDiscount"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_color_red"
+					android:textSize="18dp"
+					android:ellipsize="end"
+					android:singleLine="true"
+					android:textStyle="bold"
+					android:text="7" />
+				<TextView
+					android:id="@+id/list_item_real_time_res_tvDiscountLabel"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/text_color_red"
+					android:textSize="14dp"
+					android:ellipsize="end"
+					android:singleLine="true"
+					android:text="折" />
+			</LinearLayout>
+			<!-- 餐馆名称 -->
+			<TextView
+				android:id="@+id/list_item_real_time_res_tvResName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@+id/list_item_real_time_res_vgDiscount"
+				android:layout_toRightOf="@+id/list_item_real_time_res_ivResLogo"
+				android:layout_alignTop="@+id/list_item_real_time_res_ivResLogo"
+				android:layout_alignWithParentIfMissing="true"
+				android:textSize="18dp"
+				android:textColor="@color/text_color_black"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:layout_marginRight="5dp"
+				android:text="餐厅名称" />
+			<!-- 人均 -->
+			<TextView
+				android:id="@+id/list_item_real_time_res_tvAvgPrice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="2dp"
+				android:layout_below="@+id/list_item_real_time_res_tvResName"
+				android:layout_alignLeft="@+id/list_item_real_time_res_tvResName"
+				android:textColor="@color/text_color_gray"
+				android:textSize="14dp"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:text="人均: ¥500-1000" />
+			<!-- 距离 -->
+			<TextView
+				android:id="@+id/list_item_real_time_res_tvResDistance"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignRight="@+id/list_item_real_time_res_vgDiscount"
+				android:layout_alignTop="@+id/list_item_real_time_res_tvAvgPrice"
+				android:layout_alignWithParentIfMissing="true"
+				android:textSize="14dp"
+				android:textColor="@color/text_color_gray"
+				android:singleLine="true"
+				android:text="1.6公里" />
+			<!-- 喜欢 -->
+			<TextView
+				android:id="@+id/list_item_real_time_res_tvLike"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@+id/list_item_real_time_res_tvAvgPrice"
+				android:layout_alignTop="@+id/list_item_real_time_res_tvAvgPrice"
+				android:textColor="@color/text_color_red"
+				android:textSize="14dp"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:text="86%" />
+			<TextView
+				android:id="@+id/list_item_real_time_res_tvLikeLabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/list_item_real_time_res_tvLike"
+				android:layout_alignTop="@+id/list_item_real_time_res_tvAvgPrice"
+				android:layout_toLeftOf="@+id/list_item_real_time_res_tvResDistance"
+				android:layout_alignWithParentIfMissing="true"
+				android:textColor="@color/text_color_gray"
+				android:textSize="14dp"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:text="喜欢" />
+			<Button
+				android:id="@+id/list_item_real_time_res_btFirst"
+				android:layout_width="wrap_content"
+				android:layout_height="30dip"
+				android:layout_marginTop="15dp"
+				android:paddingLeft="5dp"
+				android:paddingRight="5dp"
+				android:layout_below="@+id/list_item_real_time_res_tvAvgPrice"
+				android:layout_alignLeft="@+id/list_item_real_time_res_tvResName"
+				android:textColor="@drawable/button_real_time_state_text"
+				android:textSize="14dp"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:focusable="false"
+				android:focusableInTouchMode="false"
+				android:background="@drawable/button_real_time_state"
+				android:text="午市大厅" />
+			<Button
+				android:id="@+id/list_item_real_time_res_btSecond"
+				android:layout_width="wrap_content"
+				android:layout_height="30dip"
+				android:layout_marginLeft="10dp"
+				android:paddingLeft="5dp"
+				android:paddingRight="5dp"
+				android:layout_toRightOf="@+id/list_item_real_time_res_btFirst"
+				android:layout_alignTop="@+id/list_item_real_time_res_btFirst"
+				android:textColor="@drawable/button_real_time_state_text"
+				android:textSize="14dp"
+				android:ellipsize="end"
+				android:singleLine="true"
+				android:focusable="false"
+				android:focusableInTouchMode="false"
+				android:background="@drawable/button_real_time_state"
+				android:text="午市包房" />
+		</RelativeLayout>
+	</RelativeLayout>
+	<!-- 消息提示区 -->
+	<LinearLayout
+		android:id="@+id/res_food_list_item_msgLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:background="@drawable/middle_list_item_bg1_state02"
+		android:visibility="gone">
+		<ProgressBar
+			android:id="@+id/res_food_list_item_pBar"
+			style="?android:attr/progressBarStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone" />
+		<TextView
+			android:id="@+id/res_food_list_item_tvMsg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dip"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="5dip"
+			android:textColor="@color/text_color_black"
+			android:textSize="14dip"
+			android:gravity="left" />
+		<Button
+			android:id="@+id/res_food_list_item_btnAddNewRes"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:text="@string/text_button_add_res"
+			android:textSize="18dip"
+			android:background="@drawable/gray_button"
+			android:visibility="gone"
+			android:textColor="@color/text_color_black" />
+		<Button
+			android:id="@+id/res_food_list_item_btnRetry"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:text="（网络通讯故障）点击重试"
+			android:textSize="18dip"
+			android:background="@drawable/gray_button"
+			android:visibility="gone"
+			android:textColor="@color/text_color_black" />
+	</LinearLayout>
+</LinearLayout>

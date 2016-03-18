@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_frame_mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e7e7e7"
+    android:fitsSystemWindows="true"
+    android:gravity="top|center" >
+
+<!--   内容区 -->
+
+    <LinearLayout
+        android:id="@+id/main_frame_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/main_frame_llBottom"
+        android:layout_below="@+id/main_frame_titlelayout"
+        android:layout_gravity="top"
+        android:background="#f2f2f1"
+        android:baselineAligned="false"
+        android:clipChildren="false"
+        android:gravity="top|center" />
+
+<!--   头部布局 -->
+
+
+    <LinearLayout
+        android:id="@+id/main_frame_titlelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:background="@drawable/tittle_topbar"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+<!--   返回按钮 -->
+
+        <LinearLayout
+            android:id="@+id/main_frame_btnGoBack_container"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/icon_go_back"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/main_frame_btnGoBack"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:textColor="@color/text_color_white"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/main_frame_tvTitle_layout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_transparent_dark_color_effect"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+<!--   页面标题 -->
+
+            <TextView
+                android:id="@+id/main_frame_tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_color_white"
+                android:textSize="20dip" />
+
+            <ImageView
+                android:id="@+id/main_frame_tvTitle_icon"
+                android:layout_width="12dip"
+                android:layout_height="12dip"
+                android:layout_marginLeft="-12dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_arrow_down_white"
+                android:visibility="gone" />
+        </LinearLayout>
+
+<!--   功能按钮 -->
+
+        <Button
+            android:id="@+id/main_frame_btnTitle"
+            style="@style/Shadow_Black_Up_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_title"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/arrow_title_down"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/main_frame_btnOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/button_light_color_effect"
+            android:padding="10dip"
+            android:text=""
+            android:textColor="@color/text_color_white"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+<!--   地理位置层 -->
+
+
+    <LinearLayout
+        android:id="@+id/main_frame_locationLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="28dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dip"
+        android:background="#66000000"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/main_frame_location_address"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:text="正在定位..."
+            android:textColor="@color/background_color_white"
+            android:textSize="14dip" />
+
+        <ImageButton
+            android:id="@+id/main_frame_location_refresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/button_color_effect"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="1dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/update_arrw" />
+    </LinearLayout>
+
+<!--   ===================  底部布局开始 ====================== -->
+
+
+    <RelativeLayout
+        android:id="@+id/main_frame_llBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/frame_btLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/menu_left" />
+
+        <TextView
+            android:id="@+id/index_frame_order_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/frame_btLeft"
+            android:layout_marginLeft="-10dip"
+            android:layout_marginTop="-10dip"
+            android:layout_toRightOf="@+id/frame_btLeft"
+            android:background="@drawable/bg_bubble"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/background_color_white"
+            android:textSize="10dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/frame_btRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/menu_right" />
+
+        <TextView
+            android:id="@+id/index_frame_user_center_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/frame_btRight"
+            android:layout_alignTop="@+id/frame_btRight"
+            android:layout_marginLeft="-10dip"
+            android:layout_marginTop="-10dip"
+            android:background="@drawable/bg_bubble"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/background_color_white"
+            android:textSize="10dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_frame_fac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/icon_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription=""
+            android:src="@drawable/navigation_main_menu" />
+    </LinearLayout>
+
+<!--   ===================  底部布局结束  ====================== 
+ -->
+
+    <!--
+           <include
+        android:id="@+id/main_frame_llBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        layout="@layout/frame_bottom_layout" />
+
+    -->
+
+</RelativeLayout>

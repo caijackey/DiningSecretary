@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dip"
+        android:background="@color/background_color_new_white"
+        android:baselineAligned="false"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <!-- 折扣价 -->
+
+        <TextView
+            android:id="@+id/group_buy_discount_price"
+            style="@style/Shadow_White_Down_3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingBottom="0dip"
+            android:textColor="@color/new_text_color_red"
+            android:textSize="26dip" />
+        <!-- 原价 -->
+
+        <TextView
+            android:id="@+id/group_buy_original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="4dip"
+            android:gravity="center"
+            android:paddingBottom="0dip"
+            android:textColor="@color/text_color_gray"
+            android:textSize="18dip" />
+
+        <TextView
+            android:id="@+id/group_buy_apply_short_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:singleLine="true"
+            android:textColor="@color/text_color_gray"
+            android:textSize="16dip" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <!-- 购买按钮 -->
+
+        <Button
+            android:id="@+id/group_buy_bt"
+            android:layout_width="120dip"
+            android:layout_height="35dip"
+            android:background="@drawable/bg_new_red"
+            android:singleLine="true"
+            android:textColor="@color/text_color_white"
+            android:textSize="18dip" 
+            android:text=""/>
+    </LinearLayout>
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="@color/background_color_deep_gray"/>
+
+</LinearLayout>

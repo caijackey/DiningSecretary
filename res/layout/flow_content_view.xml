@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/flow_content_frameMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp" >
+
+        <com.fg114.main.app.view.WaterFallImageView
+            android:id="@+id/flow_content_WaterFallImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+        </com.fg114.main.app.view.WaterFallImageView>
+
+        <TextView
+            android:id="@+id/flow_content_picTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@color/background_color_transparent"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:text="特色酥豆煲"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/background_color_white"
+            android:textSize="16dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/flow_content_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="130dp" >
+
+        <RelativeLayout
+            android:id="@+id/flow_content_relate"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+             >
+
+            <TextView
+                android:id="@+id/flow_content_HotNumTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="人气：1233"
+                android:layout_marginLeft="6dp"
+                android:textColor="@color/background_color_black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/flow_content_PicNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/flow_content_HotNumTv"
+                android:gravity="right|center_vertical"
+                android:singleLine="true"
+                android:text="图片：222张"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/background_color_black"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <com.fg114.main.app.view.LineView
+            xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/flow_content_div2"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/flow_content_relate"
+            android:layout_marginTop="5dip"
+            android:background="#00000000"
+            line:dashedGap="2dip"
+            line:dashedWidth="2dip"
+            line:orientation="horizontal"
+            line:thickness="1dip"
+            android:visibility="visible"
+            line:color="#FFCCCCCC" 
+            android:layout_marginBottom="2dp"/>
+
+        <Button
+            android:id="@+id/flow_content_more_infoBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/btn_more_food"
+            android:gravity="center" 
+            android:visibility="gone">
+        </Button>
+
+        <RelativeLayout
+            android:id="@+id/flow_content_centerID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/flow_content_more_infoBtn"
+            android:layout_below="@+id/flow_content_div2"
+             >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/flow_content_userPic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="6dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" >
+            </com.fg114.main.app.view.MyImageView>
+
+            <com.fg114.main.app.view.EllipsizeText
+                android:id="@+id/flow_content_user_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/flow_content_userPic"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minHeight="30dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/background_color_black"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

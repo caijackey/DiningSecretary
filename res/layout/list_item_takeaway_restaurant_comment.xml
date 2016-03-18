@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:id="@+id/comment_takeaway_list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <!-- 评论信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/list_item_comment_infoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/new_block_bt01"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="0dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:paddingTop="5dip" >
+
+            <!-- 发帖人及时间 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- 头像 -->
+
+                <RelativeLayout
+                    android:layout_width="38dip"
+                    android:layout_height="38dip"
+                    android:layout_marginTop="0dip" >
+
+                    <com.fg114.main.app.view.MyImageView
+                        android:id="@+id/list_item_comment_userphoto1"
+                        android:layout_width="38dip"
+                        android:layout_height="38dip"
+                        android:src="@drawable/bg_custom_dialog" />
+
+                    <ImageView
+                        android:layout_width="38dip"
+                        android:layout_height="38dip"
+                        android:src="@drawable/res_recom_user_skin" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/list_item_comment_tvUser"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="- -"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/list_item_comment_tvTime"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1.5"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="- -"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+            <!-- 评论星级 -->
+
+            <LinearLayout
+                android:id="@+id/list_item_comment_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:baselineAligned="false"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    android:id="@+id/list_item_takeaway_star"
+                    style="@style/indexRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:isIndicator="true"
+                    android:paddingTop="1dip"
+                    android:rating="5"
+                    android:saveEnabled="true"
+                    android:stepSize="1" />
+            </LinearLayout>
+            <!-- 评论内容 -->
+
+            <LinearLayout
+                android:id="@+id/list_item_comment_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:baselineAligned="false"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/list_item_takeaway_comment_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <!-- 分隔线 -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_margin="0dip"
+                android:background="@color/background_color_deep_gray" />
+            <!-- 餐厅回复 -->
+
+            <LinearLayout
+                android:id="@+id/list_item_comment_replyInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:baselineAligned="false"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="餐厅回复："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/list_item_takeaway_comment_replyInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

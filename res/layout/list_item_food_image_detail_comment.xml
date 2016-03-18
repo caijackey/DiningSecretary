@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/list_item_infoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dip"
+        android:paddingBottom="0dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <!-- 评论信息部分 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:baselineAligned="false"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingTop="0dip"
+            android:paddingBottom="5dip" 
+            android:paddingLeft="5dip" 
+            android:paddingRight="5dip"  >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/list_item_food_image_detail_comment_userphoto"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:src="@drawable/bg_custom_dialog" />
+            <!-- 发帖人及时间 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- 用户名 -->
+
+                <TextView
+                    android:id="@+id/list_item_food_image_detail_comment_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="海苔娃"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <!-- 喜欢类型 -->
+
+                <TextView
+                    android:id="@+id/list_item_food_image_detail_comment_like_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="喜欢这道菜"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="20dip"
+                    android:layout_weight="1" />
+
+                <!-- 发表时间 -->
+
+                <TextView
+                    android:id="@+id/list_item_food_image_detail_comment_post_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="2012-10-18 11:30"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="12dip" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_item_food_image_detail_comment_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingTop="5dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:paddingBottom="10dip"
+            android:text="没有评论内容"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="14dip" >
+        </TextView>
+        
+        <!-- 分隔线 -->
+
+        <com.fg114.main.app.view.LineView
+            xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/horizontal_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="#00000000"
+            android:visibility="visible"
+            line:dashedGap="2dip"
+            line:dashedWidth="2dip"
+            line:orientation="horizontal"
+            line:thickness="1dip"
+            line:color="#FFCCCCCC" />
+    </LinearLayout>
+    <!-- 提示信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/list_item_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/list_item_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/list_item_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dip"
+            android:gravity="left"
+            android:text="正在载入"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="14dip" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

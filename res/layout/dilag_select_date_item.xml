@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:padding="15dp"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_show_rest_bg" >
+
+            <LinearLayout
+                android:id="@+id/dialog_select_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/dilag_select_title" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="请选择时间:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/dilog_select_content"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/dialog_select_title"
+                android:layout_marginTop="2dp" >
+
+                <View
+                    android:id="@+id/dialog_select_line"
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="3dp"
+                    android:background="@color/text_color_hint" />
+
+                <RelativeLayout
+                    android:id="@+id/dialog_select_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/dialog_select_line" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/arrow_down" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/dialog_select_date_name_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/dialog_select_date_info_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color_red" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dialog_select_right_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/dialog_select_line" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/arrow_down" />
+
+                    <TextView
+                        android:id="@+id/dialog_select_timeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+                
+               
+            </RelativeLayout>
+             <FrameLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/voice_bottom_bg"
+                    android:layout_below="@+id/dilog_select_content"
+                   
+                    >
+                 <Button 
+                     android:id="@+id/dialog_select_Btn"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/index2_contentbtn2_sumbit"
+                     android:text="确定"
+                     android:textSize="18dp"
+                     android:textColor="@color/text_color_white"
+                     style="@style/Shadow_Black_Down_2"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginRight="10dp"
+                     android:layout_gravity="center"
+                     />
+                 
+                 
+             </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/dialog_select_X_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/dilag_select_x" />
+
+</RelativeLayout>

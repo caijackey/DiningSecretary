@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/restaurant_comment_score_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:gravity="top|center"
+                android:orientation="vertical"
+                android:padding="0dip" >
+
+                <!-- 总体评价 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginTop="10dip"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="3dip"
+                        android:text="是否喜欢"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" >
+                    </TextView>
+
+                    <RadioGroup
+                        android:id="@+id/restaurant_comment_like_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:orientation="horizontal" >
+
+                        <!-- 喜欢按钮 -->
+
+                        <RadioButton
+                            android:layout_width="80dip"
+                            android:layout_height="35dip"
+                            android:background="@drawable/rest_comment_like"
+                            android:button="@null"
+                            android:checked="false"
+                            android:ellipsize="end"
+                            android:focusable="false"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="25dip"
+                            android:paddingRight="12dip"
+                            android:singleLine="true"
+                            android:tag="1"
+                            android:text=""
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="16dip" />
+
+                        <!-- 不喜欢按钮 -->
+
+                        <RadioButton
+                            android:layout_width="90dip"
+                            android:layout_height="35dip"
+                            android:layout_marginLeft="15dip"
+                            android:background="@drawable/rest_comment_dislike"
+                            android:button="@null"
+                            android:checked="false"
+                            android:ellipsize="end"
+                            android:focusable="false"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="25dip"
+                            android:paddingRight="10dip"
+                            android:singleLine="true"
+                            android:tag="2"
+                            android:text=""
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="16dip" />
+                        <!-- 评分动画效果 -->
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 口味 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/block_top_bt01"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_layout_taste"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16sp" >
+                    </TextView>
+
+                    <RatingBar
+                        android:id="@+id/taste_ratingBar"
+                        style="@style/foodRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="-2dip"
+                        android:layout_marginLeft="20dip"
+                        android:numStars="5"
+                        android:stepSize="1" />
+                </LinearLayout>
+
+                <!-- 环境 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block_middle_bt01"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_layout_env"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" >
+                    </TextView>
+
+                    <RatingBar
+                        android:id="@+id/environment_ratingBar"
+                        style="@style/foodRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="-2dip"
+                        android:layout_marginLeft="20dip"
+                        android:numStars="5"
+                        android:stepSize="1" />
+                </LinearLayout>
+
+                <!-- 服务 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block_bottom_bt01"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_layout_service"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" >
+                    </TextView>
+
+                    <RatingBar
+                        android:id="@+id/service_ratingBar"
+                        style="@style/foodRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="-2dip"
+                        android:layout_marginLeft="20dip"
+                        android:numStars="5"
+                        android:stepSize="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/restaurant_comment_comment_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:gravity="top|center"
+                android:orientation="vertical"
+                android:padding="0dip" >
+
+                <!-- 评论 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="0dip"
+                        android:background="@drawable/block_bt01"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="5dip" >
+						<LinearLayout
+	                        android:layout_width="fill_parent"
+	                        android:layout_height="fill_parent"
+	                        android:layout_marginRight="0dip"
+	                        android:orientation="horizontal"
+	                        android:padding="5dip" >
+	                        <EditText
+	                            android:id="@+id/restaurant_comment_submit_etComment"
+	                            android:layout_width="0dp"
+	                            android:layout_weight="1"
+	                            android:layout_height="wrap_content"
+	                            android:layout_margin="5dip"
+	                            android:background="@null"
+	                            android:gravity="top"
+	                            android:hint="@string/text_layout_input_comment"
+	                            android:inputType="textMultiLine"
+	                            android:maxLines="8"
+	                            android:minLines="4"
+	                            android:maxLength="500"
+	                            android:scrollbars="vertical"
+	                            android:singleLine="false"
+	                            android:textColor="@color/text_color_black"
+	                            android:textColorHint="@color/text_color_gray"
+	                            android:textSize="16dip" />
+	                        <include
+                        		android:id="@+id/restaurant_comment_voice_button"
+                        		layout="@layout/voice_recognition_button_small" />
+                        </LinearLayout>
+                        <!-- 底部@按钮，拍照按钮，小图片区 -->
+
+                        <LinearLayout
+                            android:id="@+id/restaurant_comment_submit_upload_image_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="0dip"
+                            android:gravity="left|center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="2dip" >
+
+                            <Button
+                                android:id="@+id/restaurant_comment_submit_upload_image"
+                                android:layout_width="25dip"
+                                android:layout_height="25dip"
+                                android:layout_marginLeft="6dip"
+                                android:layout_marginRight="18dip"
+                                android:background="@drawable/camera_bt" />
+
+                            <!-- 小图片区 -->
+
+                            <LinearLayout
+                                android:id="@+id/restaurant_comment_submit_images_layout"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="0dip"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:padding="0dip" >
+                            </LinearLayout>
+
+                            <!-- 字数、清除按钮 -->
+
+                            <TextView
+                                android:id="@+id/restaurant_comment_submit_clear_comment"
+                                android:layout_width="80dip"
+                                android:layout_height="25dip"
+                                android:drawableRight="@drawable/clear_content_bt"
+                                android:gravity="left|center_vertical"
+                                android:padding="3dip"
+                                android:singleLine="true"
+                                android:text="123/140"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="14dip"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                   
+                </RelativeLayout>
+
+                <!-- 分享微博 -->
+
+                 <!-- 分享微博 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dip"
+                        android:baselineAligned="false"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="43dip" >
+
+                        <ToggleButton
+                            android:id="@+id/restaurant_comment_submit_chkShareSina"
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                            android:layout_marginLeft="13dip"
+                            android:background="@drawable/sina_check_weibo"
+                            android:textOff=""
+                            android:textOn="" >
+                        </ToggleButton>
+
+                        <ToggleButton
+                            android:id="@+id/restaurant_comment_submit_chkShareTX"
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                            android:layout_marginLeft="25dip"
+                            android:layout_toRightOf="@+id/comment_sina"
+                            android:background="@drawable/tx_check_weibo"
+                            android:textOff=""
+                            android:textOn="" >
+                        </ToggleButton>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/restaurant_comment_submit_upload_image_nouse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dip"
+                            android:background="@drawable/button_rest_comment_submit_upload_picture"
+                            android:paddingLeft="40dip"
+                            android:paddingRight="10dip"
+                            android:text="添加图片"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="15dip"
+                            android:visibility="gone" />
+                    </LinearLayout>
+            </LinearLayout>
+
+            <!-- 提交 -->
+
+            <Button
+                android:id="@+id/restaurant_comment_submit_btnUpLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/button_big"
+                android:paddingBottom="10dip"
+                android:paddingLeft="50dip"
+                android:paddingRight="50dip"
+                android:paddingTop="10dip"
+                android:text="@string/text_button_submit"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <!-- 消息遮罩 -->
+
+        <LinearLayout
+            android:id="@+id/restaurant_comment_submit_message_mask"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:background="#66000000"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="15dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingTop="15dip"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="#EE333333"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dip"
+                android:visibility="visible" >
+
+                <!-- 进度条 -->
+
+                <ProgressBar
+                    android:id="@+id/upload_pbBar"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="visible" />
+
+                <!-- 文字信息 -->
+
+                <TextView
+                    android:id="@+id/upload_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:text="@string/text_info_uploading"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="14dip" />
+                <!-- 附加文字信息 -->
+
+                <TextView
+                    android:id="@+id/upload_message_extra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="正在上传"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>

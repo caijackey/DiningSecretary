@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/order_list_red_bt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <!-- 订单内容区 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- 餐馆名称 -->
+
+            <TextView
+                android:id="@+id/rest_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="正院上海公馆"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dip" >
+
+                <!-- 外送时间 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="外送时间："
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/service_time"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="09:30~22:00"
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="14dip" />
+                <!-- 起送数量 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="起送："
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/min_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip"
+                    android:text="1份" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <!-- 订餐电话 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="订餐电话："
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip"
+                    android:text="13893477783" />
+                
+                <!-- 距离 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="距您约："
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip"
+                    android:text="270米" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 箭头符号区 -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_right2" />
+    </LinearLayout>
+    <!-- 消息提示区 -->
+
+    <LinearLayout
+        android:id="@+id/msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/middle_list_item_bg1_state02"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+</LinearLayout>

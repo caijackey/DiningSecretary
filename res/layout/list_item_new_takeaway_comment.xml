@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:id="@+id/comment_list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_light_color_effect"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <!-- 评论信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/list_item_newtakeaway_infoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <com.fg114.main.app.view.CerImageHorizontalScrollView 
+                android:id="@+id/list_item_newtakeaway_imageScrollView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 提示信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/list_item_newtakeaway_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/list_item_newtakeaway_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/list_item_newtakeaway_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:gravity="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/free_record_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mdb_flower_bg"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/free_record_list"
+            style="@style/myListView"
+            android:layout_width="fill_parent"
+            android:layout_height="100dip"
+            android:layout_marginLeft="0dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/background_color_gray"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@color/background_color_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="27dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:id="@+id/free_record_free_pct"
+                android:layout_width="wrap_content"
+                android:layout_height="17dip"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="免单率:40%"
+                android:textColor="@color/text_color_new_gray"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/free_record_free_num"
+                android:layout_width="wrap_content"
+                android:layout_height="17dip"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="已免单:10000次"
+                android:textColor="@color/text_color_new_gray"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/free_record_free_money"
+                android:layout_width="wrap_content"
+                android:layout_height="17dip"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="已免单￥600000"
+                android:textColor="@color/text_color_new_gray"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="27dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal"
+            android:paddingTop="2dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="餐厅服务评级"
+                android:textColor="@color/text_color_new_gray"
+                android:textSize="14dip" />
+
+            <RatingBar
+                android:id="@+id/free_record_flower_num"
+                style="@style/flowerRatingBar_small"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_marginLeft="10dip"
+                android:clickable="false"
+                android:focusable="false"
+                android:isIndicator="true"
+                android:saveEnabled="true"
+                android:stepSize="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/free_record_cancel_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/free_record_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-2dip"
+        android:background="@drawable/mdb_consumer_pay_sanjiao_down" />
+
+</RelativeLayout>

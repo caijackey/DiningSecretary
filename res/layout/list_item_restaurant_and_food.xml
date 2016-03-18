@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/res_food_list_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/middle_list_item_bg" >
+
+        <!-- 餐厅内容区 -->
+
+        <LinearLayout
+            android:id="@+id/res_food_list_item_resLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingRight="25dip" >
+
+            <!-- 餐馆照片 -->
+
+            <FrameLayout
+                android:id="@+id/res_food_list_item_restLogo_layout"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <com.fg114.main.app.view.MyImageView
+                    android:id="@+id/res_food_list_item_ivResLogo"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+            <!-- 餐馆内容 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginBottom="10dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:gravity="center"
+                    android:baselineAligned="false" >
+
+                    <!-- 餐馆名称 -->
+
+                    <TextView
+                        android:id="@+id/res_food_list_item_tvResName"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxEms="4"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                    	android:baselineAligned="false"  >
+
+                        <!-- 优惠图标 -->
+
+                        <ImageView
+                            android:id="@+id/res_food_list_item_promotion_icon_mibi"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_mibi_1"
+                            android:visibility="visible" />
+                        <!-- 优惠文字 -->
+
+                        <TextView
+                            android:id="@+id/res_food_list_item_promotion_mibi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-10dip"
+                            android:layout_marginLeft="-10dip"
+                            android:textSize="10dip"
+                            android:padding="0dip"
+                            android:text="15%"
+                            android:textColor="@color/text_color_red"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <!-- 优惠和文字 -->
+                    <TextView
+                        android:id="@+id/res_food_list_item_promotion_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="1dip"
+                        android:gravity="center"
+                        android:text="75折惠"
+                        android:textSize="12dip"
+                        android:textColor="@color/text_color_white"
+                        android:background="@drawable/promotion_discount_icon_bg"
+                        android:visibility="visible" />
+                    <!-- 券和文字 -->
+                    <TextView
+                        android:id="@+id/res_food_list_item_promotion_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="1dip"
+                        android:gravity="center"
+                        android:text="75折券"
+                        android:textSize="12dip"
+                        android:textColor="@color/text_color_white"
+                        android:background="@drawable/promotion_coupon_icon_bg"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <!-- 餐馆总评 -->
+
+                    <RatingBar
+                        android:id="@+id/res_food_list_item_rbStar"
+                        style="@style/starRatingBar_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dip"
+                        android:layout_marginRight="10dip" />
+                    <!-- 人均 -->
+
+                    <TextView
+                        android:id="@+id/res_food_list_item_tvResPerCapital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="12dip"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal" >
+
+                    <!-- 餐馆菜系 -->
+
+                    <TextView
+                        android:id="@+id/res_food_list_item_tvResDishType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="12dip" />
+                    <!-- 距离 -->
+
+                    <TextView
+                        android:id="@+id/res_food_list_item_tvResDistance"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|top"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="12dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 箭头符号区 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 消息提示区 -->
+
+    <LinearLayout
+        android:id="@+id/res_food_list_item_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/middle_list_item_bg1_state02"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/res_food_list_item_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/res_food_list_item_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+        
+
+        <Button
+            android:id="@+id/res_food_list_item_btnAddNewRes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="@string/text_button_add_res"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/res_food_list_item_btnRetry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="（网络通讯故障）点击重试"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

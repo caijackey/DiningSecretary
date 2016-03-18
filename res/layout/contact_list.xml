@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_height="0dp"
+		android:layout_width="0dp" /> 
+	<!-- 搜索栏 -->
+	<LinearLayout
+	    android:id="@+id/contact_list_search"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:layout_alignParentTop="true"
+		android:padding="10dip"
+		android:background="@drawable/bg_search_bar">
+		<EditText
+			android:id="@+id/contact_list_etKeyword"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:inputType="text"
+			android:imeOptions="actionSearch"
+			android:singleLine="true"
+			android:textSize="16dip"
+			android:textColorHint="@color/text_color_gray"
+			android:textColor="@color/text_color_black"
+			android:layout_weight="1"
+			android:background="@drawable/bg_search" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/contact_list_top"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/bg_gray_bar"
+		android:gravity="center"
+		android:visibility="gone"
+		android:layout_below="@id/contact_list_search"
+		>
+		<RadioGroup
+			android:id="@+id/contact_list_rgType"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:paddingLeft="15dip"
+			android:paddingRight="15dip"
+			android:orientation="horizontal">
+			<RadioButton
+				android:id="@+id/contact_list_rbtnLocal"
+				android:layout_width="wrap_content"
+				android:layout_height="31dip"
+				android:layout_weight="1"
+				android:button="@null"
+				android:gravity="center"
+				android:text="@string/text_button_local_contact"
+				android:checked="true"
+				android:background="@drawable/button_search_left_type"
+				android:textColor="@color/text_color_gray" />
+			<RadioButton
+				android:id="@+id/contact_list_rbtnNet"
+				android:layout_width="wrap_content"
+				android:layout_height="31dip"
+				android:layout_weight="1"
+				android:button="@null"
+				android:gravity="center"
+				android:text="@string/text_button_net_contact"
+				android:background="@drawable/button_search_right_type"
+				android:textColor="@color/text_color_gray" />
+		</RadioGroup>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:id="@+id/contact_list_bottom"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:layout_alignParentBottom="true"
+		android:background="@drawable/contact_list_bottom_bg">
+		<Button
+			android:id="@+id/contact_list_btnCancel"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+			android:layout_weight="1"
+			android:text="@android:string/cancel"
+			android:textSize="16dp"
+			android:textColor="@color/text_color_white"
+			android:background="@drawable/contact_list_btn_cancel" />
+		<Button
+			android:id="@+id/contact_list_btnOk"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp"
+			android:layout_weight="1"
+			android:text="@android:string/ok"
+			android:textSize="16dp"
+			android:textColor="@color/text_color_white"
+			android:background="@drawable/contact_list_btn_ok" />
+	</LinearLayout>
+	<FrameLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/contact_list_top"
+		android:layout_above="@id/contact_list_bottom">
+		<ListView
+			android:id="@+id/contact_list_lvLocal"
+			style="@style/myListView"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_gravity="center_horizontal|top"
+			android:drawSelectorOnTop="false"
+			android:fastScrollEnabled="true"
+			android:divider="@drawable/divide" />
+		<ListView
+			android:id="@+id/contact_list_lvNet"
+			style="@style/myListView"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_gravity="center_horizontal|top"
+			android:drawSelectorOnTop="false"
+			android:fastScrollEnabled="true"
+			android:divider="@drawable/divide"
+			android:visibility="gone" />
+	</FrameLayout>
+</RelativeLayout>

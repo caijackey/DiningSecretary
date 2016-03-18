@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_yellow_border_1px_gray"
+        android:padding="12dip"
+        android:singleLine="false"
+        android:text="传5张以上，自动首页直播，如被列为精华，赠送1000元餐券"
+        android:textSize="16dip" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:background="@drawable/edittext_background"
+        android:hint="点击输入标题，要有特点哦!"
+        android:maxLength="20"
+        android:padding="7dip"
+        android:singleLine="false"
+        android:text=""
+        android:textSize="16dip" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/rest_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:hint="请选择要推荐的餐厅"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/button_select_rest"
+            android:layout_width="75dip"
+            android:layout_height="28dip"
+            android:background="@drawable/edittext_background"
+            android:text="选择餐厅"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/line" />
+
+</LinearLayout>

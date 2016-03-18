@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- title -->
+    <TextView
+        android:id="@+id/dish_list_item_tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_gray"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:textColor="@color/text_color_gray"
+        android:textSize="15dip"
+        android:text="菜品类别"
+        android:visibility="visible" />
+
+    <!-- 主体内容 -->
+    <RelativeLayout
+        android:id="@+id/dish_list_item_rlMain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_white"
+        android:padding="10dp" >
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/dish_list_item_ivDishPic"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/dish_list_item_rlDishInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dish_list_item_ivDishPic"
+            android:layout_toLeftOf="@id/dish_list_item_ivDishPic" >
+
+            <TextView
+                android:id="@+id/dish_list_item_tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:singleLine="true"
+                android:textSize="14dip"
+                android:textColor="@color/text_color_deep_gray"/>
+
+            <TextView
+                android:id="@+id/dish_list_item_tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@id/dish_list_item_tvName"
+                android:layout_below="@id/dish_list_item_tvName"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:textColor="@color/text_color_gray"
+                android:textSize="14dip" />
+
+            <com.fg114.main.app.view.DigitalSelector
+                android:id="@+id/dish_list_item_amount"
+                android:layout_width="105dip"
+                android:layout_height="35dip"
+                android:layout_alignLeft="@id/dish_list_item_tvName"
+                android:layout_below="@id/dish_list_item_tvPrice" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 消息提示区 -->
+
+    <LinearLayout
+        android:id="@+id/dish_list_item_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/middle_list_item_bg1_state02"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/dish_list_item_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dish_list_item_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:textColor="@color/text_color_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

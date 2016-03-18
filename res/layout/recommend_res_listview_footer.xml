@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/new_block_bt01" >
+
+        <LinearLayout
+            android:id="@+id/recom_res_zan_bt"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_light_color_effect"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/recom_res_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zan_gray" />
+
+            <TextView
+                android:id="@+id/recom_res_zan_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="赞（）"
+                android:textColor="@color/text_color_gray"
+                android:textSize="15dip" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/background_color_gray" />
+
+        <LinearLayout
+            android:id="@+id/recom_res_try"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_light_color_effect"
+            android:gravity="center" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/res_try" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="我要挑战"
+                android:textColor="@color/text_color_gray"
+                android:textSize="15dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/other_look"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:text="其他人还看了"
+        android:visibility="gone"
+        android:textColor="@color/text_color_gray"
+        android:textSize="16dip" />
+
+    <LinearLayout
+        android:id="@+id/other_relate_recom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:orientation="vertical"
+        android:background="@color/background_color_white"
+        android:layout_marginBottom="20dip" >
+    </LinearLayout>
+
+</LinearLayout>

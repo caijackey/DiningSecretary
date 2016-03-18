@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/error_net_bg"
+    android:padding="20dp"
+    android:orientation="vertical" >
+
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/error_net"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        />
+    <TextView 
+        android:id="@+id/error_net_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/background_color_white"
+        android:gravity="center"
+        android:textSize="18dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dip"
+     />
+    <TextView 
+        android:id="@+id/error_net_click_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/background_color_deep_gray"
+        android:gravity="center"
+        android:textSize="14dip"
+        android:text="请点击重试"
+        android:layout_gravity="center"
+        
+        
+        
+        />
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color_white"
+    android:orientation="vertical"
+    android:paddingTop="10dip" >
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="left|right" >
+
+        <LinearLayout
+            android:id="@+id/takeaway_order_info"
+            android:layout_width="0dip"
+            android:layout_height="45dip"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/takeaway_order_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/takeaway_order_item_price"
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:singleLine="true"
+                android:textColor="@color/text_color_red_2"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <com.fg114.main.app.view.DigitalSelector
+            android:id="@+id/takeaway_property_diaitalselector"
+            android:layout_width="105dip"
+            android:layout_height="35dip"
+            android:layout_marginTop="5dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip" />
+
+        <ImageView
+            android:id="@+id/takeaway_order_arrow"
+            android:layout_width="10dip"
+            android:layout_height="15dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/arrow"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/takeaway_order_item_propertytype"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:layout_below="@+id/takeaway_order_info"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:singleLine="true"
+        android:textColor="@color/text_color_gray"
+        android:textSize="14dip" />
+
+    <View
+        android:layout_height="1px"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dip"
+        android:background="@color/divider" />
+
+</LinearLayout>

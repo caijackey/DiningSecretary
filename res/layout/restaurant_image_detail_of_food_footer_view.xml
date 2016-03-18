@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <EditText
+        android:id="@+id/food_image_comment_content"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/search_tv"
+        android:hint="来点评吧，还能拿秘币哟~"
+        android:maxLines="3"
+        android:minLines="1"
+        android:maxLength="200"
+        android:textColor="@color/text_color_black"
+        android:textSize="16dip" >
+    </EditText>
+
+    <Button
+        android:id="@+id/food_image_comment_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="0dip"
+        android:background="@drawable/button_food_image_detail_submit_comment"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingLeft="15dip"
+        android:paddingRight="5dip"
+        android:singleLine="true"
+        android:text="" />
+
+</LinearLayout>

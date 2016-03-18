@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:orientation="vertical" >
+
+        <!-- 顶部已选择联系人 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/bg_red_gradient_bar"
+            android:padding="10dip"
+            android:scrollbars="horizontal" >
+
+            <!-- 内部白色背景框 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@drawable/shape_rectangle_white"
+                android:padding="5dip"
+                android:scrollbars="horizontal" >
+
+                <ScrollView
+                    android:id="@+id/sms_invite_scroll_container_of_contact_list"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="30dip" >
+
+                    <!-- 已添加的联系人 -->
+
+                    <com.fg114.main.app.view.PredicateLayout
+                        android:id="@+id/sms_invite_contract_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+                    </com.fg114.main.app.view.PredicateLayout>
+                </ScrollView>
+                <!-- 添加按钮 -->
+
+                <ImageButton
+                    android:id="@+id/sms_invite_add_person_button"
+                    android:layout_width="37dip"
+                    android:layout_height="27dip"
+                    android:layout_marginLeft="5dip"
+                    android:background="#00000000"
+                    android:padding="0dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sms_invite_add_person_button" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 中部最近联系人 -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@color/background_color_white"
+            android:fillViewport="true"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="0dip" >
+
+                <TableLayout
+                    android:id="@+id/sms_invite_recent_person"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:baselineAligned="false"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="3dip"
+                    android:paddingRight="3dip"
+                    android:paddingTop="5dip" >
+                </TableLayout>
+                <!-- 分隔线 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_margin="0dip"
+                    android:background="@color/border_color_deep_gray"
+                    android:orientation="horizontal"
+                    android:padding="0dip" />
+                <!-- 自动伸缩空白区域 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@color/background_color_gray"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="0dip" >
+
+                    <TextView
+                        android:layout_width="295dip"
+                        android:layout_height="100dip"
+                        android:background="@drawable/sms_invite_info_bg"
+                        android:gravity="left|center_vertical"
+                        android:paddingBottom="5dip"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="20dip"
+                        android:text="@string/text_info_send_sms_label_info"
+                        android:textColor="@color/text_color_default" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 分隔线 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_margin="0dip"
+            android:background="@color/border_color_deep_gray"
+            android:orientation="horizontal"
+            android:padding="0dip" >
+        </LinearLayout>
+        <!-- 底部短信内容和按钮区 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip" >
+
+            <!-- 短信内容 -->
+
+            <EditText
+                android:id="@+id/sms_invite_content"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rectangle_white_with_radius_border"
+                android:gravity="top|left"
+                android:hint="请输入短信内容(最多130个字)"
+                android:maxLength="999"
+                android:maxLines="4"
+                android:minLines="1"
+                android:padding="5dip"
+                android:text=""
+                android:textSize="16dip" />
+
+            <!-- 右边按钮和已输入数字 -->
+
+            <LinearLayout
+                android:layout_width="55dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dip"
+                android:background="#00ffff00"
+                android:gravity="center_horizontal|top"
+                android:orientation="vertical" >
+
+                <!-- 发送按钮 -->
+
+                <ImageButton
+                    android:id="@+id/sms_invite_send_sms_button"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:background="#00000000"
+                    android:padding="0dip"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sms_invite_send_button" />
+                <!-- 已输入字数 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:gravity="center_horizontal|top"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/sms_invite_word_counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="000"
+                        android:textColor="@color/text_color_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="/130"
+                        android:textColor="@color/text_color_gray" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>

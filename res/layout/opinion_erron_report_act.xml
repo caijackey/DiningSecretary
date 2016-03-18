@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/opinion_error_view"
+            android:layout_width="fill_parent"
+            android:layout_height="177dip"
+            android:background="@color/background_color_new_white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/problem_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:text="选择你要反馈的问题类型"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/resandfood_problem"
+                android:layout_width="120dip"
+                android:layout_height="35dip"
+                android:layout_below="@id/problem_title"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/huikuang"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="订餐厅问题"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/takeaway_problem"
+                android:layout_width="120dip"
+                android:layout_height="35dip"
+                android:layout_below="@id/problem_title"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:layout_toRightOf="@+id/resandfood_problem"
+                android:background="@drawable/huikuang"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="叫外卖问题"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/mibi_problem"
+                android:layout_width="120dip"
+                android:layout_height="35dip"
+                android:layout_below="@id/resandfood_problem"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/huikuang"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="秘币问题"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/bug_problem"
+                android:layout_width="120dip"
+                android:layout_height="35dip"
+                android:layout_below="@id/takeaway_problem"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="10dip"
+                android:layout_toRightOf="@+id/mibi_problem"
+                android:background="@drawable/huikuang"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="软件BUG问题"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/other_problem"
+                android:layout_width="120dip"
+                android:layout_height="35dip"
+                android:layout_below="@id/mibi_problem"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/huikuang"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="其它问题"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/background_color_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="250dip" >
+
+            <EditText
+                android:id="@+id/opinion_error_memo"
+                android:layout_width="fill_parent"
+                android:layout_height="250dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/edittext_background"
+                android:gravity="left"
+                android:hint="请输入意见反馈，支持语言输入哦~"
+                android:maxLength="200"
+                android:orientation="vertical"
+                android:padding="10dip" />
+
+            <Button
+                android:id="@+id/opinion_error_memo_btvoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/opinion_error_memo"
+                android:layout_marginBottom="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/opinion_error_btvoice" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/error_report_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/text_layout_input_reporter"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_gray"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/error_report_sumbit"
+            android:layout_width="110dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_new_red"
+            android:text="提交"
+            android:textColor="@color/text_color_white" />
+    </LinearLayout>
+
+</ScrollView>

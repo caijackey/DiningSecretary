@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 按钮 -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="30dip"
+            android:background="#00FFFFFF"
+            android:gravity="center"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:text="味道如何？打个分吧！"
+            android:textColor="@color/text_color_black"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/upload_to_food_bonus"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dip"
+            android:background="#00FFFFFF"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/text_layout_upload_bonus_for_grade_food"
+            android:textColor="@color/text_color_gray"
+            android:textSize="15dip" />
+
+        <!-- 味道好 -->
+
+        <Button
+            android:id="@+id/upload_to_food_grade_good"
+            android:layout_width="175dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dip"
+            android:background="@drawable/button_upload_to_food_grade_good"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip"
+            android:textStyle="bold" />
+
+        <!-- 味道一般 -->
+
+        <Button
+            android:id="@+id/upload_to_food_grade_general"
+            android:layout_width="175dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dip"
+            android:background="@drawable/button_upload_to_food_grade_general"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip"
+            android:textStyle="bold" />
+
+        <!-- 味道差 -->
+
+        <Button
+            android:id="@+id/upload_to_food_grade_bad"
+            android:layout_width="175dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dip"
+            android:background="@drawable/button_upload_to_food_grade_bad"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <com.fg114.main.app.view.LineView
+            xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/horizontal_line"
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="#00000000"
+            android:visibility="visible"
+            line:dashedGap="0dip"
+            line:dashedWidth="2dip"
+            line:orientation="horizontal"
+            line:thickness="1px"
+            line:color="#FFCCCCCC" />
+
+        <!-- 跳过 -->
+
+        <Button
+            android:id="@+id/upload_skip"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/button_gray_with_right_arrow"
+            android:gravity="center"
+            android:paddingLeft="15dip"
+            android:paddingRight="22dip"
+            android:text="跳过"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="16dip"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</ScrollView>

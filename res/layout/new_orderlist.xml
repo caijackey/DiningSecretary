@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/tittle_topbar"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 返回按钮 -->
+
+        <LinearLayout
+            android:id="@+id/main_frame_btnGoBack_container"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/icon_go_back"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnGoBack"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:textColor="@color/text_color_white"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/orderlist_rest_order_bnt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/order_list_red_left"
+                android:text="餐厅订单"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+
+            <LinearLayout
+                android:id="@+id/orderlist_rest_order_number_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/user_name"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/orderlist_rest_user_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_order_bubble"
+                    android:text="1"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10dip"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/orderlist_take_away_order_bnt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/order_list_red_right"
+                android:text="外卖订单"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" 
+                />
+
+            <LinearLayout
+                android:id="@+id/orderlist_take_away_order_number_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/orderlist_take_away_order_bnt"
+                android:layout_marginTop="2dip"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/orderlist_take_away_user_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_order_bubble"
+                    android:text="1"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="10dip" 
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/orderlist_drop_down_box"
+            android:layout_width="26dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/order_list_title_icon"
+            android:layout_marginRight="10dip"
+             />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/orderlist_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:text="暂无订单记录"
+        android:textColor="@color/text_color_black"
+        android:textSize="16dip"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/order_list_status"
+        style="@style/myListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/background_color_transparent"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false" />
+
+</LinearLayout>

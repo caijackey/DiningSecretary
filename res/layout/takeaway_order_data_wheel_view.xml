@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.fg114.main.app.view.TakeawayOrderSelectorWheelView
+        xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+        android:id="@+id/takeaway_order_selection_wheel"
+        android:layout_width="fill_parent"
+        android:layout_height="140dip"
+        android:background="@drawable/index_search_bg_top"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+         >
+    </com.fg114.main.app.view.TakeawayOrderSelectorWheelView>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal"
+            android:layout_above="@+id/takeaway_order_selection_wheel" >
+
+            <Button
+                android:id="@+id/takeaway_order_bnt_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_green"
+                android:text="取消"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/takeaway_order_bnt_confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_green"
+                android:text="确定"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+</RelativeLayout>

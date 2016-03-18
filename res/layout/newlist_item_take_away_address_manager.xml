@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="10dip"
+    android:layout_marginRight="10dip"
+    android:layout_marginTop="20dip"
+    android:background="@drawable/block_bt01"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/newtake_away_manage_address_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_light_color_effect" >
+
+        <ImageView
+            android:id="@+id/newtake_away_address_select"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/address_select"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dip"
+                    android:text="送餐地址"
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/newtake_away_manage_address"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@null"
+                    android:hint="请输入送餐地址"
+                    android:maxLength="50"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dip"
+                    android:text="联系电话"
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/newtake_away_manage_phone"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@null"
+                    android:hint="请输入联系人电话"
+                    android:maxLength="50"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dip"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dip"
+                    android:text="联系人"
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/newtake_away_manage_person"
+                    style="?android:attr/textViewStyle"
+                    android:layout_width="130dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@null"
+                    android:hint="请输入联系人姓名"
+                    android:maxLength="20"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/newtake_away_address_edite"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_marginRight="5dip"
+                        android:background="@drawable/address_edite" />
+
+                    <Button
+                        android:id="@+id/newtake_away_address_delete"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:background="@drawable/delete" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/close_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10px"
+        android:layout_marginRight="20px"
+        android:background="@drawable/chat_mp_close" />
+
+    <!--
+         <Button 
+        android:id="@+id/refresh_web"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/close_chat"
+        android:layout_alignParentRight="true"
+        android:text="R"
+        />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/send_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/send_sms"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/bg_red_new"
+            android:clickable="false"
+            android:text="发送" />
+
+        <EditText
+            android:id="@+id/sms_content"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/send_sms"
+            android:layout_centerInParent="true"
+            android:hint="发送消息框"
+            android:layout_marginLeft="7dp"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:paddingLeft="7dp"
+            android:enabled="false" />
+    </RelativeLayout>
+
+    <com.fg114.main.app.view.ChatWebView
+        android:id="@+id/simple_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/send_layout"
+        android:layout_below="@id/close_chat" />
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="2dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip" >
+
+    <LinearLayout
+        android:id="@+id/hotsale_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_routart"
+        android:orientation="vertical"
+        android:paddingLeft="0.1dip"
+        android:paddingRight="0.1dip"
+        android:paddingTop="0.1dip" >
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:paddingTop="0.5dip"
+            android:paddingLeft="0.5dip"
+            android:paddingRight="0.5dip"
+            
+            >
+               <com.fg114.main.app.view.MyImageView
+                android:id="@+id/hotsale_picture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+            
+                  <ImageView 
+                 android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_top_list_view_bg"
+                />
+        </RelativeLayout>
+
+   
+
+        <LinearLayout
+            android:id="@+id/hotsale_nameAdprice_relayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/hotsale_rest_name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="3dip"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="18dip"
+                android:singleLine="true" 
+                android:layout_weight="3"
+                />
+
+            <TextView
+                android:id="@+id/holtsale_avdprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dip"
+                android:paddingRight="5dip"
+                android:textSize="16dip"
+                android:textColor="@color/text_color_red_3" 
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="3dip"
+            android:background="#00000000"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/text_color_gray"
+            android:textSize="16dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_margin="0dip"
+                android:background="@color/divider" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:padding="3dip" >
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="2dip"
+                android:src="@drawable/zan_bangdanx" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_restaurant_comment"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dip"
+                android:src="@drawable/right_bangdan2" />
+
+            <TextView
+                android:id="@+id/tv_restaurant_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/img2"
+                android:layout_toRightOf="@+id/img"
+                android:ellipsize="end"
+                android:lines="2"
+                android:padding="2dip"
+                android:textColor="@color/background_color_deep_gray"
+                android:textSize="14dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/res_comment_replyList"
+        style="@style/myListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:paddingBottom="0dip"
+        android:cacheColorHint="@color/transparence"
+        android:dividerHeight="0dip" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/res_comment_replyLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:padding="10dip"
+        android:background="@drawable/home_backgroud"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/res_comment_replyButton"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content" 
+            android:padding="0dip"
+            android:textSize="18dip"
+            
+            android:textColor="@color/text_color_white"
+            android:background="@drawable/bg_red_new"
+            android:text="我要回复" />
+    </LinearLayout>
+
+</LinearLayout>

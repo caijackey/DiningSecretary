@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/middle_list_item_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <!-- 照片 -->
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/image"
+            android:layout_width="87dip"
+            android:layout_height="70dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            local:roundType="2"
+ 			    local:roundRadius="0dip"  />
+        <!-- 箭头符号 -->
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|right"
+            android:padding="3dip"
+            android:src="@drawable/arrow_right2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/arrow"
+            android:layout_toRightOf="@+id/image"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <!-- 折扣价 -->
+
+                <TextView
+                    android:id="@+id/discount_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="￥198"
+                    android:textColor="@color/text_color_red_3"
+                    android:textSize="22dip" />
+                <!-- 原价 -->
+
+                <TextView
+                    android:id="@+id/original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/discount_price"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toLeftOf="@+id/state"
+                    android:layout_toRightOf="@+id/discount_price"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:text="￥951"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="15dip" />
+                <!-- 状态 -->
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/discount_price"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:paddingBottom="3dp"
+                    android:text="已卖完"
+                    android:textColor="@color/text_color_red_2"
+                    android:textSize="13dip" />
+            </RelativeLayout>
+            <!--
+                  <LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="2dip"
+				android:gravity="left|center_vertical"
+				android:orientation="horizontal">
+            -->
+            <!-- 描述 -->
+            <!--
+            <TextView
+					android:id="@+id/description"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:singleLine="false"
+					android:text="去鱼骨头精致套餐，３人精致套餐，美味新体验"
+					android:textColor="@color/text_color_black"
+					android:singleLine="true"
+					android:textSize="14dip" />
+			</LinearLayout>
+            -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- 餐馆名称 -->
+
+                <TextView
+                    android:id="@+id/rest_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxEms="8"
+                    android:singleLine="true"
+                    android:text="餐馆名称 "
+                    android:textColor="@color/text_color_deep_gray"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <!-- 剩余张数 -->
+
+                <TextView
+                    android:id="@+id/remain_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dip"
+                    android:layout_alignParentLeft="true"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" />
+                <!-- 位置 -->
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/remain_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/icon_lcation"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/icon_location_anchor_gray" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="淮海路"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="14dip" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 消息提示区 -->
+
+    <LinearLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/middle_list_item_bg1_state02"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+        <TextView
+            android:id="@+id/tvMsg_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center"
+            android:text="下拉再次刷新"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="（网络通讯故障）点击重试"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

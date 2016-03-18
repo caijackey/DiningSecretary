@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/button_light_color_effect">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"      
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:id="@+id/coupon_describe_name"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_gray"
+            android:textSize="18dip" />
+
+        <TextView
+            android:id="@+id/coupon_describe_detail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:paddingBottom="3dip"
+            android:layout_weight="4"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="14dip" />
+
+        <ImageView
+            android:id="@+id/coupon_describe_arrow"
+            android:layout_width="13dip"
+            android:layout_height="20dip"
+            android:background="@drawable/arrow_right2" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/coupon_describe_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/background_color_gray" />
+
+</LinearLayout>

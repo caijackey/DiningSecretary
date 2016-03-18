@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/newtakeaway_detail_res_scrollBar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- 头部 -->
+
+            <LinearLayout
+                android:id="@+id/newtakeaway_detail_top_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="142dip"
+                android:background="@drawable/takeaway_detail_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dip"
+                    android:layout_margin="10dip"
+                    android:orientation="horizontal" >
+
+                    <!-- 餐厅图片 -->
+
+                    <RelativeLayout
+                        android:layout_width="80dip"
+                        android:layout_height="80dip"
+                        android:layout_gravity="left|top"
+                        android:layout_marginRight="10dip"
+                        android:gravity="left|top"
+                        android:orientation="horizontal"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingRight="1dip"
+                        android:paddingTop="1dip" >
+
+                        <com.fg114.main.app.view.MyImageView
+                            android:id="@+id/newtakeaway_detail_res_ivResPic"
+                            android:layout_width="80dip"
+                            android:layout_height="80dip"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerInside"
+                            />
+                        <ImageView 
+                            android:layout_width="80dip"
+                            android:layout_height="80dip"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/newtakeaway_detail_res_pic_skin"
+                            />
+                    </RelativeLayout>
+                    <!-- 餐厅信息 -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dip"
+                        android:layout_gravity="left|top"
+                        android:gravity="left|top"
+                        android:orientation="vertical" >
+
+                        <!-- 餐馆名称 -->
+
+                        <TextView
+                            android:id="@+id/newtakeaway_detail_res_tvResName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="18dip" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:gravity="left|center_vertical"
+                            android:orientation="horizontal" >
+
+                            <!-- 预定 -->
+
+                            <RatingBar
+                                android:id="@+id/newtakeaway_res_detail_overall_num"
+                                style="@style/starRatingBar_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dip"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:isIndicator="true"
+                                android:saveEnabled="true" />
+
+                            <LinearLayout
+                                android:id="@+id/newtakeaway_predeter_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:background="@drawable/shape_rectangle_white_with_newtakeaway_radius_border" >
+
+                                <TextView
+                                    android:id="@+id/newtakeaway_predeter"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:paddingBottom="1dip"
+                                    android:paddingLeft="2dip"
+                                    android:paddingRight="2dip"
+                                    android:paddingTop="1dip"
+                                    android:textColor="@color/text_color_white"
+                                    android:textSize="12dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/newtakeaway_detail_takeoutmsg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="16dip" />
+                        </LinearLayout>
+                        <!-- 提示信息部分 -->
+
+                        <LinearLayout
+                            android:id="@+id/newtakeaway_detail_res_resInfoLoadingLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="10dip"
+                            android:visibility="gone" >
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dip"
+                                android:gravity="center"
+                                android:text="@string/text_info_loading"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="14dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/newtakeaway_newpredetermine_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|top"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:gravity="left|top"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <Button
+                        android:id="@+id/newpredetermine"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dip"
+                        android:background="@drawable/white_bg"
+                        android:text="立即点菜"
+                        android:textColor="@color/new_text_color_red"
+                        android:textSize="18dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 餐厅基本信息 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical" >
+
+                <!-- 分隔符 -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:text="餐厅基本信息"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="18dip" />
+
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/background_color_deep_gray" />
+
+                <com.fg114.main.app.view.MyImageView
+                    android:id="@+id/newrest_location_map"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:layout_marginLeft="1dip"
+                    android:layout_marginRight="1dip"
+                    android:background="#00FFFF00"
+                    android:scaleType="fitXY"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/takeaway_newdetail_res_tvaddress_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dip"
+                    android:layout_marginRight="1dip"
+                    android:background="@drawable/button_light_color_effect"
+                    android:orientation="horizontal"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:gravity="left|top"
+                        android:text="地址："
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+
+                    <TextView
+                        android:id="@+id/newtakeaway_detail_res_tvaddress"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:id="@+id/arrow_right_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="0dip"
+                        android:scaleType="center"
+                        android:src="@drawable/arrow_right2"
+                        android:visibility="visible" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:gravity="left|center_vertical"
+                        android:text="电话："
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+                    <!-- 餐厅电话 -->
+
+                    <TextView
+                        android:id="@+id/newdetail_res_tvtel"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+                    <!-- 添加号码按钮 -->
+
+                    <Button
+                        android:id="@+id/takeaway_newdetail_res_add_phone"
+                        android:layout_width="85dip"
+                        android:layout_height="30dip"
+                        android:background="@drawable/button_red_with_plus_in_the_left"
+                        android:gravity="right|center_vertical"
+                        android:paddingBottom="4dip"
+                        android:paddingRight="7dip"
+                        android:text="添加号码"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="14dip"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:gravity="left|center_vertical"
+                        android:text="营业："
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+                    <!-- 营业时间 -->
+
+                    <TextView
+                        android:id="@+id/newdetail_res_time"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 餐厅简介 -->
+
+            <LinearLayout
+                android:id="@+id/takeaway_newdetail_res_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical" >
+
+                <!-- 分隔符 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="餐厅简介"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="18dip" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+                <!-- 简介 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <!-- 简介 -->
+
+                    <TextView
+                        android:id="@+id/newtakeaway_detail_res_introduction"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+                <!-- 简介 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:text="风味："
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+
+                    <TextView
+                        android:id="@+id/newtakeaway_detail_res_menutype"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 外送须知 -->
+
+            <LinearLayout
+                android:id="@+id/takeaway_newdetail_takeout_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical" >
+
+                <!-- 分隔符 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="外送须知"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="18dip" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+                <!-- 外送须知 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <!-- 外送须知 -->
+
+                    <TextView
+                        android:id="@+id/newtakeaway_detail_takeout_introduction"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color_shallow_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/takeaway_newdetail_dis_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical" >
+
+                <!-- 分隔符 -->
+
+                <LinearLayout
+                    android:id="@+id/newdetail_restaurant_discount_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:baselineAligned="false"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="最新优惠"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="18dip" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+
+                <LinearLayout
+                    android:id="@+id/newdetail_restaurant_discount_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dip"
+                    android:gravity="left|center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/detail_restaurant_no_newdiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="无"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="16dip"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 评论 -->
+
+            <LinearLayout
+                android:id="@+id/newdetail_res_plLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="查看评论"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="18dip" />
+
+                    <TextView
+                        android:id="@+id/newdetail_res_comment_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="14dip" />
+                </LinearLayout>
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+
+                <!-- 评论信息部分 -->
+
+                <LinearLayout
+                    android:id="@+id/takeaway_detail_comment_infoLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_light_color_effect"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingBottom="0dip" >
+
+                        <!-- 发帖人及时间 -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginTop="5dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <!-- 头像 -->
+
+                            <RelativeLayout
+                                android:layout_width="38dip"
+                                android:layout_height="38dip"
+                                android:layout_marginTop="0dip" >
+
+                                <com.fg114.main.app.view.MyImageView
+                                    android:id="@+id/takeaway_detail_comment_userphoto"
+                                    android:layout_width="38dip"
+                                    android:layout_height="38dip" />
+
+                                <ImageView
+                                    android:layout_width="38dip"
+                                    android:layout_height="38dip"
+                                    android:src="@drawable/res_recom_user_skin" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/takeaway_detail_comment_tvUser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:gravity="left|center_vertical"
+                                android:singleLine="true"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16dip" >
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/takeaway_detail_comment_tvTime"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="5dip"
+                                android:layout_weight="1"
+                                android:gravity="right|center_vertical"
+                                android:singleLine="true"
+                                android:textColor="@color/text_color_gray"
+                                android:textSize="12dip" >
+                            </TextView>
+                        </LinearLayout>
+                        <!-- 餐馆总评 -->
+
+                        <RatingBar
+                            android:id="@+id/newtakeaway_detail_commentrating_bar"
+                            style="@style/starRatingBar_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginTop="5dip"
+                            android:rating="5" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="5dip" >
+
+                            <TextView
+                                android:id="@+id/takeaway_detail_comment_tvComment"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="0dip"
+                                android:gravity="left|center_vertical"
+                                android:textColor="@color/text_color_shallow_black"
+                                android:textSize="16dip" >
+                            </TextView>
+                            <!-- 右箭头 -->
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/newtakeaway_comment_line"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:background="@color/background_color_deep_gray" />
+
+                        <LinearLayout
+                            android:id="@+id/newtakeaway_detail_comment_backlayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="5dip"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:text="餐厅回复："
+                                android:textColor="@color/text_color_shallow_black"
+                                android:textSize="16dip" >
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/newtakeaway_detail_comment_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dip"
+                                android:text="谢谢"
+                                android:textColor="@color/text_color_shallow_black"
+                                android:textSize="16dip" >
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/takeaway_detail_comment_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/arrow_right2" />
+                </LinearLayout>
+
+                <!-- 提示信息部分 -->
+
+                <LinearLayout
+                    android:id="@+id/detail_res_newresCommentLoadingLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dip"
+                    android:visibility="gone" >
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="center"
+                        android:text="@string/text_info_loading"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="14dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/new_res_newtag_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/new_block_bt01"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginLeft="1dip"
+                    android:layout_marginRight="1dip"
+                    android:background="@drawable/button_light_color_effect"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_weight="1"
+                        android:text="餐厅资质"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+
+                <!-- 分隔线 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+
+                <LinearLayout
+                    android:id="@+id/newtakeaway_img_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/button_light_color_effect"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 提示信息部分 -->
+
+            <LinearLayout
+                android:id="@+id/detail_res_newresOtherInfoLoadingLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="center"
+                    android:text="@string/text_info_loading"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

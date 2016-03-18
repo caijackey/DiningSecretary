@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="top"
+    android:background="@color/background_color_white"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:padding="5dip" 
+    android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:background="#EEEEEEEE"
+            android:textSize="12dip"
+            android:text="你好你好你好"
+            android:textColor="@color/text_color_black" />
+
+</ScrollView>

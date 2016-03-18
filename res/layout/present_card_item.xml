@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+         >
+
+         <CheckBox
+            android:id="@+id/present_card_box"
+            style="@style/presentCheckbox"
+            android:layout_width="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            
+            android:checked="false" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dip"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:textColor="@color/background_color_deep_gray"
+            android:id="@+id/present_card_tv"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/present_card_box"
+             />
+
+       
+    </RelativeLayout>
+
+</LinearLayout>

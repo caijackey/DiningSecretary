@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recommend_res_fram"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 推荐餐厅详情 -->
+
+    <ListView
+        android:id="@+id/recommend_restaurant_listview"
+        style="@style/myListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false" />
+
+    <LinearLayout
+        android:id="@+id/add_item_view_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#e7e7e7"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+</LinearLayout>

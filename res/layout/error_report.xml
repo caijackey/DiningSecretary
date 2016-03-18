@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <!-- 输入错误信息区 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rectangle_transparent_with_border"
+            android:orientation="vertical" >
+
+            <!-- 顶部提示 -->
+
+            <TextView
+                android:id="@+id/message_on_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="@string/error_report_top_message"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip" />
+
+            <!-- 单行文本框 -->
+
+            <LinearLayout
+                android:id="@+id/singleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" 
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/singleLine_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_view_bg"
+                    android:gravity="left"
+                    android:maxLength="120"
+                    android:padding="5dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="16dip"
+                    android:visibility="visible" />
+
+                <include
+                    android:id="@+id/voice_recognition_button_singleLine"
+                    layout="@layout/voice_recognition_button_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/multipleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <!-- 多行文本框 -->
+
+                <EditText
+                    android:id="@+id/multipleLine_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_view_bg"
+                    android:gravity="top"
+                    android:hint="@string/text_layout_input_error"
+                    android:maxLength="220"
+                    android:maxLines="5"
+                    android:minLines="5"
+                    android:padding="5dip"
+                    android:singleLine="false"
+                    android:textColor="@color/text_color_black"
+                    android:textColorHint="@color/text_color_gray"
+                    android:textSize="16dip" />
+
+                <include
+                    android:id="@+id/voice_recognition_button_multipleLine"
+                    layout="@layout/voice_recognition_button_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 底部提示文字 -->
+
+        <TextView
+            android:id="@+id/message_on_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:gravity="left"
+            android:text="@string/error_report_bottom_message"
+            android:textColor="@color/text_color_red"
+            android:textSize="12dip"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/error_report_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:background="@drawable/text_view_bg"
+            android:hint="@string/text_layout_input_reporter"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_gray"
+            android:textSize="16dip" />
+
+        <EditText
+            android:id="@+id/error_report_etName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:background="@drawable/block_bt01"
+            android:hint="@string/text_layout_input_name"
+            android:inputType="text"
+            android:maxLength="50"
+            android:padding="10dip"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_gray"
+            android:textSize="16dip"
+            android:visibility="gone" />
+
+        <!-- 底部两个按钮 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/error_report_btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:paddingLeft="40dip"
+                android:paddingRight="40dip"
+                android:background="@drawable/button_big"
+                android:text="@string/text_button_clear_error_info"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/error_report_btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:paddingLeft="40dip"
+                android:paddingRight="40dip"
+                android:background="@drawable/button_big"
+                android:text="@string/text_button_submit"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

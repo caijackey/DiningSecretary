@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="left|top"
+    android:orientation="vertical"
+    android:padding="0dip" >
+
+   <LinearLayout
+        android:id="@+id/restautant_discount_block_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dip"
+        android:layout_marginRight="1dip"       
+        android:baselineAligned="false"
+        android:gravity="left|top"
+        android:orientation="vertical"
+        android:padding="0dip" >
+
+        <!-- 分隔线 -->
+
+        <View
+            android:id="@+id/newtakeaway_horizontal_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_deep_gray" />
+
+        <LinearLayout
+            android:id="@+id/newdiscount_nested_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="left|top"
+            android:orientation="horizontal"
+            android:paddingTop="15dip"
+            
+            android:paddingRight="10dip"
+            android:paddingBottom="15dip" >
+
+       
+            <!-- 文字区 -->
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:orientation="vertical"
+                android:padding="0dip"
+                >
+
+                <!-- 优惠页面中的普通列表项 -->
+
+                <TextView
+                    android:id="@+id/newrestautant_discount_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    
+                    android:text="@string/text_layout_ydzk"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+            
+
+                
+            </RelativeLayout>
+            <!-- 右端箭头 -->
+            <ImageView
+                android:id="@+id/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dip"
+                android:scaleType="center"
+                android:src="@drawable/arrow_right2"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

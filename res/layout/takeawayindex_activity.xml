@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/new_take_away_adv_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" 
+        android:visibility="gone">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_margin="0dip"
+            android:background="@color/background_color_deep_gray" />
+
+        <com.fg114.main.app.view.ViewFlow
+            xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/viewflow_img"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="0dp"
+            android:focusableInTouchMode="true"
+            app:sidebuffer="3" />
+
+        <com.fg114.main.app.view.CircleFlowIndicator
+            xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/circle_indicator_img"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            app:activeColor="@color/text_color_red"
+            app:fadeOut="0"
+            app:inactiveColor="@color/text_color_white"
+            app:inactiveType="fill"
+            app:radius="3dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/new_take_away_adv_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:layout_margin="0dip"
+        android:background="@color/background_color_deep_gray" />
+
+    <ListView
+        android:id="@+id/list_view_takeawayindex"
+        style="@style/myListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:visibility="visible" />
+
+</LinearLayout>

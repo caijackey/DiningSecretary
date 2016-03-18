@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外卖广告条目 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+        
+     		<TextView
+			android:id="@+id/advertisement_text_view"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_margin="0dp"
+			android:ellipsize="end"
+			android:gravity="center"
+			android:paddingBottom="3dip"
+			android:paddingLeft="20dip"
+			android:paddingRight="20dip"
+			android:singleLine="true"
+			android:textColor="@color/text_title_new_color_black"
+			android:textSize="16dip" />
+     	<!--
+		<com.fg114.main.app.view.MyImageView
+			android:id="@+id/advertisement_image_view"
+			android:layout_width="fill_parent"
+			android:layout_height="50dp"
+			android:layout_margin="0dp"
+			android:scaleType="fitXY"
+			android:visibility="gone" />
+        -->
+</LinearLayout>

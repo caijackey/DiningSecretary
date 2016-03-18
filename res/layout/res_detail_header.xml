@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/top_background"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/rest_detail_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:text="餐厅名称"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="38dip"
+                android:layout_height="38dip"
+                android:layout_marginLeft="10dip" >
+
+                <com.fg114.main.app.view.MyImageView
+                    android:id="@+id/res_recom_hint_imageview"
+                    android:layout_width="38dip"
+                    android:layout_height="38dip"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:layout_width="38dip"
+                    android:layout_height="38dip"
+                    android:src="@drawable/res_recom_user_skin" />
+
+                <ImageView
+                    android:id="@+id/res_user_vip"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_alignBottom="@id/res_recom_hint_imageview"
+                    android:layout_alignRight="@id/res_recom_hint_imageview"
+                    android:layout_marginBottom="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/vip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/res_recom_hint_titile"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

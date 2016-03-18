@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 餐厅分类按钮 -->
+
+    <LinearLayout
+        android:id="@+id/type_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/order_list_bt01"
+        android:padding="5dip" >
+
+        <ImageView
+            android:id="@+id/arrow_left"
+            android:layout_width="8dip"
+            android:layout_height="16dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/left_light"
+            android:scaleType="center" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:fadingEdgeLength="0dip"
+            android:scrollbars="none" >
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="8dip"
+            android:layout_height="16dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/right_light"
+            android:scaleType="center" />
+    </LinearLayout>
+    <!-- 餐厅信息 -->
+    <LinearLayout
+        android:id="@+id/rest_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#66FFFFFF" >
+
+        <TextView
+            android:id="@+id/restaurant_menu_tvResName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:text="@string/text_layout_res_info"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="2dip"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 餐馆星级 -->
+
+            <RatingBar
+                android:id="@+id/restaurant_menu_rbStar"
+                style="@style/starRatingBar_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true" />
+
+            <TextView
+                android:id="@+id/restaurant_menu_tvOverallNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textColor="@color/text_color_red"
+                android:textSize="12dip" />
+            <!-- 口味 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="@string/text_layout_taste"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/restaurant_menu_tvTasteNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_red"
+                android:textSize="14dip" />
+            <!-- 环境 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="@string/text_layout_env"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/restaurant_menu_tvEnvNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_red"
+                android:textSize="14dip" />
+            <!-- 服务 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="@string/text_layout_service"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/restaurant_menu_tvServiceNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_red"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/detail_res_btnResInfoMore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/more_button"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/text_button_view_res_info"
+            android:textColor="@color/text_color_gray" />
+    </LinearLayout>
+    <!-- listview -->
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_margin="0dip"
+        android:layout_weight="1"
+        android:dividerHeight="1px"
+        android:divider="@color/background_color_deep_gray"
+        android:cacheColorHint="@color/transparence"
+        android:drawSelectorOnTop="false"
+        android:fastScrollEnabled="false" />
+
+</LinearLayout>

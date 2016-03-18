@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- webView -->
+
+    <WebView
+        android:id="@+id/takeaway_webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/takeaway_buy_payment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/new_block_bt01"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

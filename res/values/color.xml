@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparence">#00000000</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_green2">#7ed99b</color>
+    <color name="text_color_black">#000000</color>
+    <color name="text_color_shallow_black">#2F2F2F</color>
+    <color name="text_color_deep_red">#680000</color>
+    <color name="text_color_red_2">#ce3b27</color>
+    <color name="text_color_red_3">#FF6666</color>
+    <color name="text_color_red">#bf0001</color>
+    <color name="text_color_deep_gray">#3f3f3f</color>
+    <color name="text_color_gray">#777777</color>
+    <color name="text_color_light_gray">#AAAAAA</color>
+   
+    <color name="text_color_default">#333333</color>
+    <color name="text_color_deep_blue">#4c566c</color>
+   
+    
+    <color name="text_color_green">#FF437617</color>
+    <color name="text_color_new_green">#4CE078</color>
+    <color name="text_color_search_blue">#007aff</color>
+    <color name="background_color_white">#ffffff</color>
+   
+    <color name="background_color_black">#000000</color>
+    <color name="background_search_gray">#dcdcdc</color>
+    <color name="background_color_yellow">#FFFFCC</color>
+    
+    <color name="background_color_deep_red">#680000</color>
+   
+    
+    <color name="background_color_light_gray">#f7f7f7</color>
+    <color name="background_color_gray">#E7E7E7</color>
+    <color name="background_color_deep_gray">#AAAAAA</color>
+    <color name="border_color_gray">#AAAAAA</color>
+    <color name="border_color_deep_gray">#999999</color>
+    <color name="border_color_light_gray">#DDDDDD</color>
+    <color name="border_color_white">#FFFFFF</color>
+   
+    
+   
+    
+    
+    <color name="text_color_hint">#999999</color>
+    <color name="divider">#cccccc</color>
+    <color name="line">#ababab</color>
+   
+    <color name="background_color_transparent">#66000000</color>
+   
+    <color name="new_text_color_red">#f34747</color>
+    
+    <color name="text_title_new_color_black">#444444</color>
+    <color name="text_color_new_gray">#333333</color>
+     <color name="home_text_gray">#8d8f85</color>
+    
+    <color name="text_color_new_deep_gray">#666666</color>
+    <color name="background_color_new_gray">#EDEDED</color>
+    <color name="background_color_new_white">#FFFFFF</color>
+    <color name="background_color_new_gray1">#F8F8F8</color>
+    <color name="background_color_new_gray2">#F6F6F6</color>
+    <color name="group_buy_color_gray">#B5B5B5</color>
+</resources>

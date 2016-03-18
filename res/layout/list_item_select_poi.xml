@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/autoComplete_infoLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="45dip"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:orientation="vertical"
+		android:gravity="center_vertical">
+		<!-- 查询结果 -->
+		<TextView
+			android:id="@+id/name"
+			android:layout_width="wrap_content"
+			android:layout_height="20dip"
+			android:gravity="left|center_vertical"
+			android:textSize="14dip"
+			android:textColor="@color/text_color_deep_gray"
+			android:text="小小查询地址名称"
+			android:singleLine="true" />
+		<TextView
+			android:id="@+id/address"
+			android:layout_width="wrap_content"
+			android:layout_height="15dip"
+			android:gravity="left|center_vertical"
+			android:textSize="12dip"
+			android:textColor="@color/text_color_light_gray"
+			android:text="小小查询地址名称"
+			android:singleLine="true" />
+		
+	</LinearLayout>
+	<!-- 提示信息部分 -->
+	<LinearLayout
+		android:id="@+id/autoComplete_msgLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="10dip"
+		android:gravity="center"
+		android:visibility="gone">
+		<ProgressBar
+			android:id="@+id/autoComplete_pBar"
+			style="?android:attr/progressBarStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="5dip"
+			android:visibility="gone" />
+		<TextView 
+		    android:id="@+id/autoComplete_hideMsg"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:visibility="gone"
+		    android:textColor="@color/text_color_black"
+			android:textSize="14dip"
+		    />
+		<TextView
+			android:id="@+id/autoComplete_tvMsg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/text_color_black"
+			android:textSize="14dip"
+			android:text=""
+			android:gravity="left" />
+		<Button
+			android:id="@+id/autoComplete_btnRetry"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:text="（网络通讯故障）点击重试"
+			android:textSize="18dip"
+			android:background="@drawable/gray_button"
+			android:visibility="gone" 
+			android:textColor="@color/text_color_black"/>
+	
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:background="@color/background_color_white"
+    android:paddingTop="10dip" >
+
+    <LinearLayout
+        android:id="@+id/autoComplete_infoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 类型图标 -->
+
+        <ImageView
+            android:id="@+id/autoComplete_type_icon"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_marginRight="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_phone" />
+
+        <!-- 餐厅名称 -->
+
+        <TextView
+            android:id="@+id/autoComplete_rest_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/autoComplete_tvNum"
+            android:layout_weight="1"
+            android:singleLine="false"
+            android:text="大华餐厅大华餐厅大华餐厅大华餐厅大华餐厅"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="14dip" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center" >
+
+            <!-- 秘币图标 -->
+
+            <ImageView
+                android:id="@+id/promotion_icon_mibi"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_mibi_1"
+                android:visibility="visible" />
+
+            <!-- 秘币文字 -->
+
+            <TextView
+                android:id="@+id/promotion_mibi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-10dip"
+                android:layout_marginTop="-7dip"
+                android:padding="0dip"
+                android:text="15%"
+                android:textColor="@color/text_color_red"
+                android:textSize="10dip"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- 优惠和文字 -->
+
+        <TextView
+            android:id="@+id/promotion_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="22dip"
+            android:background="@drawable/promotion_discount_icon_bg"
+            android:gravity="center"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="1dip"
+            android:text="75折惠"
+            android:textColor="@color/text_color_white"
+            android:textSize="12dip"
+            android:visibility="visible" />
+        <!-- 券和文字 -->
+
+        <TextView
+            android:id="@+id/promotion_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="22dip"
+            android:background="@drawable/promotion_coupon_icon_bg"
+            android:gravity="center"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="1dip"
+            android:text="75折券"
+            android:textColor="@color/text_color_white"
+            android:textSize="12dip"
+            android:visibility="visible" />
+    </LinearLayout>
+    <!-- 提示信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/autoComplete_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dip"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/autoComplete_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/autoComplete_hideMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/autoComplete_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+
+        <Button
+            android:id="@+id/autoComplete_btnAddNewRes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="@string/text_button_add_res"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/autoComplete_btnRetry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="（网络通讯故障）点击重试"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

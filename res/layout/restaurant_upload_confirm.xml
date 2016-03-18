@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dip"
+        android:paddingTop="35dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:background="#00000000"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="按确定提交，审核通过后将立即发放秘币至您的帐户中"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip" />
+
+        <!-- 点评结果 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/upload_confirm_result_comment_image"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:src="@drawable/restaurant_upload_confirm_check_mark"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/upload_confirm_result_comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_toRightOf="@+id/upload_confirm_result_comment_image"
+                android:background="#00FFFFFF"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="成功发表点评"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/upload_confirm_result_comment_mibi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#00FFFFFF"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="+30~150秘币"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+            <!-- 模拟文字删除线 -->
+
+            <com.fg114.main.app.view.LineView
+                xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+                android:id="@+id/delete_line_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_alignLeft="@+id/upload_confirm_result_comment_mibi_text"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:visibility="visible"
+                line:dashedGap="0dip"
+                line:dashedWidth="2dip"
+                line:orientation="horizontal"
+                line:thickness="1.5dip"
+                line:color="#FF000000" />
+        </RelativeLayout>
+
+        <!-- 上传图片结果 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/upload_confirm_result_upload_image"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:src="@drawable/restaurant_upload_confirm_check_mark"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/upload_confirm_result_upload_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_toRightOf="@+id/upload_confirm_result_upload_image"
+                android:background="#00FFFFFF"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="成功上传图片"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/upload_confirm_result_upload_mibi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#00FFFFFF"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="+30秘币"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+            <!-- 模拟文字删除线 -->
+
+            <com.fg114.main.app.view.LineView
+                xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+                android:id="@+id/delete_line_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_alignLeft="@+id/upload_confirm_result_upload_mibi_text"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:visibility="visible"
+                line:dashedGap="0dip"
+                line:dashedWidth="2dip"
+                line:orientation="horizontal"
+                line:thickness="1.5dip"
+                line:color="#FF000000" />
+        </RelativeLayout>
+
+        <!-- 打分结果 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/upload_confirm_result_grade_image"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:src="@drawable/restaurant_upload_confirm_check_mark"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/upload_confirm_result_grade_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_toRightOf="@+id/upload_confirm_result_grade_image"
+                android:background="#00FFFFFF"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="成功对餐厅评分"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/upload_confirm_result_grade_mibi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#00FFFFFF"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="+250秘币"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dip" />
+            <!-- 模拟文字删除线 -->
+
+            <com.fg114.main.app.view.LineView
+                xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+                android:id="@+id/delete_line_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_alignLeft="@+id/upload_confirm_result_grade_mibi_text"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:visibility="visible"
+                line:dashedGap="0dip"
+                line:dashedWidth="2dip"
+                line:orientation="horizontal"
+                line:thickness="1.5dip"
+                line:color="#FF000000" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <com.fg114.main.app.view.LineView
+            xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/horizontal_line"
+            android:layout_width="fill_parent"
+            android:layout_height="5dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="#00000000"
+            android:visibility="visible"
+            line:dashedGap="0dip"
+            line:dashedWidth="2dip"
+            line:orientation="horizontal"
+            line:thickness="1px"
+            line:color="#FFCCCCCC" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/upload_confirm"
+                android:layout_width="110dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_big"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:text="确定"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

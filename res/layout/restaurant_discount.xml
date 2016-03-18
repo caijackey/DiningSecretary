@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scrollbars="vertical"
+	>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dip"
+		android:orientation="vertical">
+		
+		<!-- 套餐信息列表  -->
+		<LinearLayout
+		    android:id="@+id/restaurant_discount_meal_combo_list_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:padding="0dip"
+			android:orientation="vertical" >
+			<!-- 列表　 -->
+			<LinearLayout
+		   	android:id="@+id/restaurant_discount_meal_combo_list"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left|top"
+			android:padding="0dip"
+			android:orientation="vertical">
+			</LinearLayout>			
+		</LinearLayout>
+		
+		<!-- 现金券列表  -->
+		<LinearLayout
+		    android:id="@+id/restaurant_discount_cash_list_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:padding="0dip"
+			android:orientation="vertical" >
+			<!-- 列表　 -->
+			<LinearLayout
+		   	android:id="@+id/restaurant_discount_cash_list"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left|top"
+			android:padding="0dip"
+			android:orientation="vertical">
+			</LinearLayout>			
+		</LinearLayout>
+		
+		<!-- 促销列表 -->
+		<LinearLayout
+		    android:id="@+id/restaurant_discount_promotion_list_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:padding="0dip"
+			android:orientation="vertical">
+			<!-- 列表　 -->
+			<LinearLayout
+		   	android:id="@+id/restaurant_discount_promotion_list"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="left|top"
+			android:padding="0dip"
+			android:orientation="vertical">
+			</LinearLayout>
+			<!-- 按钮　 -->
+			<LinearLayout
+		   	android:id="@+id/restaurant_discount_promotion_list_button_layout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:padding="10dip"
+			android:orientation="horizontal"
+			android:background="@drawable/block_bottom_bt01">
+			<Button 
+			    android:id="@+id/restaurant_discount_promotion_list_button"
+			    android:text="立即预订"
+			    android:textSize="16dip"
+			    android:paddingLeft="20dip"
+			    android:paddingRight="20dip"
+			    android:paddingTop="8dip"
+			    android:paddingBottom="8dip"
+				android:textColor="@color/text_color_white"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/small_button"/>
+			</LinearLayout>
+		</LinearLayout>
+		<Button
+			android:id="@+id/restaurant_discount_btnShareToSina"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="top|center_horizontal"
+			android:layout_marginTop="10dip"
+			android:padding="10dip"
+			android:text="@string/text_button_share_to_sina"
+			android:textColor="@color/text_color_white"
+			android:textSize="16dip"
+			android:background="@drawable/button_big" />
+		<TextView 
+		    android:id="@+id/restaurant_discount_no_discount"
+		    android:layout_width="fill_parent"
+			android:layout_height="100dip"
+			android:text="暂无优惠信息"
+			android:padding="20dip"
+			android:gravity="center" />
+	</LinearLayout>
+</ScrollView>

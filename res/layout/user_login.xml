@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/new_block_button"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/login_by_phonenumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/phones" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="手机号绑定登录"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/new_block_button"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/login_by_sinablog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/sina_blog" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="新浪微博绑定登录"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/new_block_button"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/login_by_tencent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/tencent_blog" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="QQ或腾讯微博绑定登录"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/new_block_button"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/login_by_invite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/invite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="通过邀请码登录"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

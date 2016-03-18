@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top|center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dishorder_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/restaurant_dishorder_toplefttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:text="1号贵宾包房"
+            android:textSize="14dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="·"
+            android:textColor="@color/background_color_black"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/restaurant_dishorder_toprighttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:text="菜品确认"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_frame_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false" >
+
+        <ListView
+            android:id="@+id/restaurant_dishorder_itemlist"
+            android:layout_width="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:layout_height="match_parent" >
+        </ListView>
+    </LinearLayout>
+
+    <include layout="@layout/zy_dish_list_base" 
+        android:visibility="gone"/>
+</LinearLayout>

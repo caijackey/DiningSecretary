@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/new_block_button"
+            android:layout_margin="10dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/attention_to_xms"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="在新浪微博上关注小秘书"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/background_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/share_to_friend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="分享给好友，让更多人认识我吧！"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/new_block_button"
+            android:layout_margin="10dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/members_help"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="会员帮助"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/background_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/mibi_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="秘币细则"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@drawable/new_block_button"
+            android:orientation="vertical" >
+            
+            
+            <LinearLayout
+                android:id="@+id/push_service"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="消息推送"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                 <ToggleButton
+                        android:id="@+id/push_bnt_toggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/button_toggle"
+                        android:textOff=""
+                        android:textOn="" />
+
+            </LinearLayout>
+            
+             <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/background_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/update_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="版本更新"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/version_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="12dip" />
+
+                <Button
+                    android:id="@+id/restartDownLoadAPK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dip"
+                    android:background="@drawable/gray_button"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:text="重新下载"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="12dip"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="30dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/background_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/user_feedback"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="意见反馈"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/background_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/about_us"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="关于我们"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/app_market_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:visibility="visible"
+                android:background="@color/background_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/app_market"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dip"
+                    android:text="应用推荐"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

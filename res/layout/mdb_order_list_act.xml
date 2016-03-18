@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mdb_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/tittle_topbar"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 返回按钮 -->
+
+        <LinearLayout
+            android:id="@+id/mdb_main_frame_btnGoBack_container"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/icon_go_back"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/mdb_btnGoBack"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_light_color_effect"
+                android:gravity="center"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:textColor="@color/text_color_white"
+                android:textSize="14dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mdb_order_list_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="免单宝订单"
+            android:textColor="@color/text_color_white"
+            android:textSize="20dip" >
+        </TextView>
+
+        <Button
+            android:id="@+id/mdb_orderlist_drop_down_box"
+            android:layout_width="26dip"
+            android:layout_height="20dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/order_list_title_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mdb_orderlist_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:text="暂无订单记录"
+        android:textColor="@color/text_color_black"
+        android:textSize="16dip"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/mdb_order_list_status"
+        style="@style/myListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/background_color_transparent"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false" />
+
+</LinearLayout>

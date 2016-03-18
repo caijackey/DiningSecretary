@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="60dip"
+        android:background="@color/background_color_new_gray"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.09"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical"
+             >
+
+            <TextView
+                android:id="@+id/takeaway_property_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="大杯香草拿铁"
+                android:textColor="@color/text_color_black"
+                android:textSize="18dip" 
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/takeaway_property_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="3dip"
+                android:text="￥33"
+                android:textColor="@color/new_text_color_red"
+                android:textSize="18dip"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/takeaway_property_cannel"
+            android:layout_width="44dip"
+            android:layout_height="44dip"
+            android:background="@drawable/guanbi" />
+    </LinearLayout>
+
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.78"
+        android:background="@color/background_color_new_white">
+    <LinearLayout
+        android:id="@+id/takeaway_property_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_new_white"
+        android:orientation="vertical" 
+        android:paddingRight="10dip"
+        android:paddingLeft="10dip"
+        android:paddingBottom="10dip">
+
+
+    </LinearLayout>
+</ScrollView>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@color/background_color_new_gray1" >
+
+        <com.fg114.main.app.view.DigitalSelector
+            android:id="@+id/takeaway_property_diaitalselector"
+            android:layout_width="105dip"
+            android:layout_height="35dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/takeaway_property_bt"
+            android:layout_width="90dip"
+            android:layout_height="28dip"
+            android:background="@drawable/bg_red_new"
+            android:textColor="@color/background_color_white"
+            android:textSize="16dip"
+            android:text="选好了"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

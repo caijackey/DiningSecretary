@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/new_block_button"
+        android:orientation="vertical"
+        android:padding="0dip" >
+
+        <!-- 名称 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            
+
+            <EditText
+                android:id="@+id/mdb_consume_ensure_Auth_num"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:background="@null"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" >
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@color/line" />
+        <!-- 营业时间 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            
+
+            <EditText
+                android:id="@+id/mdb_consume_ensure_card_num"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:background="@null"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" >
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/mdb_consume_ensure_pos_example"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_marginRight="5dip"
+                android:text=""
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mdb_valid_code_lyout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+      android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="0dip" >
+
+        <EditText
+            android:id="@+id/mdb_valid_code_num"
+            android:layout_width="110dip"
+            android:layout_height="wrap_content"
+             android:paddingLeft="5dip"
+            android:singleLine="true"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/text_color_black"
+            android:hint="请输入验证码"
+            android:layout_marginRight="10dip"
+            android:textSize="14dip" >
+        </EditText>
+        
+        <com.fg114.main.app.view.MyImageView 
+            android:id="@+id/mdb_valid_code_image"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="10dip"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/mdb_consume_ensure_btn"
+            android:layout_width="120dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/bg_red_new"
+            android:text="核  对"
+            android:textColor="@color/text_color_white"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+</LinearLayout>

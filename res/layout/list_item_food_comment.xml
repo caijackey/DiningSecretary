@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/food_comment_list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="0dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="0dip" 
+     >
+    
+<!--     分隔线
+     <com.fg114.main.app.view.LineView
+        xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+        android:id="@+id/list_item_food_comment_line"
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:background="#00FFFF00"      
+        line:dashedGap="2dip"
+        line:dashedWidth="1dip"
+        line:orientation="horizontal"
+        line:thickness="0.5dip"
+        line:color="#00000000" />  -->
+
+    <!-- 评论信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/list_item_food_comment_infoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/block_bt01"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:padding="10dip" >
+
+        <!-- 评论人及时间 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 用户名 -->
+
+            <TextView
+                android:id="@+id/list_item_food_comment_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dip" >
+            </TextView>
+            <!-- 评价图标 -->
+
+            <ImageView
+                android:id="@+id/list_item_food_comment_likeType"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_marginLeft="10dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/food_comment_general" />
+
+            <!-- 评价时间 -->
+
+            <TextView
+                android:id="@+id/list_item_food_comment_createTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/text_color_gray"
+                android:textSize="12dip" >
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_item_food_comment_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/text_color_deep_gray"
+            android:textSize="14dip" >
+        </TextView>
+    </LinearLayout>
+
+
+    <!-- 提示信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/list_item_food_comment_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/list_item_food_comment_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/list_item_food_comment_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:gravity="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

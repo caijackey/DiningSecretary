@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/middle_list_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 餐厅内容区 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingRight="0dip" >
+
+            <!-- 餐馆照片 -->
+
+            <LinearLayout
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/shape_bg_white_border_1px_gray"
+                android:orientation="horizontal"
+                android:padding="1dip" >
+
+                <com.fg114.main.app.view.MyImageView
+                    android:id="@+id/rest_logo"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <!-- 餐馆内容 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center" >
+
+                    <!-- 餐馆名称 -->
+
+                    <TextView
+                        android:id="@+id/rest_name"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="餐厅名称"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+
+                    <TextView
+                        android:id="@+id/have_gift"
+                        android:layout_width="15dip"
+                        android:layout_height="15dip"
+                        android:background="#FFFF8231"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="赠"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="11dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="left|center_vertical"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <!-- 餐馆总评 -->
+
+                    <RatingBar
+                        android:id="@+id/rating_bar"
+                        style="@style/starRatingBar_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dip"
+                        android:layout_marginRight="10dip" />
+
+                    <!-- 餐厅状态文字 -->
+
+                    <TextView
+                        android:id="@+id/rest_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dip"
+                        android:background="#FFFF8231"
+                        android:gravity="center"
+                        android:paddingLeft="10px"
+                        android:paddingRight="10px"
+                        android:singleLine="true"
+                        android:text="暂不送"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="11dip" />
+                </LinearLayout>
+
+                <!-- 底部信息区 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:baselineAligned="false" >
+
+                    <!-- 起送价格 -->
+
+                    <ImageView
+                        android:layout_width="15dip"
+                        android:layout_height="15dip"
+                        android:src="@drawable/icon_car" />
+
+                    <TextView
+                        android:id="@+id/send_limit_price"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:singleLine="true"
+                        android:text="20元起送"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="12dip" />
+                    
+                    <!-- 预计送达时间 -->
+                    <ImageView
+                        android:layout_width="15dip"
+                        android:layout_height="15dip"
+                        android:src="@drawable/icon_clock" />
+
+                   <TextView
+                        android:id="@+id/send_reach_mins"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:singleLine="true"
+                        android:text="30分钟"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="12dip" />
+                   
+                   <!-- 距离 -->
+                   <ImageView
+                        android:layout_width="15dip"
+                        android:layout_height="15dip"
+                        android:src="@drawable/icon_location_anchor_gray" />
+
+                   <TextView
+                        android:id="@+id/distance_meter"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="600m"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="12dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 箭头符号 -->
+
+        <ImageView
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <!-- 消息提示区 -->
+
+    <LinearLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/middle_list_item_bg1_state02"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+
+        <Button
+            android:id="@+id/button_retry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="（网络通讯故障）点击重试"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

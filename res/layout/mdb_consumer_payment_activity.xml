@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+        <!-- webView -->
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <!-- 支付方式选择页 -->
+
+    <LinearLayout
+        android:id="@+id/paymentTypeView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+         >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:text="支付方式"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip" />
+        <!-- 支付方式容器 -->
+
+        <LinearLayout
+            android:id="@+id/paymentTypeContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/new_block_bt01"
+            android:orientation="vertical"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip" >
+
+            <include layout="@layout/list_item_payment_type" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mdb_vonsumer_payment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/consumer_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/new_block_bt01"
+            android:orientation="vertical"
+            android:paddingBottom="10dip" >
+
+            <TextView
+                android:id="@+id/rest_name_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:layout_marginTop="10dip"
+                android:singleLine="true"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="18dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/background_color_gray" />
+
+            <EditText
+                android:id="@+id/pay_money"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_backgroud"
+                android:gravity="center_vertical|left"
+                android:hint="请输入消费金额(请和服务员确认)"
+                android:inputType="numberDecimal"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="16dip"
+                android:drawableLeft="@drawable/mdb_money"
+                android:drawablePadding="10dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/background_color_gray" />
+
+            <EditText
+                android:id="@+id/booker_tel"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="3dip"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_backgroud"
+                android:gravity="center_vertical|left"
+                android:hint="请输入手机号(用于获取验证短信)"
+                android:inputType="number"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="16dip" 
+                android:drawableLeft="@drawable/mdb_phone"
+                android:drawablePadding="10dip"/>
+
+            <LinearLayout
+                android:id="@+id/use_remain_money_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/background_color_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <CheckBox
+                        android:id="@+id/use_remain_money_iv"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:button="@null"
+                        android:background="@drawable/mdb_use_remain_money_bt"
+                        android:checked="false"
+                         />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:singleLine="true"
+                        android:text="余额支付"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="16dip" />
+
+                    <TextView
+                        android:id="@+id/user_remain_money"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="37dip"
+                        android:layout_marginRight="10dip"
+                        android:singleLine="true"
+                        android:text="还需支付"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+
+                    <TextView
+                        android:id="@+id/user_pay_money"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/text_color_red_3"
+                        android:textSize="16dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bnt_submit"
+            android:layout_width="160dip"
+            android:layout_height="35dip"
+            android:layout_below="@+id/consumer_info_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_red_new"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="下一步"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip" />
+
+        <LinearLayout
+            android:id="@+id/flower_panel_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="54dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/mdb_flower_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="27dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/free_pct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_color_new_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/free_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_color_new_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/free_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_color_new_gray"
+                    android:textSize="14dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="27dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal"
+                android:paddingTop="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="餐厅服务评级"
+                    android:textColor="@color/text_color_new_gray"
+                    android:textSize="14dip" />
+
+                <RatingBar
+                    android:id="@+id/flower_num"
+                    style="@style/flowerRatingBar_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="10dip"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:isIndicator="true"
+                    android:saveEnabled="true"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/flower_panel_more_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/flower_panel_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-2dip"
+            android:background="@drawable/mdb_consumer_pay_sanjiao_up" 
+           />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_list_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <LinearLayout
+        android:id="@+id/list_item_comment_infoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dip"
+        android:paddingRight="15dip"
+        android:paddingTop="15dip" >
+
+        <ImageView
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:layout_margin="7dip"
+            android:src="@drawable/corner_arrow" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.fg114.main.app.view.MyImageView
+                    android:id="@+id/list_item_comment_userphoto"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:layout_margin="0dip"
+                    android:src="@drawable/bg_custom_dialog" />
+
+                <!-- 评论信息部分 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginTop="0dip"
+                    android:gravity="top"
+                    android:orientation="vertical" >
+
+                    <!-- 发帖人及时间 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/list_item_comment_tvUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16dip" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/list_item_comment_tvTime"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right|center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="12dip" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/list_item_comment_tvComment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginTop="0dip"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/text_color_gray"
+                        android:textSize="16dip" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 分隔线 -->
+
+            <com.fg114.main.app.view.LineView
+                xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+                android:id="@+id/horizontal_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="0dip"
+                android:layout_marginTop="10dip"
+                android:background="#00000000"
+                android:visibility="visible"
+                line:dashedGap="2dip"
+                line:dashedWidth="2dip"
+                line:orientation="horizontal"
+                line:thickness="1dip"
+                line:color="#FFCCCCCC" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 提示信息部分 -->
+
+    <LinearLayout
+        android:id="@+id/list_item_comment_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/list_item_comment_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/list_item_comment_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:gravity="center"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

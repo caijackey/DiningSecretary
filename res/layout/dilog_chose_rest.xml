@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:padding="15dp"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_show_rest_bg" >
+
+            <LinearLayout
+                android:id="@+id/dialog_chose_rest_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/dilag_select_title" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="请选择餐厅:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_chose_rest_content"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:padding="8dp"
+                android:layout_below="@+id/dialog_chose_rest_title"
+                android:orientation="vertical"
+                 >
+                <ListView 
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/dilog_chose_rest_list"
+                    android:layout_gravity="center_horizontal|top"
+			        style="@style/myListView"
+			        android:dividerHeight="0.5dp"
+			        android:divider="@color/text_color_gray"
+			        android:drawSelectorOnTop="false"
+                    ></ListView>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/dialog_chose_rest_X_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/dilag_select_x" />
+
+</RelativeLayout>

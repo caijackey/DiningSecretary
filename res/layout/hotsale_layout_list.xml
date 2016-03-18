@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hotsale_relative_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="#f2f2f1"
+    >
+    <ListView
+        android:id="@+id/hotsale_listview"
+        style="@style/myListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:visibility="visible" />
+</RelativeLayout>

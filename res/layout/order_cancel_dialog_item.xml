@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="#99000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:id="@+id/add_tag_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dip"
+        android:background="@drawable/shape_rectangle_dialog_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/add_tag_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dip"
+            android:text="你确定取消该订单吗？"
+            android:textColor="@color/text_color_white"
+            android:textSize="18dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计划有变"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" 
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/plane_change"
+                android:layout_width="29dip"
+                android:layout_height="29dip"
+                android:background="@drawable/cancel_order_no_kuang" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更换餐厅"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:layout_weight="1" 
+                />
+
+            <Button
+                android:id="@+id/change_rest"
+                android:layout_width="29dip"
+                android:layout_height="29dip"
+                android:background="@drawable/cancel_order_no_kuang" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/order_cancel_content"
+            android:layout_width="fill_parent"
+            android:layout_height="95dip"
+            android:background="@drawable/shape_bg_white_border_deep_gray_round_corner"
+            android:gravity="left"
+            android:hint="其它原因"
+            android:maxLength="200"
+            android:paddingLeft="5dip"
+            android:textColor="@color/background_color_black"
+            android:textSize="16dip" />
+
+        <!-- 按钮 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/order_cancel_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/crystal_button_light_color"
+                android:text="不取消"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/order_cancel_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/crystal_button_light_color"
+                android:text="确定"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" 
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

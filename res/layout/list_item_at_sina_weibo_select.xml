@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color_white"
+    android:orientation="vertical" >
+
+    <!-- 字母分类域 -->
+
+    <TextView
+        android:id="@+id/letter_title"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:background="@drawable/shape_bg_white_border_deep_gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dip"
+        android:shadowColor="@color/text_color_black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:singleLine="true"
+        android:text="#"
+        android:textColor="@color/text_color_white"
+        android:textSize="16dip"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_margin="10dip"
+            android:background="@drawable/shape_bg_white_border_gray"
+            android:padding="4dip" >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/user_pic"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="0dp"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <!-- 好友名称 -->
+
+        <TextView
+            android:id="@+id/list_item_at_sina_weibo_user_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_transparent_light_color_effect"
+            android:gravity="left|center_vertical"
+            android:layout_marginRight="10dip"
+            android:singleLine="true"
+            android:text="#"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/background_color_deep_gray" />
+
+</LinearLayout>

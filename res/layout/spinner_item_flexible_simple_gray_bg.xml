@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 不具有固定高度 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:textSize="16dip"
+    android:textColor="@color/text_color_deep_gray"
+    android:padding="0dip"
+	android:gravity="left|center_vertical"
+    android:singleLine="true"
+    android:drawableRight="@drawable/arrow_down_black"
+    />

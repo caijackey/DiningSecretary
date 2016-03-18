@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="5dp">
+	<TextView
+		android:id="@+id/contract_list_item_tvAlpha"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="13dip"
+		android:background="#333333"
+		android:textColor="#99CCFF"
+		android:textAppearance="?android:textAppearanceMedium"
+		android:visibility="gone" />
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/contract_list_item_tvAlpha">
+		<ImageView
+			android:id="@+id/contract_list_item_ivPhoto"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="3dip"
+			android:layout_marginTop="6dip"
+			android:layout_marginRight="5dip"
+			android:src="@drawable/nopic"
+			android:visibility="gone" />
+		<TextView
+			android:id="@+id/contract_list_item_tvName"
+			android:textAppearance="?android:textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="2dip"
+			android:layout_marginTop="6dip"
+			android:layout_marginRight="5dip"
+			android:singleLine="true"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@id/contract_list_item_tvAlpha"
+			android:layout_alignWithParentIfMissing="true" />
+		<TextView
+			android:id="@+id/contract_list_item_tvNumber"
+			android:textAppearance="?android:textAppearanceSmall"
+			android:ellipsize="marquee"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:textColor="#AAAAAA"
+			android:layout_below="@id/contract_list_item_tvName"
+			android:layout_alignLeft="@id/contract_list_item_tvName"
+			android:layout_alignWithParentIfMissing="true" />
+		<CheckBox
+			android:id="@+id/contract_list_item_cbSelect"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:focusable="false"
+			android:clickable="false"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true" 
+			style="@style/myCheckBox"/>
+	</RelativeLayout>
+</RelativeLayout>

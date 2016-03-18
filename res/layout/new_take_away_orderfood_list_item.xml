@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="left|top"
+    android:orientation="vertical"
+    android:padding="0dip" >
+
+    <LinearLayout
+       
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dip"
+        android:layout_marginRight="1dip"
+        android:baselineAligned="false"
+        android:gravity="left|top"
+        android:orientation="vertical"
+        android:padding="0dip" >
+
+        <!-- 分隔线 -->
+
+        <View
+            android:id="@+id/new_takeaway_horizontal_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@color/background_color_deep_gray" />
+
+        <LinearLayout
+            android:id="@+id/newdiscount_nested_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="left|top"
+            android:orientation="vertical"
+            android:paddingBottom="5dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip" >
+
+            <!-- 文字区 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                android:padding="0dip" >
+
+                <!-- 优惠页面中的普通列表项 -->
+
+                <TextView
+                    android:id="@+id/new_order_foodlist_foodname"
+                    android:layout_width="0dip"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/text_layout_ydzk"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/new_order_foodnum"
+                    android:layout_width="0dip"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="2"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:id="@+id/new_order_foodprice"
+                    android:layout_width="0dip"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                     android:gravity="center"
+                    android:text="200"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dip" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dip"
+                    android:id="@+id/new_order_food_transcation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"                                     
+                    android:text="@string/text_layout_ydzk"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="10dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

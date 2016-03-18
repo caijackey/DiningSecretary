@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msgLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:background="@color/background_color_white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:visibility="visible" >
+
+    <ProgressBar
+        android:id="@+id/pBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:text="正在加载中,请稍后..."
+        android:textColor="@color/text_color_black"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gray_button"
+        android:text="（网络通讯故障）点击重试"
+        android:textColor="@color/text_color_black"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</LinearLayout>

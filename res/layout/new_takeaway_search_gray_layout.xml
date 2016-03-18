@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/takeaway_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" 
+        android:background="@color/background_search_gray">
+        
+        <AutoCompleteTextView
+            android:id="@+id/takeaway_search_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="7dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="7dip"
+            android:layout_toLeftOf="@+id/takeaway_search_cancel_bnt"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:drawableLeft="@drawable/search_bt2"
+            android:singleLine="true"
+            android:textSize="16dip" 
+            android:background="@drawable/edittext_backgroud"
+            android:hint="搜索菜品名"/>
+
+        <Button
+            android:id="@+id/takeaway_search_reset_bnt"
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:layout_alignRight="@+id/takeaway_search_edt"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:textSize="16dip" 
+            android:visibility="gone"
+            android:background="@drawable/fork_search"/>
+
+        <TextView
+            android:id="@+id/takeaway_search_cancel_bnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/text_color_search_blue"
+            android:text="完成" 
+            android:textSize="18dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="14dip"
+            android:gravity="center_vertical"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/takeaway_center_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/takeaway_top_layout"
+        android:layout_above="@+id/takeaway_bottom_layout"
+        android:layout_alignParentLeft="true" >
+
+        <ListView
+            android:id="@+id/takeaway_list_food_lv"
+            style="@style/myListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/divider"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="1dp" >
+        </ListView>
+        <!-- 无数据显示 -->
+
+        <TextView
+            android:id="@+id/takeaway_search_no_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textSize="16dip"
+            android:visibility="gone">
+            
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/takeaway_bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_color_new_gray" >
+
+            <TextView
+                android:id="@+id/takewawy_shopping_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:text="还差￥20元起送"
+                android:textColor="@color/text_color_red_3"
+                android:textSize="16dip" />
+
+            <Button
+                android:id="@+id/takewawy_shopping_cart_bnt"
+                android:layout_width="80dip"
+                android:layout_height="35dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_red_new"
+                android:gravity="center"
+                android:layout_marginRight="10dip"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip" 
+                android:text="去买单"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/takewawy_shopping_cart_iv"
+                android:layout_width="49dip"
+                android:layout_height="49dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shopping_car_gray" />
+
+            <TextView
+                android:id="@+id/takeaway_shoppint_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/takewawy_shopping_cart_iv"
+                android:textColor="@color/text_color_gray"
+                android:text="0份"
+                android:textSize="16dip" />
+            <TextView
+                android:id="@+id/takeaway_shoppint_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/takeaway_shoppint_num_tv"
+                android:textColor="@color/text_color_deep_gray"
+                android:text="￥0"
+                android:layout_marginLeft="10dip"
+                android:textSize="16dip" />
+        </RelativeLayout>
+
+</RelativeLayout>

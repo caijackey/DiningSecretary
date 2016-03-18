@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fg114.main"
+    android:installLocation="auto"
+    android:versionCode="4109"
+    android:versionName="4_1_9" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="7" />
+
+    <application
+        android:name="com.fg114.main.app.Fg114Application"
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+
+        <!-- 首页 -->
+        <activity
+            android:name=".app.activity.IndexActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <!-- 主页 -->
+        <activity
+            android:name=".app.activity.HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+
+
+        <!-- 消息推送界面 -->
+        <activity
+            android:name=".app.activity.PushCommonActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 闪屏页 -->
+        <activity
+            android:name=".app.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/IndexTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="home"
+                    android:scheme="xms" />
+            </intent-filter>
+        </activity>
+
+        <!-- 城市选择页 -->
+        <activity
+            android:name=".app.activity.CityActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 更多城市选择页 -->
+        <activity
+            android:name=".app.activity.CityMoreActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 城市搜索页 -->
+        <activity
+            android:name=".app.activity.CitySearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅美食 -->
+        <!-- 餐厅列表页 -->
+        <activity
+            android:name=".app.activity.resandfood.ResAndFoodListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 附近餐厅列表页 -->
+        <activity
+            android:name=".app.activity.resandfood.NearbyResAndFoodListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新版本附近餐厅 -->
+        <activity
+            android:name=".app.activity.resandfood.NearbyResAndFoodShowActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 餐厅详细页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 餐厅详细主页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantDetailMainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 餐厅详细荐店页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantDetailRecommendActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新餐厅详细页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantDetailNewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新榜单餐厅详细页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantDetailListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 吃货荐店页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantFoodieListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 热门榜单页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantHotsaleActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 餐厅标签页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantTagActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 定餐厅界面 -->
+        <activity
+            android:name=".app.activity.resandfood.BookingRestaurantActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅评论页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantCommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 餐厅评论详细页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantCommentDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅信息页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅图片上传页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantUploadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 餐厅图片上传，评分页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantUploadMoreCommentSubmitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 餐厅图片列表页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantImageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅图片相册页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantGalleryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 推荐餐厅图片相册页 -->
+        <activity
+            android:name=".app.activity.resandfood.RecommendRestaurantGalleryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅优惠页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantDiscountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅评论提交页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantCommentSubmitActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅菜品确认页 -->
+        <activity
+            android:name=".app.activity.resandfood.DishOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 同类美食页 -->
+        <activity
+            android:name=".app.activity.resandfood.SimilarFoodListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 点菜菜单列表页 -->
+        <activity
+            android:name=".app.activity.resandfood.DishListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 点菜菜单列表页 -->
+        <activity
+            android:name=".app.activity.resandfood.ZyDishListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅菜品确认页 -->
+        <activity
+            android:name=".app.activity.resandfood.ZyDishOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 餐厅菜品确认页 -->
+        <activity
+            android:name=".app.activity.resandfood.MyDishOrderListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 菜品评论页 -->
+        <activity
+            android:name=".app.activity.resandfood.FoodCommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 菜品评论提交页 -->
+        <activity
+            android:name=".app.activity.resandfood.FoodCommentSubmitActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅评论回复提交页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantCommentReplyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐馆查询页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 菜品查询页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantSearchFoodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 菜品详情页 -->
+        <activity
+            android:name=".app.activity.resandfood.FoodInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 订单页 -->
+        <activity
+            android:name=".app.activity.resandfood.BookingFromNetActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 地图页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantMapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 添加或更新餐厅页 -->
+        <activity
+            android:name=".app.activity.resandfood.AddOrUpdateResActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 百度地图页 -->
+        <activity
+            android:name=".app.activity.resandfood.MyMapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 短信邀请界面 -->
+        <activity
+            android:name=".app.activity.order.SelectSMSActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 附近地标信息界面 -->
+        <activity
+            android:name=".app.activity.order.NearByAddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 附近外卖地标信息界面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayRestaurantMapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 查询 -->
+        <!-- 查询页 -->
+        <activity
+            android:name=".app.activity.search.SearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 区域列表页 -->
+        <activity
+            android:name=".app.activity.search.RegionListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 商区列表页 -->
+        <activity
+            android:name=".app.activity.search.DistrictListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 榜单 -->
+        <!-- 榜单类别页 -->
+        <activity
+            android:name=".app.activity.top.TopListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 榜单页 -->
+        <activity
+            android:name=".app.activity.top.TopRestaurantListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 最近浏览 -->
+        <!-- 浏览历史页 -->
+        <activity
+            android:name=".app.activity.HistoryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 用户 -->
+        <!-- 用户登录页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 用户注册页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserRegistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 分享微博页面 -->
+        <activity
+            android:name=".app.activity.usercenter.ShareToWeiboActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 分享微信页面 -->
+        <activity
+            android:name=".app.activity.usercenter.ShareToWeiXinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 用户账号设置页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserAccessSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 新浪账号绑定 -->
+        <activity
+            android:name=".app.activity.usercenter.BindSinaWeiboActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 新浪微博登录页 -->
+        <activity
+            android:name=".app.activity.usercenter.LoginSinaWeiboActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 用户订单列表页 -->
+        <activity
+            android:name=".app.activity.order.MyOrderListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 订座提交成功页 -->
+        <activity
+            android:name=".app.activity.order.OrderSubmitSuccessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 我的订单页 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayMyOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 外卖订单详情 -->
+        <activity
+            android:name=".app.activity.order.MyTakeAwayOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 外卖美食页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayDelicaciesFoodListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 可发送短信邀请的用户订单列表页 -->
+        <activity
+            android:name=".app.activity.order.MyShortMessageOrderListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 用户订单详细页 -->
+        <activity
+            android:name=".app.activity.order.MyOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新用户订单详细页 -->
+        <activity
+            android:name=".app.activity.order.NewMyOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 用户婚团宴订单详细页 -->
+        <activity
+            android:name=".app.activity.order.MyWeddingPartyOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 找回密码页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserFindPwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 修改密码页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserChangePwdActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 用户中心页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserCenterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- APP设置 -->
+        <activity
+            android:name=".app.activity.usercenter.APPSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 手机验证 -->
+        <activity
+            android:name=".app.activity.usercenter.ValidatePhoneNOActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 邀请注册 -->
+        <activity
+            android:name=".app.activity.usercenter.InviteRegistrationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 订单 -->
+        <activity
+            android:name=".app.activity.order.NewOrderListAcitivy"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 确认订单 -->
+        <activity
+            android:name=".app.activity.order.MyBookRestaurantActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 快捷预定 -->
+        <activity
+            android:name=".app.activity.order.FastBookingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 现金劵列表页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserCashListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 现金卷详情页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserCashDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 婚团宴订单页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserWeddingPartyOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 用户站内信页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserStationMessageListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 购买记录页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserCashCouponBuyListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 账户余额页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserAccountInOutListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 现金卷使用说明页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserCashIntroduceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 用户积分查询页面 -->
+        <activity
+            android:name=".app.activity.usercenter.UserPointListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 其他 -->
+        <!-- 消息提示页 -->
+        <activity
+            android:name=".app.activity.ShowErrorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 自动升级页 -->
+        <activity
+            android:name=".app.activity.AutoUpdateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 关键字提示页 -->
+        <activity
+            android:name=".app.activity.AutoCompleteActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅美食页 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantFoodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 错误报告页 -->
+        <activity
+            android:name=".app.activity.ErrorReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 意见反馈页 -->
+        <activity
+            android:name=".app.activity.usercenter.OpinionErronReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 短信发送页 -->
+        <activity
+            android:name=".app.activity.SendSMSActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 联系人列表页 -->
+        <activity
+            android:name=".app.activity.ContactListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 站内信详细页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserStationMessageDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 站内信回复页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserStationMessageReplyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 关于我们页 -->
+        <activity
+            android:name=".app.activity.AboutUsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 优惠精选页面 -->
+        <activity
+            android:name=".app.activity.resandfood.FavourableActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 优惠券购买页面 -->
+        <activity
+            android:name=".app.activity.resandfood.CashBuyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+
+        <!-- 优惠券购买支付页面，已存在订单的 -->
+        <activity
+            android:name=".app.activity.resandfood.CashBuyPaymentOfExistingOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 如要弹出提示GPS城市变更的Alert，跳转至此页 -->
+        <activity
+            android:name=".app.activity.AlertActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 新功能提示页 -->
+        
+           <activity
+            android:name=".app.activity.NewFeaturesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- 叫外卖页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayRestaurantListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 新版本外卖首页页面 -->
+        <activity
+            android:name=".app.activity.takeaway.NewTakeAwayIndexActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新版本外卖餐厅列表页面 -->
+
+        <activity
+            android:name=".app.activity.takeaway.NewTakeAwaySearchRestListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新版本外卖美味详情页面 -->
+        <activity
+            android:name=".app.activity.takeaway.NewTakeAwayFoodDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 新版本外卖餐厅详情页面 -->
+        <activity
+            android:name=".app.activity.takeaway.NewTakeAwayRestaurantDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新版本外卖餐厅详情页面 -->
+        <activity
+            android:name=".app.activity.order.MyNewTakeAwayOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 新叫外卖页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayFoodListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 4.16新叫外卖页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayNewFoodListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新叫外卖页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayFoodOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新叫外卖在线支付 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayBuyPaymentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新叫外卖完善订单信息页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayPerfectOrderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新叫外卖地址管理页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayManageAddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新叫外卖地址管理页面 -->
+        <activity
+            android:name=".app.activity.takeaway.NewTakeAwayManageAddressActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 新叫外卖赠品管理页面 -->
+        <activity
+            android:name=".app.activity.takeaway.NewTakeAwayGiftListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 新叫外卖付款拦截页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayBuyOrderInterceptActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 叫外卖－餐厅菜单页面 -->
+        <activity
+            android:name=".app.activity.takeaway.TakeAwayRestaurantMenuActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 团购详情页面 -->
+        <activity
+            android:name=".app.activity.mealcombo.GroupBuyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 团购提交页面 -->
+        <activity
+            android:name=".app.activity.mealcombo.GroupBuyPaymentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 团购成功提交页面 -->
+        <activity
+            android:name=".app.activity.mealcombo.GroupBuySubmitSuccessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 团购详情页面 -->
+        <activity
+            android:name=".app.activity.mealcombo.GroupBuySubmitActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <!-- 简单网页浏览页面 -->
+        <activity
+            android:name=".app.activity.SimpleWebViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 套餐列表页面 -->
+        <activity
+            android:name=".app.activity.mealcombo.MealComboListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+
+
+        <!-- 餐厅菜品列表新页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantFoodListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 微博功能中间页面 -->
+        <activity
+            android:name=".weibo.activity.MediatorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 微博授权页面 -->
+        <activity
+            android:name=".weibo.activity.AuthWebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 微博好友选择页面 -->
+        <activity
+            android:name=".weibo.activity.FriendSelectionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 随手拍菜品评分页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantUploadGradeFoodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 随手拍环境评分页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantUploadGradeRestaurantActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 随手拍环境评分页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantUploadConfirmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 菜品图片详情页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantImageDetailOfFoodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 餐厅图片新页面 -->
+        <activity
+            android:name=".app.activity.resandfood.RestaurantPicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 语音订餐的消息列表 -->
+        <activity
+            android:name=".app.activity.chat.ChatMsgListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- 语音订餐的消息推送中转页面 -->
+        <activity
+            android:name=".app.activity.ChkHaveChatMsgActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 点菜页 -->
+        <activity
+            android:name=".app.activity.resandfood.FoodListForSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 我的菜单页 -->
+        <activity
+            android:name=".app.activity.usercenter.UserMenuListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 由点菜进入的评论页 -->
+        <activity
+            android:name=".app.activity.resandfood.DishFoodCommentSubmitActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 推荐餐厅评论 -->
+        <activity
+            android:name=".app.activity.resandfood.RecommendRestaurantCommentListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 由点菜进入的评论列表页 -->
+        <activity
+            android:name=".app.activity.resandfood.DishFoodCommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 推荐餐厅 -->
+        <activity
+            android:name=".app.activity.resandfood.RecommendRestaurantDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 我的霸王菜 -->
+        <activity
+            android:name=".app.activity.bwc.MyFavoriteActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+        <!-- 免担保 -->
+        <!-- 免担保消费付款 -->
+        <activity
+            android:name=".app.activity.Mdb.MdbConsumerPaymentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 免担保餐厅列表页 -->
+        <activity
+            android:name=".app.activity.Mdb.MdbResListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 免担保餐厅详情页 -->
+        <activity
+            android:name=".app.activity.Mdb.MdbRestDetaiActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 免担保餐厅搜索页 -->
+        <activity
+            android:name=".app.activity.Mdb.MdbRestSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 免担保订单详情页 -->
+        <activity
+            android:name=".app.activity.order.MdbOrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 免担保订单状态提示页 -->
+        <activity
+            android:name=".app.activity.Mdb.MdbSubmitSuccessActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 免担保订单列表页 -->
+        <activity
+            android:name=".app.activity.order.MdbOrderListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 超级57Service -->
+        <service
+            android:name=".app.service.Super57Service"
+            android:enabled="true" />
+
+        <!-- 推送服务 -->
+        <!--  <service
+            android:name=".app.service.KeepAliveService"
+            android:enabled="true"
+            android:process=":keep_alive"
+            />-->
+
+        <!-- 下载更新服务 -->
+        <service
+            android:name=".app.service.UpdateService"
+            android:enabled="true" />
+
+        <!-- 语音订餐的消息推送服务 -->
+        <!--
+              <service
+            android:name=".app.service.ChkHaveChatMsgService"
+            android:enabled="true" />
+        -->
+
+
+        <!-- 微信相关 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/IndexTheme" />
+        <!-- 微信支付相关 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/IndexTheme" />
+
+        <!-- 新浪SSO授权页 -->
+        <activity
+            android:name="com.fg114.main.weibo.activity.SinaSSOAuthActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <!-- =========================== 新版功能 start ============================== -->
+
+
+        <!--  -->
+        <activity
+            android:name=".app.activity.RestSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 热门商圈页 -->
+        <activity
+            android:name=".app.activity.HotDistrictActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 现金券支付表单页面 -->
+        <activity
+            android:name=".app.activity.mealcombo.CashBuyPaymentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!-- 全部商圈选择页 -->
+        <activity
+            android:name=".app.activity.DistrictChoosingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 添加推荐餐厅页 -->
+        <activity
+            android:name=".app.activity.resandfood.RecommandRestaurantSubmitActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 图片多选页 -->
+        <activity
+            android:name=".app.activity.SelectMultiplePictureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 图片多选页广播 -->
+        <receiver android:name=".app.activity.SelectMultiplePictureActivity$MyBroadcastReceiver" >
+        </receiver>
+        <!-- 外卖餐厅评论页 -->
+        <activity
+            android:name="com.fg114.main.app.activity.takeaway.TakeAwayRestaurantCommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- 外卖菜品评价 -->
+
+        <activity
+            android:name="com.fg114.main.app.activity.takeaway.TakeoutOrderCommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <!-- 外卖搜索位置选择页 -->
+        <activity
+            android:name="com.fg114.main.app.activity.SelectPOIActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        
+
+        <!-- =========================== 新版功能  end ============================== -->
+        <!-- 开机自启动广播接收者 -->
+        <receiver android:name="com.fg114.main.app.receiver.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                </action>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+         <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="itiQxz4G0UYb3Sb92evDUEWr" />
+        <!-- #################################百度推送######################################### -->
+        <!-- push service client -->
+        <receiver android:name="com.xiaomishu.extension.baidu.push.PushMessageReceiver" >
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push service -->
+       <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":keep_alive" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":keep_alive" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":keep_alive" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service> 
+
+        <!-- ########################################################################## -->
+
+
+        <!-- 银联支付 -->
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="com.unionpay.upomp.bypay.paymain_com_fg114_main" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayUserCreditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayUserDebitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayOnUserTelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.PayResultLoseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.RegisterResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.UserProtocalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserCardManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserUserManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.changePswActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.changeTelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardCreditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardDebitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardPanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.OnUserBindCardResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.SupportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.GetpassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.AuthBindCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.bypay.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Activity_MyDialog"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+         <!-- 快钱手机支付插件Activity配置 -->
+        <activity
+            android:name="com.qmoney.ui.QmoneyPayMoneyWayActivity"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyCreditCardPayActivity"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyOrderFormActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyBindPayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyBindCardsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyOrderInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyChooseCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyMakeSureDeleteCardsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyPayResultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyPayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.qmoney.ui.QmoneyAgreementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />    
+        <activity
+            android:name="com.fg114.main.qmoney.KqActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />  
+            
+        
+            
+        <!-- 可替换商户自己设计的银行列表 -->
+        <activity
+            android:name="com.qmoney.ui.MemChooseBankActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />  
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <!-- 使用Internet许可 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 检测WIFI状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 改变WIFI状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- GPS定位技术许可 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 网络定位技术许可 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 读取手机状态许可 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入内存卡许可 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 添加快捷方式许可 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 允许程序监视、修改有关拨出电话 -->
+    <!-- <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" /> -->
+
+
+    <!-- 允许震动事件 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 读取通讯录 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 允许语音录入 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许使用相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许使用震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 可调用getRunningTasks -->
+    <!-- 允许录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 银联额外许可 -->
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" >
+    </uses-permission>
+    <!-- 银联额外许可 end -->
+
+
+    <!-- 百度地图、定位需要的权限 -->
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    
+    
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    
+    
+
+    <!-- 百度推送需要的权限 ======================================================== -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    
+    <!-- 快钱手机支付插件权限配置 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+
+    <!-- for log. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 完  ======================================================================= -->
+
+</manifest>

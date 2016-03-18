@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dip"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/order_list_bt"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:background="@color/background_color_white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@color/background_color_new_gray2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/icon_url"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dip" />
+
+            <TextView
+                android:id="@+id/order_list_status_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/text_color_deep_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/order_list_rest_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_black"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/order_list_reserve_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/divider" />
+
+</LinearLayout>

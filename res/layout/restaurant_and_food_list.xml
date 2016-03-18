@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<!-- spinner工具栏 -->
+		<LinearLayout
+			android:id="@+id/restrauant_and_food_topLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="45dip"
+			android:gravity="center"
+			android:layout_marginBottom="0dip"
+			android:orientation="horizontal"
+			android:padding="0dip">
+			<Button
+				android:id="@+id/restrauant_and_food_btFirst"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:paddingLeft="5dp"
+				android:paddingRight="18dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:gravity="center"
+				android:background="@drawable/list_toggle_button"
+				android:singleLine="true"
+				android:textColor="@color/text_color_black"
+				android:textSize="14dp"
+				android:text="" />
+
+			<Button
+				android:id="@+id/restrauant_and_food_btChannel"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:paddingLeft="5dp"
+				android:paddingRight="18dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:background="@drawable/list_toggle_button"
+				android:gravity="center"
+				android:singleLine="true"
+				android:textColor="@color/text_color_black"
+				android:textSize="14dp" />
+			<Button
+				android:id="@+id/restrauant_and_food_btSort"
+				android:layout_width="0dp"
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:paddingLeft="5dp"
+				android:paddingRight="18dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:background="@drawable/list_toggle_button"
+				android:gravity="center"
+				android:singleLine="true"
+				android:textColor="@color/text_color_black"
+				android:textSize="14dp" />
+		</LinearLayout>
+		<!-- 关键字显示栏 -->
+		<LinearLayout
+			android:id="@+id/restrauant_and_food_keyLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:gravity="left"
+			android:orientation="horizontal"
+			android:padding="10dip"
+			android:background="@drawable/bg_key_bar">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="10dip"
+				android:text="@string/text_layout_search_key"
+				android:textColor="@color/text_color_black"
+				android:textSize="14dip"
+				android:singleLine="true" />
+			<Button
+				android:id="@+id/restrauant_and_food_btnShowKey"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/text_color_white"
+				android:textSize="14dip"
+				android:singleLine="true"
+				android:background="@drawable/show_key_button" />
+		</LinearLayout>
+		<!-- 餐厅与美食列表 -->
+		<ListView
+			android:id="@+id/restrauant_and_food_listview"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_gravity="center_horizontal|top"
+			style="@style/myListView"
+			android:drawSelectorOnTop="false"
+			android:fadingEdge="none"
+			android:divider="@color/divider"
+			android:dividerHeight="1px"
+			android:layout_weight="1" />
+	</LinearLayout>
+
+</FrameLayout>

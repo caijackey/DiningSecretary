@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dip"
+    android:layout_height="100dip"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/picture_container"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_gravity="center"
+        android:layout_margin="0dip"
+        android:background="@drawable/shape_bg_white_border_1px_gray"
+        android:padding="1dip" >
+
+        <com.fg114.main.app.view.MyImageView
+            android:id="@+id/picture"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="0dip" />
+    </LinearLayout>
+
+    <!-- 选择打勾 -->
+
+    <TextView
+        android:id="@+id/picture_selected_mark"
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="20"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16dip"
+        android:background="@drawable/bg_bubble"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <!-- 搜索栏 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dip"
+        android:background="@drawable/bg_search_bar_gray"
+        android:baselineAligned="false"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="5dip" >
+
+        <Button
+            android:id="@+id/btVoice"
+            android:layout_width="33dip"
+            android:layout_height="33dip"
+            android:layout_marginTop="3dip"
+            android:background="@drawable/button_voice_round" />
+
+        <EditText
+            android:id="@+id/etSearchbox"
+            android:layout_width="0dip"
+            android:layout_height="33dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dip"
+            android:layout_marginTop="3dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="输入要切换的地址"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_hint"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <!-- 定位按钮 -->
+
+    <LinearLayout
+        android:id="@+id/button_locate_me"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/button_bg_gray"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:id="@+id/text_locate_me"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="点击定位到当前位置"
+            android:textColor="@color/text_color_deep_gray" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_locate_me" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top|center_horizontal" />
+
+</LinearLayout>

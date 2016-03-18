@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dip"
+    android:orientation="horizontal"
+    android:padding="0dip" 
+    android:gravity="center"
+    >
+
+    <ImageButton
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:background="@drawable/subtraction_bt"
+        android:scaleType="fitXY" />
+
+    <EditText
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_weight="1"
+        android:inputType="none"
+        android:enabled="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:background="@drawable/takeaway_num"
+        android:imeOptions="actionDone"
+        android:textColor="@color/text_color_gray"
+        android:textSize="14dip"
+        android:text="12"/>
+
+    <ImageButton
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:background="@drawable/add_bt"
+        android:scaleType="fitXY" />
+
+</LinearLayout>

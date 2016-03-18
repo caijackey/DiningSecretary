@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/takeaway_my_order_bottom_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/takeaway_my_order_hint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color_yellow"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip"
+                android:textColor="@color/text_color_deep_gray"
+                android:gravity="center_vertical"
+                android:textSize="14dip" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/divider" />
+
+            <RelativeLayout
+                android:id="@+id/takeaway_my_order_info_bt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color_white"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/takeaway_my_order_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/text_color_green2"
+                    android:textSize="16dip" 
+                    />
+
+                <TextView
+                    android:id="@+id/takeaway_my_order_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@+id/takeaway_my_order_name"
+                    android:textColor="@color/text_color_green2"
+                    android:textSize="16dip" 
+                    />
+
+                <TextView
+                    android:id="@+id/takeaway_my_order_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/takeaway_my_order_phone"
+                    android:layout_marginTop="10dip"
+                    android:textColor="@color/text_color_green2"
+                    android:textSize="16dip" 
+                    />
+
+                <ImageView
+                    android:layout_width="10dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/divider" />
+
+            <RelativeLayout
+                android:id="@+id/takeaway_my_order_data_bt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color_white"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/takeaway_my_order_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="送餐时间:"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/takeaway_my_order_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@+id/takeaway_my_order_text"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_new_gray"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="10dip"
+                    android:layout_height="15dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow" 
+                     />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color_white"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                >
+
+                <TextView
+                    android:id="@+id/takeaway_my_order_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付方式:"
+                    android:textColor="@color/text_color_light_gray"
+                    android:textSize="16dip" 
+                    android:layout_gravity="center" 
+                    />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/takeaway_my_order_offlinepay"
+                        android:layout_width="100dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/radiobutton_select_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="货到付款"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:textColor="@color/text_color_light_gray"
+                        android:textSize="16dip" />
+
+                    <RadioButton
+                        android:id="@+id/takeaway_my_order_onlinepay"
+                        android:layout_width="100dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/radiobutton_select_bg"
+                        android:button="@null"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:gravity="center"
+                        android:text="在线支付"
+                        android:textColor="@color/text_color_light_gray"
+                        android:textSize="16dip" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/divider" />
+
+            <EditText
+                android:id="@+id/takeaway_order_memo_et"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:background="@drawable/edittext_backgroud"
+                android:hint="备注..." />
+
+            <LinearLayout
+                android:id="@+id/takeaway_my_order_selpack"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/takeaway_my_order_bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_backgroud" >
+
+        <Button
+            android:id="@+id/takeaway_my_order_cart_bnt"
+            android:layout_width="85dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/bg_red_new"
+            android:gravity="center"
+            android:text="立即下单"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/takeaway_my_order_sum_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="共0份"
+            android:textColor="@color/text_color_gray"
+            android:textSize="16dip" />
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/takeout_my_order_pbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/refresh_loading"
+        android:visibility="gone" 
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

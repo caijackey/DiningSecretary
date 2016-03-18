@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color_light_gray" >
+
+    <RelativeLayout
+        android:id="@+id/list_item_dishorderLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/button_light_color_effect"
+        android:descendantFocusability="blocksDescendants"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/list_item_reasturant_reasturantname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginRight="20dip"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip" />
+
+        <ImageView
+            android:id="@+id/list_item_reasturant_ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/list_item_reasturant_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:singleLine="true"
+            android:layout_toLeftOf="@id/list_item_reasturant_ivArrow"
+            android:textColor="@color/text_color_gray" />
+
+        <TextView
+            android:id="@+id/list_item_reasturant_declare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_item_reasturant_reasturantname"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/text_color_gray"
+            android:textSize="14dip" />
+    </RelativeLayout>
+
+    <!-- 消息提示区 -->
+
+    <LinearLayout
+        android:id="@+id/res_food_list_item_msgLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/middle_list_item_bg1_state02"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/res_food_list_item_pBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/res_food_list_item_tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:textColor="@color/text_color_black"
+            android:textSize="14dip" />
+
+        <Button
+            android:id="@+id/res_food_list_item_btnAddNewRes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="@string/text_button_add_res"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/res_food_list_item_btnRetry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_button"
+            android:text="（网络通讯故障）点击重试"
+            android:textColor="@color/text_color_black"
+            android:textSize="18dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

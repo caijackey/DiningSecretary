@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical" 
+    android:gravity="center"
+  	android:orientation="vertical"
+  	android:padding="10dip">
+
+    <TextView
+        android:id="@+id/cash_coupon_tvInterceptDesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/block_bt01"
+        android:padding="10dip"
+        android:text="服务器正在处理，请等待..."
+        android:textColor="@color/text_color_black" />
+
+    <Button 
+        android:id="@+id/cash_coupon_btWaitTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_red"
+        android:text="5"
+        android:minWidth="100dp"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="@color/text_color_white"/>
+</LinearLayout>

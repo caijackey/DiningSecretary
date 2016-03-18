@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/autoComplete_infoLayout" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"	
+		android:padding="10dip"	
+		android:orientation="horizontal"
+		android:gravity="center_vertical">
+		<!-- 关键字 -->		
+		<TextView 
+			android:id="@+id/autoComplete_tvKey"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left|center_vertical"
+			android:gravity="left|center_vertical"
+			android:textSize="12dip"
+			android:textColor="@color/text_color_black"
+			android:singleLine="true"/>
+	</LinearLayout>
+	<!-- 提示信息部分 -->
+	<LinearLayout
+		android:id="@+id/autoComplete_msgLayout" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"		
+		android:orientation="horizontal"
+		android:padding="10dip"	
+		android:gravity="center"
+		android:visibility="gone">
+		<TextView 
+			android:id="@+id/autoComplete_tvMsg"
+			android:textSize="14dip"
+			android:textColor="@color/text_color_black"
+			android:layout_gravity="center"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+		</TextView>
+	</LinearLayout>
+</LinearLayout>

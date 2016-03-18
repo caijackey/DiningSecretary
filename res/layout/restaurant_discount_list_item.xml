@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="left|top"
+    android:orientation="vertical"
+    android:padding="0dip" >
+ 
+    <LinearLayout
+        android:id="@+id/restautant_discount_block_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dip"
+        android:layout_marginRight="1dip"
+        android:background="@drawable/block_top_button"
+        android:baselineAligned="false"
+        android:gravity="left|top"
+        android:orientation="vertical"
+        android:padding="0dip" >
+
+       
+
+        <com.fg114.main.app.view.LineView
+            xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+            android:id="@+id/horizontal_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="0dip"
+            android:layout_marginTop="0dip"
+            android:background="#00000000"
+            line:dashedGap="2dip"
+            line:dashedWidth="2dip"
+            line:orientation="horizontal"
+            android:padding="0dip"
+            line:thickness="1dip"
+            android:visibility="gone"
+            line:color="#FFCCCCCC" />
+
+        <LinearLayout
+            android:id="@+id/discount_nested_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="left|top"
+            android:orientation="horizontal"
+            android:paddingTop="15dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="10dip"
+            android:paddingBottom="15dip" >
+
+            <!-- 优惠图标 -->
+
+            <ImageView
+                android:id="@+id/discount_icon"
+                android:layout_width="28dip"
+                android:layout_height="28dip"
+                android:layout_marginTop="2dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/discount" />
+            <!-- 秘币文字 -->
+
+            <TextView
+                android:id="@+id/promotion_mibi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-3dip"
+                android:layout_marginTop="-2dip"
+                android:padding="0dip"
+                android:text="15%"
+                android:textColor="@color/text_color_red"
+                android:textSize="10dip"
+                android:visibility="gone" />
+            <!-- 文字区 -->
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:orientation="vertical"
+                android:padding="0dip"
+                >
+
+                <!-- 优惠页面中的普通列表项 -->
+
+                <TextView
+                    android:id="@+id/restautant_discount_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/restautant_discount_price"
+                    android:text="@string/text_layout_ydzk"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/restautant_discount_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_alignParentRight="true"
+                    android:text="39.00元"
+                    android:textColor="#FFBF0001"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/restautant_discount_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/restautant_discount_title"
+                    android:layout_marginTop="5dip"
+                    android:singleLine="false"
+                    android:text="多少多少折扣"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14dip"
+                    android:textStyle="bold" 
+                    
+                    />
+            </RelativeLayout>
+            <!-- 右端箭头 -->
+
+            <ImageView
+                android:id="@+id/arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dip"
+                android:scaleType="center"
+                android:src="@drawable/arrow_right2"
+                android:visibility="visible" />
+        </LinearLayout>
+    
+     </LinearLayout>
+    <!-- 按钮　 -->
+    <LinearLayout
+        android:id="@+id/restaurant_discount_cash_list_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/block_bottom_bt01"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dip" 
+        android:layout_marginBottom="10dip"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/restaurant_discount_cash_list_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_button"
+            android:paddingBottom="8dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="8dip"
+            android:text="立即购买"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+</LinearLayout>

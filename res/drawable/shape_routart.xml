@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <!-- 关于画一个背景为圆的图形四角的角度均可以自行设置，外面线条的粗细度，及颜色均可以在这里设置 -->
+            <solid android:color="#FFFFFF" />
+            <corners android:topLeftRadius="13dip" android:topRightRadius="13dip"
+                android:bottomRightRadius="10dp" android:bottomLeftRadius="10dp" />
+            <stroke android:width="0.5dp" android:color="#CCCCCC" />
+        </shape>
+    </item>
+    <item android:top="0.5dp" android:left="0.5dip" android:right="0.5dip" android:bottom="0.5dip">
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <corners android:topLeftRadius="13dip" android:topRightRadius="13dip"
+                android:bottomRightRadius="10dip" android:bottomLeftRadius="10dip" />
+            <stroke android:width="0.5dip" android:color="#CCCCCC" />
+        </shape>
+    </item>
+
+</layer-list>

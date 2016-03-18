@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="2dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip" >
+
+    <LinearLayout
+        android:id="@+id/list_item_dishorderLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_routart"
+        android:orientation="vertical"
+        android:paddingBottom="10dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="1dip" >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/mdb_rest_image"
+                android:layout_width="fill_parent"
+                android:layout_height="210dip"
+                 />
+  <ImageView 
+                 android:layout_width="fill_parent"
+                android:layout_height="210dip"
+                android:background="@drawable/home_top_list_view_bg"
+                />
+            <TextView
+                android:id="@+id/mdb_icon_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="-2dip"
+                android:layout_marginTop="-2dip" 
+                android:textColor="@color/text_color_white"
+                android:textSize="16dip"
+                android:text=""
+                android:gravity="center_horizontal|bottom"
+                android:paddingBottom="10dip"
+                android:background="@drawable/mdb_mian"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mdb_rest_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/text_color_new_gray"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/mdb_rest_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip"
+                android:drawableLeft="@drawable/mdb_loc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mdb_rest_reason"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/mdb_rest_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_new_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mdb_rest_detail_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/mdb_rest_detail_flower"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal" >
+
+            <RatingBar
+                android:id="@+id/mdb_rest_showFlower"
+                style="@style/flowerRatingBar_small"
+                android:layout_width="wrap_content"
+                android:layout_height="20dip"
+                android:clickable="false"
+                android:focusable="false"
+                android:isIndicator="true"
+                android:saveEnabled="true"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/mdb_rest_freeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/text_color_new_deep_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

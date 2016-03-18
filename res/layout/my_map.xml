@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	<FrameLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<com.baidu.mapapi.map.MapView
+			android:id="@+id/my_map_mvMain"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:clickable="true" />
+		<LinearLayout
+		    android:id="@+id/my_map_llBg"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:focusable="false"
+			android:visibility="gone"
+			android:background="@drawable/map_select_mask"
+			/>
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/mdb_rest_search_list_item_bt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/mdb_rest_search_rest_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="4.5"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="16dip"
+            android:textColor="@color/text_color_new_gray" />
+
+        <TextView
+            android:id="@+id/mdb_rest_search_rest_district"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="16dip" 
+            android:textColor="@color/text_color_gray"/>
+    </LinearLayout>
+
+</LinearLayout>

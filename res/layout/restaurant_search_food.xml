@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search_bar"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <!-- 搜索栏 -->
+
+        <EditText
+            android:id="@+id/restaurant_search_etSearchbox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_search"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="请输入菜名"
+            android:imeOptions="actionNone"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_hint"
+            android:textSize="16dip" />
+    </LinearLayout>
+    <!-- 列表 -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/restaurant_search_food_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/no_info"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal|top"
+            android:padding="10dip"
+            android:text="请在上方的框内输入您所拍的菜名。"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/pop_letter_layer"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_rectangle_pop_letter_layer"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/text_color_black"
+            android:textSize="40dip"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/restaurant_search_food_bottomlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <Button
+            android:id="@+id/restaurant_search_food_upload"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_big"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:text="确定"
+            android:textColor="@color/text_color_white"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+</LinearLayout>

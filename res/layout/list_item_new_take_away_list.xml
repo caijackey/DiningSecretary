@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="fill_parent"
+        android:background="@drawable/button_light_color_effect"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- title -->
+
+        <TextView
+            android:id="@+id/takeaway_list_item_tvTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color_gray"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:maxLines="2"
+            android:ellipsize="marquee"
+            android:text="菜品类别"
+            android:textColor="@color/text_color_gray"
+            android:textSize="15dip"
+            android:visibility="gone" />
+
+        <!-- 主体内容 -->
+
+        <RelativeLayout
+            android:id="@+id/takeaway_list_item_rlMain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color_white"
+            android:padding="10dp" >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/takeaway_list_item_ivFoodPic"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/takeaway_list_item_rlFoodInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/takeaway_list_item_ivFoodPic"
+                android:layout_toLeftOf="@id/takeaway_list_item_ivFoodPic" >
+
+                <LinearLayout
+                    android:id="@+id/takeaway_list_item_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_vertical"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/takeaway_list_item_tvName"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="16dip" />
+
+                    
+
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/takeaway_list_item_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/takeaway_list_item_top"
+                    android:layout_below="@id/takeaway_list_item_top"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/takeaway_list_item_tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:layout_marginTop="2dip"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color_new_deep_gray"
+                        android:textSize="14dip" />
+
+                    <RatingBar
+                        android:id="@+id/takeaway_list_item_overall_num"
+                        style="@style/starRatingBar_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dip"
+                        android:layout_marginLeft="10dip"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:isIndicator="true"
+                        android:saveEnabled="true"
+                        android:stepSize="1" />
+                </LinearLayout>
+                <LinearLayout 
+                    android:id="@+id/takeaway_list_item_shopping_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/takeaway_list_item_top"
+                    android:layout_below="@id/takeaway_list_item_center"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dip"
+                    android:orientation="horizontal" >
+                    <ImageButton 
+                        android:id="@+id/takeaway_list_item_shopping_cart_bt"
+                        android:layout_width="60dip"
+                        android:layout_height="28dip"
+                        android:background="@drawable/shopping_cart_gray_bt"/>
+                    <TextView 
+                        android:id="@+id/takeaway_list_item_shopping_cart_num"
+                        android:layout_width="28dip"
+                        android:layout_height="28dip"
+                        android:layout_marginLeft="10dip"
+                        android:textSize="16dip"
+                        android:maxLength="3"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_new_deep_gray"
+                        android:background="@color/background_color_gray"/>
+                    
+                </LinearLayout>
+
+               <!--   <com.fg114.main.app.view.DigitalSelector
+                    android:id="@+id/takeaway_list_item_amount"
+                    android:layout_width="90dip"
+                    android:layout_height="28dip"
+                    android:layout_below="@id/takeaway_list_item_center" />-->
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 消息提示区 -->
+
+        <LinearLayout
+            android:id="@+id/takeaway_list_item_msgLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/middle_list_item_bg1_state02"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/takeaway_list_item_pBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/takeaway_list_item_tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textColor="@color/text_color_black"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

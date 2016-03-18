@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_index_new"
+    android:orientation="vertical" >
+
+    <com.fg114.main.app.view.MyScrollView
+        android:id="@+id/select_sms_svMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dip"
+                android:gravity="top|center"
+                android:padding="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_title_select_sms_resad"
+                    android:textColor="@color/background_color_black" />
+
+                <TextView
+                    android:id="@+id/select_sms_res_adTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/background_color_black" />
+            </LinearLayout>
+
+            <!-- 分隔线 -->
+
+            <com.fg114.main.app.view.LineView
+                xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+                android:id="@+id/horizontal_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="0dip"
+                android:background="#00000000"
+                android:visibility="visible"
+                line:dashedGap="2dip"
+                line:dashedWidth="2dip"
+                line:orientation="horizontal"
+                line:thickness="1dip"
+                line:color="#FFCCCCCC" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="top|center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <EditText
+                    android:id="@+id/select_sms_resinfoET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dip"
+                    android:background="@drawable/block_top_bt01"
+                    android:gravity="top|left"
+                    android:maxLines="4"
+                    android:padding="10dip"
+                    android:text=""
+                    android:textSize="15dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block_bottom_bt01"
+                    android:gravity="center"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_title_select_sms_moban"
+                        android:textColor="@color/background_color_black"
+                        android:textSize="15dip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <RadioGroup
+                            android:id="@+id/select_sms_image_list_group"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 分隔线 -->
+
+            <com.fg114.main.app.view.LineView
+                xmlns:line="http://schemas.android.com/apk/res/com.fg114.main"
+                android:id="@+id/horizontal_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginBottom="0dip"
+                android:background="#00000000"
+                android:visibility="visible"
+                line:dashedGap="2dip"
+                line:dashedWidth="2dip"
+                line:orientation="horizontal"
+                line:thickness="1dip"
+                line:color="#FFCCCCCC" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <!-- 通过短信邀请 -->
+
+                <LinearLayout
+                    android:id="@+id/invite_by_sms"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/block_button"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/icon_sms" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_marginLeft="15dip"
+                        android:text="通过短信邀请"
+                        android:textColor="@color/text_color_deep_gray"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+                
+                <!-- 通过微信邀请 -->
+
+                <LinearLayout
+                    android:id="@+id/invite_by_weixin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/block_button"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="10dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/icon_weixin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_marginLeft="15dip"
+                        android:text="通过微信邀请"
+                        android:textColor="@color/text_color_deep_gray"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.fg114.main.app.view.MyScrollView>
+
+</LinearLayout>

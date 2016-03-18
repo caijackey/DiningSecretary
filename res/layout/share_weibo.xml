@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <!-- 评论 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/block_bt01"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dip" >
+
+                    <EditText
+                        android:id="@+id/share_to_weibo_detail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:maxLength="1000"
+                        android:maxLines="8"
+                        android:minLines="6"
+                        android:scrollbars="vertical"
+                        android:singleLine="false"
+                        android:textColor="@color/text_color_black"
+                        android:textColorHint="@color/text_color_gray"
+                        android:textSize="16dip" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/share_to_weibo_detail_voice"
+                    layout="@layout/voice_recognition_button_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="43dip" >
+
+                <ToggleButton
+                    android:id="@+id/restaurant_comment_submit_chkShareSina"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="13dip"
+                    android:background="@drawable/sina_check_weibo"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="gone" >
+                </ToggleButton>
+
+                <ToggleButton
+                    android:id="@+id/restaurant_comment_submit_chkShareTX"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="25dip"
+                    android:layout_toRightOf="@+id/comment_sina"
+                    android:background="@drawable/tx_check_weibo"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="gone" >
+                </ToggleButton>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/restaurant_comment_submit_upload_image_nouse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dip"
+                    android:background="@drawable/button_rest_comment_submit_upload_picture"
+                    android:paddingLeft="40dip"
+                    android:paddingRight="10dip"
+                    android:text="添加图片"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="15dip"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>

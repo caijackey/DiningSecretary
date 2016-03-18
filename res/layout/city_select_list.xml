@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<!-- 搜索栏 -->
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:padding="10dip"
+		android:background="@drawable/bg_search_bar">
+		<EditText
+			android:id="@+id/city_select_list_etSearch"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:inputType="textEmailAddress"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:textSize="16dip"
+			android:hint="@string/text_layout_search_city"
+			android:textColorHint="@color/text_color_gray"
+			android:textColor="@color/text_color_black"
+			android:focusable="false"
+			android:layout_weight="1"
+			android:background="@drawable/search_bar_button" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/city_select_list_listLayout"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<!-- GPS显示城市 -->
+		<LinearLayout
+			android:id="@+id/city_select_list_gpsLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<!-- 说明部分 -->
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="15dip"
+				android:paddingLeft="10dip"
+				android:paddingRight="10dip"
+				android:layout_gravity="left|top"
+				android:text="@string/text_layout_gps_city"
+				android:textSize="14dip"
+				android:textColor="@color/text_color_black"
+				android:singleLine="true" />
+			<Button
+				android:id="@+id/city_select_list_btnGps"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="10dip"
+				android:textColor="@color/text_color_black"
+				android:textSize="16dip"
+				android:gravity="left|center_vertical"
+				android:padding="10dip"
+				android:background="@drawable/block_button" />
+			<!-- 分隔符 -->
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:background="@drawable/divide" />
+		</LinearLayout>
+		<!-- 说明部分 -->
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="15dip"
+			android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+			android:layout_gravity="left|top"
+			android:text="@string/text_layout_more_city"
+			android:textSize="14dip"
+			android:textColor="@color/text_color_black"
+			android:singleLine="true" />
+		<!-- 可选城市列表 -->
+		<ListView
+			android:id="@+id/city_select_list_listview"
+			android:layout_width="fill_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:layout_gravity="center_horizontal|top"
+			android:padding="10dip"
+			android:drawSelectorOnTop="false"
+			style="@style/myListView" />
+		<!-- 消息提示区 -->
+		<LinearLayout
+			android:id="@+id/city_select_list_msgLayout"
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:gravity="center">
+			<ProgressBar
+				style="?android:attr/progressBarStyleSmall"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:text="@string/text_info_loading"
+				android:textSize="14dip"
+				android:textColor="@color/text_color_black"
+				android:layout_marginLeft="5dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

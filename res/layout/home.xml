@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+    android:id="@+id/index2_relative_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 下部餐厅列表 -->
+
+    <LinearLayout
+        android:id="@+id/index_listview_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/index_top_container"
+        android:layout_gravity="center_horizontal|top" >
+
+        <com.fg114.main.app.view.DragLoadingView
+            android:id="@+id/dragview_rest_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView
+                android:id="@+id/index_listview"
+                style="@style/myListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false" />
+        </com.fg114.main.app.view.DragLoadingView>
+    </LinearLayout>
+
+    <!-- 推荐餐厅按钮区 -->
+
+    <LinearLayout
+        android:id="@+id/recommend_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_below="@+id/index_top_container"
+        android:background="@drawable/shape_bg_white_border_1px_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/switch_button1"
+            android:layout_width="50dip"
+            android:layout_height="60dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_light_color_effect" 
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView 
+                android:id="@+id/switch_button1_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_top_1_gray"/>
+            <TextView
+                android:id="@+id/switch_button1_tv"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:text="精选荐店"
+                android:gravity="center"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+        
+        <View 
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="15dip"
+            android:layout_marginBottom="15dip"
+            android:background="@color/background_color_gray"/>
+        
+        <LinearLayout
+            android:id="@+id/switch_button2"
+            android:layout_width="50dip"
+            android:layout_height="60dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_light_color_effect" 
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView 
+                android:id="@+id/switch_button2_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_top_2_gray"/>
+            <TextView
+                android:id="@+id/switch_button2_tv"
+                android:layout_width="50dip"
+                android:layout_height="60dip"
+                android:layout_weight="1"
+                android:text="最新荐店"
+                android:gravity="center"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+        
+        <View 
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="15dip"
+            android:layout_marginBottom="15dip"
+            android:background="@color/background_color_gray"/>
+        
+        <LinearLayout
+            android:id="@+id/recommend_button"
+            android:layout_width="50dip"
+            android:layout_height="60dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_light_color_effect" 
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_top_3_gray"/>
+            <TextView
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:text="我要荐店"
+                android:gravity="center"
+                android:textColor="@color/text_color_gray"
+                android:textSize="16dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    
+    
+    
+    
+    
+    
+<!--     顶部按钮区 -->
+    <LinearLayout
+        android:id="@+id/index_top_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/index_top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/tittle_topbar"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip" >
+
+            <!-- 搜索餐厅 -->
+
+            <LinearLayout
+                android:id="@+id/button_search_rest"
+                android:layout_width="65dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_transparent_light_color_effect"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_search_rest" />
+            </LinearLayout>
+
+            <!-- 广告 -->
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <com.fg114.main.app.view.ViewFlow
+                    xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+                    android:id="@+id/viewflow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="0dp"
+                    android:focusableInTouchMode="true"
+                    app:sidebuffer="3" />
+
+                <com.fg114.main.app.view.CircleFlowIndicator
+                    xmlns:app="http://schemas.android.com/apk/res/com.fg114.main"
+                    android:id="@+id/circle_indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    app:activeColor="@color/text_color_white"
+                    app:fadeOut="0"
+                    app:inactiveColor="@color/text_color_white"
+                    app:inactiveType="stroke"
+                    app:radius="3dp" />
+            </RelativeLayout>
+
+            <!-- 语音搜索 -->
+
+            <LinearLayout
+                android:id="@+id/button_voice_search_rest"
+                android:layout_width="65dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_transparent_light_color_effect"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_voice_search_rest" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 筛选条件 -->
+
+        <LinearLayout
+            android:id="@+id/index_rest_select"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_marginBottom="0dip"
+            android:background="@drawable/bg_search_bar"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/index_first_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/list_toggle_button"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/index_menu_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/list_toggle_button"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/index_third_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/list_toggle_button"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="18dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 下部两个列表*************** -->
+
+     <LinearLayout
+        android:id="@+id/index_3d_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/recommend_button_layout"
+        android:layout_gravity="center_horizontal|top"
+        android:background="#f2f2f1"
+        android:orientation="vertical"
+        android:paddingTop="0dip" >
+
+        <!-- 精选餐厅 -->
+
+        <com.fg114.main.app.view.DragLoadingView
+            android:id="@+id/dragview_top_rest_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView
+                android:id="@+id/top_list_view"
+                style="@style/myListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:visibility="visible" />
+        </com.fg114.main.app.view.DragLoadingView>
+
+        <!-- 推荐餐厅 -->
+
+        <com.fg114.main.app.view.DragLoadingView
+            android:id="@+id/dragview_recom_rest_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <com.fg114.main.app.view.MyWaterFallView
+                    android:id="@+id/waterfall_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="top|center"
+                    android:background="#0000FF00"
+                    android:fillViewport="true"
+                    android:padding="0dip"
+                    android:scrollbars="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#0000FFFF"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </com.fg114.main.app.view.MyWaterFallView>
+            </LinearLayout>
+        </com.fg114.main.app.view.DragLoadingView>
+    </LinearLayout>
+    <!-- 进度指示 -->
+
+    <LinearLayout
+        android:id="@+id/res_pic_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_alignBottom="@+id/index_3d_layout"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/bg_loading"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="0dp"
+            android:singleLine="true"
+            android:text="正在加载..."
+            android:textColor="@color/background_color_white"
+            android:textSize="10dip" />
+    </LinearLayout>
+
+</RelativeLayout>

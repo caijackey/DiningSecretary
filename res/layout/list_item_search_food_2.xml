@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 字母分类域 -->
+
+    <TextView
+        android:id="@+id/letter_title"
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:background="@color/background_color_gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dip"
+        android:singleLine="true"
+        android:text="#"
+        android:textColor="@color/text_color_black"
+        android:textSize="16dip"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/block_middle_button"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <!-- 名称 -->
+
+        <TextView
+            android:id="@+id/list_item_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:padding="10dip"
+            android:singleLine="true"
+            android:text="#"
+            android:textColor="@color/text_color_black"
+            android:textSize="16dip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:padding="10dip"
+            android:src="@drawable/arrow_right2" />
+    </LinearLayout>
+
+</LinearLayout>

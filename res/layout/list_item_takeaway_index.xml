@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/com.fg114.main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/button_light_color_effect"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/detail_res_recom_hint_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="center" >
+
+            <com.fg114.main.app.view.MyImageView
+                android:id="@+id/takeaway_kinds"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="5dip"
+                local:roundType="2"
+ 			    local:roundRadius="0dip" />
+
+            <ImageView
+                android:id="@+id/arrow_right_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="20dip"
+                android:scaleType="center"
+                android:src="@drawable/arrow_right2"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text_takeaway_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                
+                android:layout_toLeftOf="@id/arrow_right_2"
+                android:layout_toRightOf="@id/takeaway_kinds"
+                android:singleLine="false"
+                android:text="中餐点"
+                android:textSize="16dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5px"
+        android:layout_marginLeft="65dip"
+        android:background="@color/background_color_deep_gray" />
+
+</LinearLayout>
